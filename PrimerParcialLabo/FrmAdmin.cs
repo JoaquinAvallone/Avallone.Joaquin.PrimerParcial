@@ -13,8 +13,8 @@ namespace PrimerParcialLabo
 {
     public partial class FrmAdmin : Form
     {
-        Usuarios usuarioActual;
-        string pathFotoUsuario;
+        Usuarios? usuarioActual;
+        string? pathFotoUsuario;
         public FrmAdmin()
         {
             InitializeComponent();

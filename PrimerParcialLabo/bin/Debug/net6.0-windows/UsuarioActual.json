@@ -1,8 +1,8 @@
 {
-  "legajo": 5,
-  "correo": "admin@admin.com",
-  "clave": "12345678",
-  "perfil": "administrador",
-  "apellido": "Jordan",
-  "nombre": "Michael"
+  "Legajo": 1,
+  "Correo": "cgorgen@vendedor.com",
+  "Clave": "123abc45",
+  "Perfil": "vendedor",
+  "Apellido": "Gorgen",
+  "Nombre": "Corey"
 }

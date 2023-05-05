@@ -51,6 +51,40 @@ namespace Biblioteca
             }
             return matricula;
         }
+        public static bool operator ==(Aeronaves avion, Vuelos vuelo)
+        {
+            if (avion is null || vuelo is null)
+            {
+                return false;
+            }
+            if (avion.matricula == vuelo.Avion.Matricula)
+            {
+                return true;
+            }
+            
+            return false;
+        }
+
+        public static bool operator !=(Aeronaves avion, Vuelos vuelo)
+        {
+            return !(avion == vuelo);
+        }
+
+        public string BoolAString(bool booleano)
+        {
+            StringBuilder sb = new StringBuilder();
+
+
+            if (booleano == true)
+            {
+                sb.AppendLine("Si");
+            }
+            else
+            {
+                sb.AppendLine("No");
+            }
+            return sb.ToString();
+        }
 
         public override string ToString()
         {
@@ -59,11 +93,12 @@ namespace Biblioteca
             sb.AppendLine($"Matricula: {matricula}");
             sb.AppendLine($"Cantidad de Asientos: {cantidadAsientos}");
             sb.AppendLine($"Cantidad de Baños: {cantidadBaños}");
-            sb.AppendLine($"Internet: {internet}");
-            sb.AppendLine($"Comida: {comida}");
+            sb.AppendLine($"Internet: {BoolAString(internet)}");
+            sb.AppendLine($"Comida: {BoolAString(comida)}");
             sb.Append($"Capacidad de Bodega: {capacidadBodega}");
 
             return sb.ToString();
         }
+
     }
 }

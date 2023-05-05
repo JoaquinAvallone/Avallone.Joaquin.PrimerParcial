@@ -49,7 +49,7 @@
             picBRestore = new PictureBox();
             picBMaximize = new PictureBox();
             picbMini = new PictureBox();
-            panelPrincipal = new Panel();
+            panelFormularios = new Panel();
             panelSideMenu.SuspendLayout();
             panelSubMenuModif.SuspendLayout();
             panelSubmenuVenta.SuspendLayout();
@@ -61,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)picBRestore).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picBMaximize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picbMini).BeginInit();
-            panelPrincipal.SuspendLayout();
+            panelFormularios.SuspendLayout();
             SuspendLayout();
             // 
             // panelSideMenu
@@ -81,6 +81,7 @@
             // 
             // btnEstadisticas
             // 
+            btnEstadisticas.Cursor = Cursors.Hand;
             btnEstadisticas.Dock = DockStyle.Top;
             btnEstadisticas.FlatAppearance.BorderSize = 0;
             btnEstadisticas.FlatAppearance.MouseOverBackColor = Color.FromArgb(18, 18, 18);
@@ -99,6 +100,7 @@
             // 
             panelSubMenuModif.BackColor = Color.FromArgb(35, 32, 39);
             panelSubMenuModif.Controls.Add(btnModPasa);
+            panelSubMenuModif.Cursor = Cursors.Hand;
             panelSubMenuModif.Dock = DockStyle.Top;
             panelSubMenuModif.Location = new Point(0, 190);
             panelSubMenuModif.Name = "panelSubMenuModif";
@@ -123,6 +125,7 @@
             // 
             // btnModificaciones
             // 
+            btnModificaciones.Cursor = Cursors.Hand;
             btnModificaciones.Dock = DockStyle.Top;
             btnModificaciones.FlatAppearance.BorderSize = 0;
             btnModificaciones.FlatAppearance.MouseOverBackColor = Color.FromArgb(18, 18, 18);
@@ -143,6 +146,7 @@
             panelSubmenuVenta.BackColor = Color.FromArgb(35, 32, 39);
             panelSubmenuVenta.Controls.Add(btnVender);
             panelSubmenuVenta.Controls.Add(btnViajesDispon);
+            panelSubmenuVenta.Cursor = Cursors.Hand;
             panelSubmenuVenta.Dock = DockStyle.Top;
             panelSubmenuVenta.Location = new Point(0, 106);
             panelSubmenuVenta.Name = "panelSubmenuVenta";
@@ -164,9 +168,11 @@
             btnVender.Text = "Vender";
             btnVender.TextAlign = ContentAlignment.MiddleLeft;
             btnVender.UseVisualStyleBackColor = true;
+            btnVender.Click += btnVender_Click;
             // 
             // btnViajesDispon
             // 
+            btnViajesDispon.Cursor = Cursors.Hand;
             btnViajesDispon.Dock = DockStyle.Top;
             btnViajesDispon.FlatAppearance.BorderSize = 0;
             btnViajesDispon.FlatStyle = FlatStyle.Flat;
@@ -180,9 +186,11 @@
             btnViajesDispon.Text = "Viajes Disponibles";
             btnViajesDispon.TextAlign = ContentAlignment.MiddleLeft;
             btnViajesDispon.UseVisualStyleBackColor = true;
+            btnViajesDispon.Click += btnViajesDispon_Click;
             // 
             // btnVenta
             // 
+            btnVenta.Cursor = Cursors.Hand;
             btnVenta.Dock = DockStyle.Top;
             btnVenta.FlatAppearance.BorderSize = 0;
             btnVenta.FlatAppearance.MouseOverBackColor = Color.FromArgb(18, 18, 18);
@@ -321,14 +329,14 @@
             picbMini.TabStop = false;
             picbMini.Click += picbMini_Click;
             // 
-            // panelPrincipal
+            // panelFormularios
             // 
-            panelPrincipal.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panelPrincipal.Controls.Add(picBoxLogo);
-            panelPrincipal.Location = new Point(200, 34);
-            panelPrincipal.Name = "panelPrincipal";
-            panelPrincipal.Size = new Size(711, 379);
-            panelPrincipal.TabIndex = 5;
+            panelFormularios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelFormularios.Controls.Add(picBoxLogo);
+            panelFormularios.Location = new Point(200, 34);
+            panelFormularios.Name = "panelFormularios";
+            panelFormularios.Size = new Size(711, 379);
+            panelFormularios.TabIndex = 5;
             // 
             // FrmVendedor
             // 
@@ -337,7 +345,7 @@
             BackColor = Color.FromArgb(35, 32, 39);
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(911, 413);
-            Controls.Add(panelPrincipal);
+            Controls.Add(panelFormularios);
             Controls.Add(panelTop);
             Controls.Add(panelSideMenu);
             DoubleBuffered = true;
@@ -360,7 +368,7 @@
             ((System.ComponentModel.ISupportInitialize)picBRestore).EndInit();
             ((System.ComponentModel.ISupportInitialize)picBMaximize).EndInit();
             ((System.ComponentModel.ISupportInitialize)picbMini).EndInit();
-            panelPrincipal.ResumeLayout(false);
+            panelFormularios.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -381,7 +389,7 @@
         private Button btnVender;
         private Button btnViajesDispon;
         private Button btnVenta;
-        private Panel panelPrincipal;
+        private Panel panelFormularios;
         private PictureBox picBMaximize;
         private PictureBox picBRestore;
         private Label lblPerfil;

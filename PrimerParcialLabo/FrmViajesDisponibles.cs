@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,6 +26,8 @@ namespace PrimerParcialLabo
 
         private void FrmViajesDisponibles_Load(object sender, EventArgs e)
         {
+            dataGVInfoPasajeros.Visible = false;
+            btnVolver.Visible = false;
         }
 
         private void RellenarGrid()
@@ -36,49 +39,50 @@ namespace PrimerParcialLabo
                 row.Cells[0].Value = item.FechaVuelo;
                 row.Cells[1].Value = item.CiudadPartida;
                 row.Cells[2].Value = item.CiudadDestino;
-                row.Cells[3].Value = item.Avion.Matricula;
+                row.Cells[3].Value = "$" + item.PrecioTurista;
+                row.Cells[4].Value = "$" + item.PrecioPrem;
+                row.Cells[5].Value = item.Avion.Matricula;
             }
         }
         private void dataGVVuelos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int indice;
             indice = e.RowIndex;
-            RellenarGridPasajeros(indice);
+            RellenarGridPasajeross(indice);
         }
 
-        private void RellenarGridPasajeros(int indice)
+        private void RellenarGridPasajeross(int indice)
         {
-            FrmInfoVuelo frmInfoVuelo = new FrmInfoVuelo();
             int auxIndice = indice;
+            dataGVVuelos.Visible = false;
+            dataGVInfoPasajeros.Visible = true;
+            btnVolver.Visible = true;
+            dataGVInfoPasajeros.Rows.Clear();
 
-            foreach (Control item in frmInfoVuelo.Controls)
+            for (int i = auxIndice; i < vuelos.Count(); i++)
             {
-                if (item is DataGridView)
+                foreach (Pasajeros items in vuelos[i].Pasajeros)
                 {
-                    DataGridView? dgv = item as DataGridView;
-                    if (dgv?.Name == "dataGVInfoVuelos")
-                    {
-                        for (int i = auxIndice; i < vuelos.Count(); i++)
-                        {
-                            foreach (Pasajeros items in vuelos[i].Pasajeros)
-                            {
-                                int rowIndex = dgv.Rows.Add();
-                                DataGridViewRow row = dgv.Rows[rowIndex];
-                                row.Cells[0].Value = items.Apellido;
-                                row.Cells[1].Value = items.Nombre;
-                                row.Cells[2].Value = items.Dni;
-                                row.Cells[3].Value = items.Edad;
-                                row.Cells[4].Value = items.TipoEquipaje(items.EquipajeMano);
-                                row.Cells[5].Value = items.TipoEquipaje(items.EquipajeBodega);
-                                row.Cells[6].Value = items.PesoEquipaje + "kg.";
-                                row.Cells[7].Value = items.Clase;
-                            }
-                            break;
-                        }
-                    }
+                    int rowIndex = dataGVInfoPasajeros.Rows.Add();
+                    DataGridViewRow row = dataGVInfoPasajeros.Rows[rowIndex];
+                    row.Cells[0].Value = items.Apellido;
+                    row.Cells[1].Value = items.Nombre;
+                    row.Cells[2].Value = items.Dni;
+                    row.Cells[3].Value = items.Edad;
+                    row.Cells[4].Value = items.TipoEquipaje(items.EquipajeMano);
+                    row.Cells[5].Value = items.TipoEquipaje(items.EquipajeBodega);
+                    row.Cells[6].Value = items.PesoEquipaje + "kg.";
+                    row.Cells[7].Value = items.Clase;
                 }
+                break;
             }
-            frmInfoVuelo.ShowDialog();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            dataGVInfoPasajeros.Visible = false;
+            dataGVVuelos.Visible = true;
+            btnVolver.Visible = false;
         }
 
     }

@@ -85,6 +85,7 @@
             panelSubMenuModif.BackColor = Color.FromArgb(35, 32, 39);
             panelSubMenuModif.Controls.Add(btnModifAeronaves);
             panelSubMenuModif.Controls.Add(btnModifViajes);
+            panelSubMenuModif.Cursor = Cursors.Hand;
             panelSubMenuModif.Dock = DockStyle.Top;
             panelSubMenuModif.Location = new Point(0, 103);
             panelSubMenuModif.Name = "panelSubMenuModif";
@@ -125,6 +126,7 @@
             // 
             // btnModificaciones
             // 
+            btnModificaciones.Cursor = Cursors.Hand;
             btnModificaciones.Dock = DockStyle.Top;
             btnModificaciones.FlatAppearance.BorderSize = 0;
             btnModificaciones.FlatAppearance.MouseOverBackColor = Color.FromArgb(18, 18, 18);

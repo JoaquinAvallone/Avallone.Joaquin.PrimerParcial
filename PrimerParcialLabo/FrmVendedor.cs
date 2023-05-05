@@ -18,7 +18,7 @@ namespace PrimerParcialLabo
         public FrmVendedor()
         {
             InitializeComponent();
-            
+
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -116,6 +116,39 @@ namespace PrimerParcialLabo
         private void FrmVendedor_FormClosing(object sender, FormClosingEventArgs e)
         {
             Serializadores.SerializarFotoperfilJson(usuarioActual, pathFotoUsuario);
+        }
+
+        private void btnViajesDispon_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmViajesDisponibles>();
+
+        }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmVentaViaje>();
+        }
+
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form? formulario;
+            formulario = panelFormularios.Controls.OfType<MiForm>().FirstOrDefault(); // busca en la coleccion el formulario
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                panelFormularios.Controls.Add(formulario);
+                panelFormularios.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            else
+            {
+                formulario.BringToFront();
+
+            }
         }
     }
 }

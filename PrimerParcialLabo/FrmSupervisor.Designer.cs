@@ -77,6 +77,7 @@
             // 
             // btnEstadisticas
             // 
+            btnEstadisticas.Cursor = Cursors.Hand;
             btnEstadisticas.Dock = DockStyle.Top;
             btnEstadisticas.FlatAppearance.BorderSize = 0;
             btnEstadisticas.FlatAppearance.MouseOverBackColor = Color.FromArgb(18, 18, 18);
@@ -95,6 +96,7 @@
             // 
             panelSubMenuModif.BackColor = Color.FromArgb(35, 32, 39);
             panelSubMenuModif.Controls.Add(btnModPasa);
+            panelSubMenuModif.Cursor = Cursors.Hand;
             panelSubMenuModif.Dock = DockStyle.Top;
             panelSubMenuModif.Location = new Point(0, 103);
             panelSubMenuModif.Name = "panelSubMenuModif";
@@ -119,6 +121,7 @@
             // 
             // btnModificaciones
             // 
+            btnModificaciones.Cursor = Cursors.Hand;
             btnModificaciones.Dock = DockStyle.Top;
             btnModificaciones.FlatAppearance.BorderSize = 0;
             btnModificaciones.FlatAppearance.MouseOverBackColor = Color.FromArgb(18, 18, 18);

@@ -14,8 +14,8 @@ namespace PrimerParcialLabo
 {
     public partial class FrmSupervisor : Form
     {
-        Usuarios usuarioActual;
-        string pathFotoUsuario;
+        Usuarios? usuarioActual;
+        string? pathFotoUsuario;
         public FrmSupervisor()
         {
             InitializeComponent();
