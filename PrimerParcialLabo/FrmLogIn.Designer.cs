@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogIn));
             pictureBLogo = new PictureBox();
             pictureBEmail = new PictureBox();
             pictureBContra = new PictureBox();
@@ -38,11 +39,15 @@
             btnIngresar = new Button();
             pictureBEscape = new PictureBox();
             pictureBMinimize = new PictureBox();
+            picBEye = new PictureBox();
+            picBEyeBlind = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBEmail).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBContra).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBEscape).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBMinimize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picBEye).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picBEyeBlind).BeginInit();
             SuspendLayout();
             // 
             // pictureBLogo
@@ -58,7 +63,7 @@
             // pictureBEmail
             // 
             pictureBEmail.Image = Properties.Resources.mail_96px;
-            pictureBEmail.Location = new Point(33, 147);
+            pictureBEmail.Location = new Point(33, 140);
             pictureBEmail.Name = "pictureBEmail";
             pictureBEmail.Size = new Size(33, 31);
             pictureBEmail.SizeMode = PictureBoxSizeMode.Zoom;
@@ -68,7 +73,7 @@
             // pictureBContra
             // 
             pictureBContra.Image = Properties.Resources.lock_500px;
-            pictureBContra.Location = new Point(33, 209);
+            pictureBContra.Location = new Point(33, 202);
             pictureBContra.Name = "pictureBContra";
             pictureBContra.Size = new Size(33, 31);
             pictureBContra.SizeMode = PictureBoxSizeMode.Zoom;
@@ -81,16 +86,16 @@
             txtBMail.BorderStyle = BorderStyle.None;
             txtBMail.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtBMail.ForeColor = SystemColors.Window;
-            txtBMail.Location = new Point(72, 155);
+            txtBMail.Location = new Point(72, 148);
             txtBMail.Name = "txtBMail";
+            txtBMail.PlaceholderText = "Email";
             txtBMail.Size = new Size(181, 15);
             txtBMail.TabIndex = 3;
-            txtBMail.Text = "Email";
             // 
             // panelEmail
             // 
             panelEmail.BackColor = Color.White;
-            panelEmail.Location = new Point(33, 177);
+            panelEmail.Location = new Point(33, 170);
             panelEmail.Name = "panelEmail";
             panelEmail.Size = new Size(220, 1);
             panelEmail.TabIndex = 4;
@@ -98,7 +103,7 @@
             // panelContrseña
             // 
             panelContrseña.BackColor = Color.White;
-            panelContrseña.Location = new Point(33, 244);
+            panelContrseña.Location = new Point(33, 237);
             panelContrseña.Name = "panelContrseña";
             panelContrseña.Size = new Size(220, 1);
             panelContrseña.TabIndex = 6;
@@ -109,19 +114,21 @@
             txtBContraseña.BorderStyle = BorderStyle.None;
             txtBContraseña.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtBContraseña.ForeColor = SystemColors.Window;
-            txtBContraseña.Location = new Point(72, 222);
+            txtBContraseña.Location = new Point(72, 215);
             txtBContraseña.Name = "txtBContraseña";
+            txtBContraseña.PlaceholderText = "Contraseña";
             txtBContraseña.Size = new Size(181, 15);
             txtBContraseña.TabIndex = 5;
-            txtBContraseña.Text = "Contraseña";
+            txtBContraseña.UseSystemPasswordChar = true;
             txtBContraseña.TextChanged += txtBContraseña_TextChanged;
             // 
             // btnIngresar
             // 
+            btnIngresar.Cursor = Cursors.Hand;
             btnIngresar.FlatStyle = FlatStyle.Flat;
             btnIngresar.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnIngresar.ForeColor = Color.Gray;
-            btnIngresar.Location = new Point(70, 290);
+            btnIngresar.Location = new Point(69, 284);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(147, 31);
             btnIngresar.TabIndex = 7;
@@ -151,12 +158,40 @@
             pictureBMinimize.TabStop = false;
             pictureBMinimize.Click += pictureBMinimize_Click;
             // 
+            // picBEye
+            // 
+            picBEye.Cursor = Cursors.Hand;
+            picBEye.Image = (Image)resources.GetObject("picBEye.Image");
+            picBEye.Location = new Point(234, 213);
+            picBEye.Name = "picBEye";
+            picBEye.Size = new Size(15, 20);
+            picBEye.SizeMode = PictureBoxSizeMode.Zoom;
+            picBEye.TabIndex = 10;
+            picBEye.TabStop = false;
+            picBEye.Visible = false;
+            picBEye.Click += picBEye_Click;
+            // 
+            // picBEyeBlind
+            // 
+            picBEyeBlind.Cursor = Cursors.Hand;
+            picBEyeBlind.Image = (Image)resources.GetObject("picBEyeBlind.Image");
+            picBEyeBlind.Location = new Point(234, 211);
+            picBEyeBlind.Name = "picBEyeBlind";
+            picBEyeBlind.Size = new Size(15, 20);
+            picBEyeBlind.SizeMode = PictureBoxSizeMode.Zoom;
+            picBEyeBlind.TabIndex = 11;
+            picBEyeBlind.TabStop = false;
+            picBEyeBlind.Visible = false;
+            picBEyeBlind.Click += picBEyeBlind_Click;
+            // 
             // FrmLogIn
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 36, 49);
             ClientSize = new Size(286, 345);
+            Controls.Add(picBEyeBlind);
+            Controls.Add(picBEye);
             Controls.Add(pictureBMinimize);
             Controls.Add(pictureBEscape);
             Controls.Add(btnIngresar);
@@ -169,6 +204,7 @@
             Controls.Add(pictureBLogo);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmLogIn";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -178,6 +214,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBContra).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBEscape).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBMinimize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBEye).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBEyeBlind).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -187,12 +225,14 @@
         private PictureBox pictureBLogo;
         private PictureBox pictureBEmail;
         private PictureBox pictureBContra;
-        private TextBox txtBMail;
         private Panel panelEmail;
         private Panel panelContrseña;
         private TextBox txtBContraseña;
         private Button btnIngresar;
         private PictureBox pictureBEscape;
         private PictureBox pictureBMinimize;
+        public TextBox txtBMail;
+        private PictureBox picBEye;
+        private PictureBox picBEyeBlind;
     }
 }

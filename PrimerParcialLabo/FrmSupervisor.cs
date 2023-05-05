@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Biblioteca;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,8 @@ namespace PrimerParcialLabo
 {
     public partial class FrmSupervisor : Form
     {
+        Usuarios usuarioActual;
+        string pathFotoUsuario;
         public FrmSupervisor()
         {
             InitializeComponent();
@@ -20,6 +24,18 @@ namespace PrimerParcialLabo
         private void FrmSupervisor_Load(object sender, EventArgs e)
         {
             SubMenuVisibility();
+            usuarioActual = Deserializadores.DeserializarUsuarioActualJson();
+            lblNombreUsuario.Text = usuarioActual.Nombre + " " + usuarioActual.Apellido;
+            lblPerfil.Text = usuarioActual.Perfil;
+            pathFotoUsuario = Deserializadores.DeserializarFotoJson(usuarioActual);
+            if (pathFotoUsuario != null)
+            {
+                picBoxUser.ImageLocation = pathFotoUsuario;
+            }
+
+            ToolTip toolTip = new ToolTip();
+            toolTip.ShowAlways = true;
+            toolTip.SetToolTip(picBoxUser, "Cambiar Foto");
         }
         private void SubMenuVisibility()
         {
@@ -47,12 +63,48 @@ namespace PrimerParcialLabo
 
         private void pictureBEscape_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Desea abandonar la aplicacion?", "AirlinesApp", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void picBMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void picBoxUser_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            string pathImagen;
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                pathImagen = ofd.FileName;
+                picBoxUser.ImageLocation = pathImagen;
+                pathFotoUsuario = pathImagen;
+            }
+        }
+
+        private void picBRestore_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            picBRestore.Visible = false;
+            picBMaximize.Visible = true;
+        }
+
+        private void picBMaximize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            picBRestore.Visible = true;
+            picBMaximize.Visible = false;
+        }
+
+        private void FrmSupervisor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Serializadores.SerializarFotoperfilJson(usuarioActual, pathFotoUsuario);
         }
     }
 }

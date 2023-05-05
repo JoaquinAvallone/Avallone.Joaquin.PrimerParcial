@@ -1,4 +1,6 @@
 using Biblioteca;
+using Microsoft.VisualBasic.ApplicationServices;
+
 namespace PrimerParcialLabo
 {
     public partial class FrmLogIn : Form
@@ -13,59 +15,82 @@ namespace PrimerParcialLabo
 
         public void FrmLogIn_Load(object sender, EventArgs e)
         {
-
-
         }
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             FrmVendedor frmVendedor = new FrmVendedor();
             FrmSupervisor frmSupervisor = new FrmSupervisor();
             FrmAdmin frmAdmin = new FrmAdmin();
+            bool flagIngreso = false;
 
             foreach (Usuarios item in list)
             {
-                if (item.clave == txtBContraseña.Text && item.correo == txtBMail.Text)
+                if (item.Clave == txtBContraseña.Text && item.Correo == txtBMail.Text)
                 {
-                    if(item.perfil == "vendedor")
+                    Serializadores.SerializarJson("UsuarioActual.json", item);
+                    if (item.Perfil == "vendedor")
                     {
+                        this.Hide();
                         frmVendedor.ShowDialog();
-                        Application.Exit();
+                        this.Close();
+                        flagIngreso = true;
                     }
-                    else if(item.perfil == "supervisor")
+                    else if (item.Perfil == "supervisor")
                     {
+                        this.Hide();
                         frmSupervisor.ShowDialog();
-                        Application.Exit();
+                        this.Close();
+                        flagIngreso = true;
                     }
-                    else if (item.perfil =="administrador")
+                    else if (item.Perfil == "administrador")
                     {
+                        this.Hide();
                         frmAdmin.ShowDialog();
-                        Application.Exit();
+                        this.Close();
+                        flagIngreso = true;
                     }
                 }
             }
-        }
-
-        private void txtBContraseña_TextChanged(object sender, EventArgs e)
-        {
-            if (txtBContraseña.Text == "Contraseña")
+            if (!flagIngreso)
             {
-                txtBContraseña.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtBContraseña.UseSystemPasswordChar = true;
+                MessageBox.Show("Email o contraseña incorrectos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void pictureBEscape_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Desea abandonar la aplicacion?", "AirlinesLogIn", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            };
         }
 
         private void pictureBMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txtBContraseña_TextChanged(object sender, EventArgs e)
+        {
+            if (Text != null)
+            {
+                picBEye.Visible = true;
+            }
+        }
+
+        private void picBEye_Click(object sender, EventArgs e)
+        {
+            txtBContraseña.UseSystemPasswordChar = false;
+            picBEye.Visible = false;
+            picBEyeBlind.Visible = true;
+        }
+
+        private void picBEyeBlind_Click(object sender, EventArgs e)
+        {
+            txtBContraseña.UseSystemPasswordChar = true;
+            picBEye.Visible = true;
+            picBEyeBlind.Visible = false;
         }
     }
 }

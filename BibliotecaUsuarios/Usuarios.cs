@@ -2,22 +2,32 @@
 
 namespace Biblioteca
 {
-    public class Usuarios
+    public class Usuarios : Persona
     {
-        public string apellido { get; set; }
-        public string nombre { get; set; }
-        public int legajo { get; set; }
-        public string correo { get; set; }
-        public string clave { get; set; }
-        public string perfil { get; set; }
+        private int legajo;
+        private string correo;
+        private string clave;
+        private string perfil;
+
+        public int Legajo { get => legajo; set => legajo = value; }
+        public string Correo { get => correo; set => correo = value; }
+        public string Clave { get => clave; set => clave = value; }
+        public string Perfil { get => perfil; set => perfil = value; }
+
+        public Usuarios( string apellido, string nombre, int legajo, string correo, string clave, string perfil) : base(apellido, nombre)
+        {
+            this.legajo = legajo;
+            this.correo = correo;
+            this.clave = clave;
+            this.perfil = perfil;
+        }
+
 
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine($"Apellido: {apellido}");
-            sb.AppendLine($"Nombre: {nombre}");
+            sb.AppendLine($"{base.ToString()}");
             sb.AppendLine($"Legajo: {legajo}");
             sb.AppendLine($"Correo: {correo}");
             sb.AppendLine($"Clave: {clave}");

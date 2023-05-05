@@ -1,42 +1,42 @@
 [
   {
-    "apellido": "Gorgen",
-    "clave": "123abc45",
-    "correo": "cgorgen@vendedor.com",
-    "legajo": 1,
-    "nombre": "Corey",
-    "perfil": "vendedor"
+    "Apellido": "Gorgen",
+    "Clave": "123abc45",
+    "Correo": "cgorgen@vendedor.com",
+    "Legajo": 1,
+    "Nombre": "Corey",
+    "Perfil": "vendedor"
   },
   {
-    "apellido": "Harroll",
-    "nombre": "Ingrid",
-    "legajo": 2,
-    "correo": "iharroll@vendedor.com",
-    "clave": "qweasdzx",
-    "perfil": "vendedor"
+    "Apellido": "Harroll",
+    "Nombre": "Ingrid",
+    "Legajo": 2,
+    "Correo": "iharroll@vendedor.com",
+    "Clave": "qweasdzx",
+    "Perfil": "vendedor"
   },
   {
-    "apellido": "Harris",
-    "nombre": "Steve",
-    "legajo": 3,
-    "correo": "sharris@maiden.com.uk",
-    "clave": "eddie666",
-    "perfil": "vendedor"
+    "Apellido": "Harris",
+    "Nombre": "Steve",
+    "Legajo": 3,
+    "Correo": "sharris@maiden.com.uk",
+    "Clave": "eddie666",
+    "Perfil": "vendedor"
   },
   {
-    "apellido": "Robinson",
-    "nombre": "Tilda",
-    "legajo": 4,
-    "correo": "trobinson@super.com",
-    "clave": "12345678",
-    "perfil": "supervisor"
+    "Apellido": "Robinson",
+    "Nombre": "Tilda",
+    "Legajo": 4,
+    "Correo": "trobinson@super.com",
+    "Clave": "12345678",
+    "Perfil": "supervisor"
   },
   {
-    "apellido": "Jordan",
-    "nombre": "Michael",
-    "legajo": 5,
-    "correo": "admin@admin.com",
-    "clave": "12345678",
-    "perfil": "administrador"
+    "Apellido": "Jordan",
+    "Nombre": "Michael",
+    "Legajo": 5,
+    "Correo": "admin@admin.com",
+    "Clave": "12345678",
+    "Perfil": "administrador"
   }
 ]

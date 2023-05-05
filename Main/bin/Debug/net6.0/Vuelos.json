@@ -1,0 +1,1082 @@
+[
+  {
+    "CiudadPartida": 10,
+    "CiudadDestino": 0,
+    "FechaVuelo": "2023-04-22T06:10:00",
+    "Avion": {
+      "Matricula": "DB1EA1AC",
+      "CantidadAsientos": 150,
+      "CantidadBa\u00F1os": 4,
+      "Internet": true,
+      "Comida": true,
+      "CapacidadBodega": 700
+    },
+    "CantidadAsientosPrem": 30,
+    "CantidadAsientosTuris": 120,
+    "PrecioTurista": 150,
+    "PrecioPrem": 202.5,
+    "DuracionVuelo": 3,
+    "Pasajeros": [
+      {
+        "Dni": 40796568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 30,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Joaquin"
+      },
+      {
+        "Dni": 44157922,
+        "Edad": 30,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 40,
+        "Clase": "Premium",
+        "Apellido": "Fernando",
+        "Nombre": "Gago"
+      },
+      {
+        "Dni": 40456568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 22,
+        "Clase": "Turista",
+        "Apellido": "Martinez",
+        "Nombre": "Dibu"
+      },
+      {
+        "Dni": 44157652,
+        "Edad": 22,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 27,
+        "Clase": "Premium",
+        "Apellido": "Messi",
+        "Nombre": "Leonel"
+      },
+      {
+        "Dni": 41796568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 21,
+        "Clase": "Turista",
+        "Apellido": "Jenner",
+        "Nombre": "Kendall"
+      },
+      {
+        "Dni": 44327922,
+        "Edad": 24,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 38,
+        "Clase": "Premium",
+        "Apellido": "Holland",
+        "Nombre": "Tom"
+      },
+      {
+        "Dni": 43196568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Lopez",
+        "Nombre": "Zendaya"
+      },
+      {
+        "Dni": 40787922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 23,
+        "Clase": "Premium",
+        "Apellido": "Hadid",
+        "Nombre": "Bella"
+      },
+      {
+        "Dni": 42795468,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 20,
+        "Clase": "Turista",
+        "Apellido": "Hadid",
+        "Nombre": "Gigi"
+      },
+      {
+        "Dni": 38108922,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Jackie",
+        "Nombre": "Chan"
+      },
+      {
+        "Dni": 37719568,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 16,
+        "Clase": "Turista",
+        "Apellido": "Potato",
+        "Nombre": "Hernan"
+      },
+      {
+        "Dni": 45157002,
+        "Edad": 17,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 20,
+        "Clase": "Premium",
+        "Apellido": "Forti",
+        "Nombre": "Agustin"
+      },
+      {
+        "Dni": 38754768,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 17,
+        "Clase": "Turista",
+        "Apellido": "Smith",
+        "Nombre": "Ignacio"
+      },
+      {
+        "Dni": 42970922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 39,
+        "Clase": "Premium",
+        "Apellido": "Marini",
+        "Nombre": "Nicolas"
+      },
+      {
+        "Dni": 40796888,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Garcia",
+        "Nombre": "Bautista"
+      },
+      {
+        "Dni": 46149922,
+        "Edad": 18,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Paloma"
+      }
+    ]
+  },
+  {
+    "CiudadPartida": 4,
+    "CiudadDestino": 0,
+    "FechaVuelo": "2023-06-12T14:40:00",
+    "Avion": {
+      "Matricula": "FD0DH5BD",
+      "CantidadAsientos": 250,
+      "CantidadBa\u00F1os": 6,
+      "Internet": false,
+      "Comida": true,
+      "CapacidadBodega": 1100
+    },
+    "CantidadAsientosPrem": 50,
+    "CantidadAsientosTuris": 200,
+    "PrecioTurista": 100,
+    "PrecioPrem": 135,
+    "DuracionVuelo": 2,
+    "Pasajeros": [
+      {
+        "Dni": 40796568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 30,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Joaquin"
+      },
+      {
+        "Dni": 44157922,
+        "Edad": 30,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 40,
+        "Clase": "Premium",
+        "Apellido": "Fernando",
+        "Nombre": "Gago"
+      },
+      {
+        "Dni": 40456568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 22,
+        "Clase": "Turista",
+        "Apellido": "Martinez",
+        "Nombre": "Dibu"
+      },
+      {
+        "Dni": 44157652,
+        "Edad": 22,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 27,
+        "Clase": "Premium",
+        "Apellido": "Messi",
+        "Nombre": "Leonel"
+      },
+      {
+        "Dni": 41796568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 21,
+        "Clase": "Turista",
+        "Apellido": "Jenner",
+        "Nombre": "Kendall"
+      },
+      {
+        "Dni": 44327922,
+        "Edad": 24,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 38,
+        "Clase": "Premium",
+        "Apellido": "Holland",
+        "Nombre": "Tom"
+      },
+      {
+        "Dni": 43196568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Lopez",
+        "Nombre": "Zendaya"
+      },
+      {
+        "Dni": 40787922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 23,
+        "Clase": "Premium",
+        "Apellido": "Hadid",
+        "Nombre": "Bella"
+      },
+      {
+        "Dni": 42795468,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 20,
+        "Clase": "Turista",
+        "Apellido": "Hadid",
+        "Nombre": "Gigi"
+      },
+      {
+        "Dni": 38108922,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Jackie",
+        "Nombre": "Chan"
+      },
+      {
+        "Dni": 37719568,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 16,
+        "Clase": "Turista",
+        "Apellido": "Potato",
+        "Nombre": "Hernan"
+      },
+      {
+        "Dni": 45157002,
+        "Edad": 17,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 20,
+        "Clase": "Premium",
+        "Apellido": "Forti",
+        "Nombre": "Agustin"
+      },
+      {
+        "Dni": 38754768,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 17,
+        "Clase": "Turista",
+        "Apellido": "Smith",
+        "Nombre": "Ignacio"
+      },
+      {
+        "Dni": 42970922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 39,
+        "Clase": "Premium",
+        "Apellido": "Marini",
+        "Nombre": "Nicolas"
+      },
+      {
+        "Dni": 40796888,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Garcia",
+        "Nombre": "Bautista"
+      },
+      {
+        "Dni": 46149922,
+        "Edad": 18,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Paloma"
+      }
+    ]
+  },
+  {
+    "CiudadPartida": 0,
+    "CiudadDestino": 17,
+    "FechaVuelo": "2023-05-24T16:20:00",
+    "Avion": {
+      "Matricula": "AF5EG6EF",
+      "CantidadAsientos": 170,
+      "CantidadBa\u00F1os": 5,
+      "Internet": true,
+      "Comida": true,
+      "CapacidadBodega": 900
+    },
+    "CantidadAsientosPrem": 34,
+    "CantidadAsientosTuris": 136,
+    "PrecioTurista": 1300,
+    "PrecioPrem": 1755,
+    "DuracionVuelo": 13,
+    "Pasajeros": [
+      {
+        "Dni": 40796568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 30,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Joaquin"
+      },
+      {
+        "Dni": 44157922,
+        "Edad": 30,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 40,
+        "Clase": "Premium",
+        "Apellido": "Fernando",
+        "Nombre": "Gago"
+      },
+      {
+        "Dni": 40456568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 22,
+        "Clase": "Turista",
+        "Apellido": "Martinez",
+        "Nombre": "Dibu"
+      },
+      {
+        "Dni": 44157652,
+        "Edad": 22,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 27,
+        "Clase": "Premium",
+        "Apellido": "Messi",
+        "Nombre": "Leonel"
+      },
+      {
+        "Dni": 41796568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 21,
+        "Clase": "Turista",
+        "Apellido": "Jenner",
+        "Nombre": "Kendall"
+      },
+      {
+        "Dni": 44327922,
+        "Edad": 24,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 38,
+        "Clase": "Premium",
+        "Apellido": "Holland",
+        "Nombre": "Tom"
+      },
+      {
+        "Dni": 43196568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Lopez",
+        "Nombre": "Zendaya"
+      },
+      {
+        "Dni": 40787922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 23,
+        "Clase": "Premium",
+        "Apellido": "Hadid",
+        "Nombre": "Bella"
+      },
+      {
+        "Dni": 42795468,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 20,
+        "Clase": "Turista",
+        "Apellido": "Hadid",
+        "Nombre": "Gigi"
+      },
+      {
+        "Dni": 38108922,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Jackie",
+        "Nombre": "Chan"
+      },
+      {
+        "Dni": 37719568,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 16,
+        "Clase": "Turista",
+        "Apellido": "Potato",
+        "Nombre": "Hernan"
+      },
+      {
+        "Dni": 45157002,
+        "Edad": 17,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 20,
+        "Clase": "Premium",
+        "Apellido": "Forti",
+        "Nombre": "Agustin"
+      },
+      {
+        "Dni": 38754768,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 17,
+        "Clase": "Turista",
+        "Apellido": "Smith",
+        "Nombre": "Ignacio"
+      },
+      {
+        "Dni": 42970922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 39,
+        "Clase": "Premium",
+        "Apellido": "Marini",
+        "Nombre": "Nicolas"
+      },
+      {
+        "Dni": 40796888,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Garcia",
+        "Nombre": "Bautista"
+      },
+      {
+        "Dni": 46149922,
+        "Edad": 18,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Paloma"
+      }
+    ]
+  },
+  {
+    "CiudadPartida": 0,
+    "CiudadDestino": 19,
+    "FechaVuelo": "2023-09-10T20:30:00",
+    "Avion": {
+      "Matricula": "DB0EF1HA",
+      "CantidadAsientos": 120,
+      "CantidadBa\u00F1os": 3,
+      "Internet": false,
+      "Comida": false,
+      "CapacidadBodega": 600
+    },
+    "CantidadAsientosPrem": 24,
+    "CantidadAsientosTuris": 96,
+    "PrecioTurista": 1000,
+    "PrecioPrem": 1350,
+    "DuracionVuelo": 10,
+    "Pasajeros": [
+      {
+        "Dni": 40796568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 30,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Joaquin"
+      },
+      {
+        "Dni": 44157922,
+        "Edad": 30,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 40,
+        "Clase": "Premium",
+        "Apellido": "Fernando",
+        "Nombre": "Gago"
+      },
+      {
+        "Dni": 40456568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 22,
+        "Clase": "Turista",
+        "Apellido": "Martinez",
+        "Nombre": "Dibu"
+      },
+      {
+        "Dni": 44157652,
+        "Edad": 22,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 27,
+        "Clase": "Premium",
+        "Apellido": "Messi",
+        "Nombre": "Leonel"
+      },
+      {
+        "Dni": 41796568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 21,
+        "Clase": "Turista",
+        "Apellido": "Jenner",
+        "Nombre": "Kendall"
+      },
+      {
+        "Dni": 44327922,
+        "Edad": 24,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 38,
+        "Clase": "Premium",
+        "Apellido": "Holland",
+        "Nombre": "Tom"
+      },
+      {
+        "Dni": 43196568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Lopez",
+        "Nombre": "Zendaya"
+      },
+      {
+        "Dni": 40787922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 23,
+        "Clase": "Premium",
+        "Apellido": "Hadid",
+        "Nombre": "Bella"
+      },
+      {
+        "Dni": 42795468,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 20,
+        "Clase": "Turista",
+        "Apellido": "Hadid",
+        "Nombre": "Gigi"
+      },
+      {
+        "Dni": 38108922,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Jackie",
+        "Nombre": "Chan"
+      },
+      {
+        "Dni": 37719568,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 16,
+        "Clase": "Turista",
+        "Apellido": "Potato",
+        "Nombre": "Hernan"
+      },
+      {
+        "Dni": 45157002,
+        "Edad": 17,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 20,
+        "Clase": "Premium",
+        "Apellido": "Forti",
+        "Nombre": "Agustin"
+      },
+      {
+        "Dni": 38754768,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 17,
+        "Clase": "Turista",
+        "Apellido": "Smith",
+        "Nombre": "Ignacio"
+      },
+      {
+        "Dni": 42970922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 39,
+        "Clase": "Premium",
+        "Apellido": "Marini",
+        "Nombre": "Nicolas"
+      },
+      {
+        "Dni": 40796888,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Garcia",
+        "Nombre": "Bautista"
+      },
+      {
+        "Dni": 46149922,
+        "Edad": 18,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Paloma"
+      }
+    ]
+  },
+  {
+    "CiudadPartida": 13,
+    "CiudadDestino": 2,
+    "FechaVuelo": "2023-06-15T10:00:00",
+    "Avion": {
+      "Matricula": "HG2BH1EA",
+      "CantidadAsientos": 200,
+      "CantidadBa\u00F1os": 5,
+      "Internet": true,
+      "Comida": true,
+      "CapacidadBodega": 1000
+    },
+    "CantidadAsientosPrem": 40,
+    "CantidadAsientosTuris": 160,
+    "PrecioTurista": 150,
+    "PrecioPrem": 202.5,
+    "DuracionVuelo": 3,
+    "Pasajeros": [
+      {
+        "Dni": 40796568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 30,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Joaquin"
+      },
+      {
+        "Dni": 44157922,
+        "Edad": 30,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 40,
+        "Clase": "Premium",
+        "Apellido": "Fernando",
+        "Nombre": "Gago"
+      },
+      {
+        "Dni": 40456568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 22,
+        "Clase": "Turista",
+        "Apellido": "Martinez",
+        "Nombre": "Dibu"
+      },
+      {
+        "Dni": 44157652,
+        "Edad": 22,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 27,
+        "Clase": "Premium",
+        "Apellido": "Messi",
+        "Nombre": "Leonel"
+      },
+      {
+        "Dni": 41796568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 21,
+        "Clase": "Turista",
+        "Apellido": "Jenner",
+        "Nombre": "Kendall"
+      },
+      {
+        "Dni": 44327922,
+        "Edad": 24,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 38,
+        "Clase": "Premium",
+        "Apellido": "Holland",
+        "Nombre": "Tom"
+      },
+      {
+        "Dni": 43196568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Lopez",
+        "Nombre": "Zendaya"
+      },
+      {
+        "Dni": 40787922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 23,
+        "Clase": "Premium",
+        "Apellido": "Hadid",
+        "Nombre": "Bella"
+      },
+      {
+        "Dni": 42795468,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 20,
+        "Clase": "Turista",
+        "Apellido": "Hadid",
+        "Nombre": "Gigi"
+      },
+      {
+        "Dni": 38108922,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Jackie",
+        "Nombre": "Chan"
+      },
+      {
+        "Dni": 37719568,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 16,
+        "Clase": "Turista",
+        "Apellido": "Potato",
+        "Nombre": "Hernan"
+      },
+      {
+        "Dni": 45157002,
+        "Edad": 17,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 20,
+        "Clase": "Premium",
+        "Apellido": "Forti",
+        "Nombre": "Agustin"
+      },
+      {
+        "Dni": 38754768,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 17,
+        "Clase": "Turista",
+        "Apellido": "Smith",
+        "Nombre": "Ignacio"
+      },
+      {
+        "Dni": 42970922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 39,
+        "Clase": "Premium",
+        "Apellido": "Marini",
+        "Nombre": "Nicolas"
+      },
+      {
+        "Dni": 40796888,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Garcia",
+        "Nombre": "Bautista"
+      },
+      {
+        "Dni": 46149922,
+        "Edad": 18,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Paloma"
+      }
+    ]
+  },
+  {
+    "CiudadPartida": 0,
+    "CiudadDestino": 15,
+    "FechaVuelo": "2023-05-16T08:00:00",
+    "Avion": {
+      "Matricula": "GF0AG7AB",
+      "CantidadAsientos": 150,
+      "CantidadBa\u00F1os": 4,
+      "Internet": false,
+      "Comida": false,
+      "CapacidadBodega": 700
+    },
+    "CantidadAsientosPrem": 30,
+    "CantidadAsientosTuris": 120,
+    "PrecioTurista": 150,
+    "PrecioPrem": 202.5,
+    "DuracionVuelo": 3,
+    "Pasajeros": [
+      {
+        "Dni": 40796568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 30,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Joaquin"
+      },
+      {
+        "Dni": 44157922,
+        "Edad": 30,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 40,
+        "Clase": "Premium",
+        "Apellido": "Fernando",
+        "Nombre": "Gago"
+      },
+      {
+        "Dni": 40456568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 22,
+        "Clase": "Turista",
+        "Apellido": "Martinez",
+        "Nombre": "Dibu"
+      },
+      {
+        "Dni": 44157652,
+        "Edad": 22,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 27,
+        "Clase": "Premium",
+        "Apellido": "Messi",
+        "Nombre": "Leonel"
+      },
+      {
+        "Dni": 41796568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 21,
+        "Clase": "Turista",
+        "Apellido": "Jenner",
+        "Nombre": "Kendall"
+      },
+      {
+        "Dni": 44327922,
+        "Edad": 24,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 38,
+        "Clase": "Premium",
+        "Apellido": "Holland",
+        "Nombre": "Tom"
+      },
+      {
+        "Dni": 43196568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Lopez",
+        "Nombre": "Zendaya"
+      },
+      {
+        "Dni": 40787922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 23,
+        "Clase": "Premium",
+        "Apellido": "Hadid",
+        "Nombre": "Bella"
+      },
+      {
+        "Dni": 42795468,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 20,
+        "Clase": "Turista",
+        "Apellido": "Hadid",
+        "Nombre": "Gigi"
+      },
+      {
+        "Dni": 38108922,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Jackie",
+        "Nombre": "Chan"
+      },
+      {
+        "Dni": 37719568,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 16,
+        "Clase": "Turista",
+        "Apellido": "Potato",
+        "Nombre": "Hernan"
+      },
+      {
+        "Dni": 45157002,
+        "Edad": 17,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 20,
+        "Clase": "Premium",
+        "Apellido": "Forti",
+        "Nombre": "Agustin"
+      },
+      {
+        "Dni": 38754768,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 17,
+        "Clase": "Turista",
+        "Apellido": "Smith",
+        "Nombre": "Ignacio"
+      },
+      {
+        "Dni": 42970922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 39,
+        "Clase": "Premium",
+        "Apellido": "Marini",
+        "Nombre": "Nicolas"
+      },
+      {
+        "Dni": 40796888,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "Apellido": "Garcia",
+        "Nombre": "Bautista"
+      },
+      {
+        "Dni": 46149922,
+        "Edad": 18,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Paloma"
+      }
+    ]
+  }
+]
