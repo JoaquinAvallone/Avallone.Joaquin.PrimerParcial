@@ -7,7 +7,6 @@ C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\b
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\bin\Debug\net6.0-windows\Biblioteca.pdb
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.csproj.AssemblyReference.cache
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmAdmin.resources
-C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmInfoVuelo.resources
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmLogIn.resources
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmSupervisor.resources
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmVendedor.resources
@@ -25,3 +24,5 @@ C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\o
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.genruntimeconfig.cache
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\ref\PrimerParcialLabo.dll
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmVentaViaje.resources
+C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmCrudPasajero.resources
+C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmAgregarPasajero.resources

@@ -19,6 +19,8 @@ namespace PrimerParcialLabo
             InitializeComponent();
             vuelos = new List<Vuelos>();
             vuelos = Serializadores.HardCodeoVuelos();
+            btnVolver.Visible = false;
+            btnSeleccionar.Visible = false;
             RellenarGrid();
         }
 
@@ -28,6 +30,7 @@ namespace PrimerParcialLabo
         }
         private void RellenarGrid()
         {
+            dataGVVuelos.Rows.Clear();
             foreach (Vuelos item in vuelos)
             {
                 int rowIndex = dataGVVuelos.Rows.Add();
@@ -47,18 +50,19 @@ namespace PrimerParcialLabo
         {
             if (checkBInternet.Checked)
             {
-                dataGVVuelos.Rows.Clear();
+                ;
                 RellenarGridInternet();
             }
             else
             {
-                dataGVVuelos.Rows.Clear();
                 RellenarGrid();
             }
         }
 
         private void RellenarGridInternet()
         {
+            dataGVVuelos.Rows.Clear();
+
             foreach (Vuelos item in vuelos)
             {
                 if (item.Avion.Internet)
@@ -80,6 +84,8 @@ namespace PrimerParcialLabo
 
         private void RellenarGridComida()
         {
+            dataGVVuelos.Rows.Clear();
+
             foreach (Vuelos item in vuelos)
             {
                 if (item.Avion.Comida)
@@ -103,12 +109,10 @@ namespace PrimerParcialLabo
         {
             if (checkBComida.Checked)
             {
-                dataGVVuelos.Rows.Clear();
                 RellenarGridComida();
             }
             else
             {
-                dataGVVuelos.Rows.Clear();
                 RellenarGrid();
             }
         }
@@ -117,9 +121,45 @@ namespace PrimerParcialLabo
         {
             int indice;
             indice = e.RowIndex;
+
+            if (indice >= 0 && indice < vuelos.Count)
+            {
+                Vuelos vueloSeleccionado = vuelos[indice];
+                dataGVVuelos.Rows.Clear();
+                btnVolver.Visible = true;
+                btnSeleccionar.Visible = true;
+                checkBComida.Visible = false;
+                checkBInternet.Visible = false;
+                dataGVVuelos.Size = new Size(709, 55);
+
+                int rowIndex = dataGVVuelos.Rows.Add();
+                DataGridViewRow row = dataGVVuelos.Rows[rowIndex];
+                row.Cells[0].Value = vueloSeleccionado.FechaVuelo;
+                row.Cells[1].Value = vueloSeleccionado.CiudadPartida;
+                row.Cells[2].Value = vueloSeleccionado.CiudadDestino;
+                row.Cells[3].Value = "$" + vueloSeleccionado.PrecioTurista;
+                row.Cells[4].Value = "$" + vueloSeleccionado.PrecioPrem;
+                row.Cells[5].Value = vueloSeleccionado.Avion.Matricula;
+                row.Cells[6].Value = vueloSeleccionado.Avion.BoolAString(vueloSeleccionado.Avion.Internet);
+                row.Cells[7].Value = vueloSeleccionado.Avion.BoolAString(vueloSeleccionado.Avion.Comida);
+            }
         }
 
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            RellenarGrid();
+            btnVolver.Visible = false;
+            btnSeleccionar.Visible = false;
+            checkBComida.Visible = true;
+            checkBInternet.Visible = true;
+            dataGVVuelos.Size = new Size(709, 350);
+        }
 
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
 

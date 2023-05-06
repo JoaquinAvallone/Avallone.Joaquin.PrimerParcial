@@ -122,6 +122,7 @@
             btnModPasa.Text = "Modificar Pasajeros";
             btnModPasa.TextAlign = ContentAlignment.MiddleLeft;
             btnModPasa.UseVisualStyleBackColor = true;
+            btnModPasa.Click += btnModPasa_Click;
             // 
             // btnModificaciones
             // 

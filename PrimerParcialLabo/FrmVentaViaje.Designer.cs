@@ -42,6 +42,8 @@
             ColumComida = new DataGridViewTextBoxColumn();
             checkBInternet = new CheckBox();
             checkBComida = new CheckBox();
+            btnVolver = new Button();
+            btnSeleccionar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGVVuelos).BeginInit();
             SuspendLayout();
             // 
@@ -59,7 +61,7 @@
             dataGVVuelos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle1.Font = new Font("Arial", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(35, 32, 39);
             dataGridViewCellStyle1.SelectionForeColor = Color.WhiteSmoke;
@@ -67,6 +69,7 @@
             dataGVVuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGVVuelos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGVVuelos.Columns.AddRange(new DataGridViewColumn[] { ColumFecha, ColumOrigen, ColumDestino, ColumPrecio, ColumPrecioP, ColumAvion, ColumWifi, ColumComida });
+            dataGVVuelos.Cursor = Cursors.Hand;
             dataGVVuelos.EnableHeadersVisualStyles = false;
             dataGVVuelos.GridColor = Color.FromArgb(35, 32, 39);
             dataGVVuelos.Location = new Point(3, 1);
@@ -176,12 +179,50 @@
             checkBComida.UseVisualStyleBackColor = true;
             checkBComida.CheckedChanged += checkBox1_CheckedChanged;
             // 
+            // btnVolver
+            // 
+            btnVolver.Anchor = AnchorStyles.Bottom;
+            btnVolver.Cursor = Cursors.Hand;
+            btnVolver.FlatAppearance.BorderSize = 0;
+            btnVolver.FlatStyle = FlatStyle.Flat;
+            btnVolver.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnVolver.ForeColor = Color.WhiteSmoke;
+            btnVolver.Location = new Point(360, 348);
+            btnVolver.MaximumSize = new Size(116, 25);
+            btnVolver.MinimumSize = new Size(116, 25);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(116, 25);
+            btnVolver.TabIndex = 4;
+            btnVolver.Text = "Volver";
+            btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnVolver_Click;
+            // 
+            // btnSeleccionar
+            // 
+            btnSeleccionar.Anchor = AnchorStyles.Bottom;
+            btnSeleccionar.Cursor = Cursors.Hand;
+            btnSeleccionar.FlatAppearance.BorderSize = 0;
+            btnSeleccionar.FlatStyle = FlatStyle.Flat;
+            btnSeleccionar.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSeleccionar.ForeColor = Color.WhiteSmoke;
+            btnSeleccionar.Location = new Point(238, 348);
+            btnSeleccionar.MaximumSize = new Size(116, 25);
+            btnSeleccionar.MinimumSize = new Size(116, 25);
+            btnSeleccionar.Name = "btnSeleccionar";
+            btnSeleccionar.Size = new Size(116, 25);
+            btnSeleccionar.TabIndex = 5;
+            btnSeleccionar.Text = "Seleccionar";
+            btnSeleccionar.UseVisualStyleBackColor = true;
+            btnSeleccionar.Click += btnSeleccionar_Click;
+            // 
             // FrmVentaViaje
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(35, 32, 39);
             ClientSize = new Size(711, 379);
+            Controls.Add(btnSeleccionar);
+            Controls.Add(btnVolver);
             Controls.Add(checkBComida);
             Controls.Add(checkBInternet);
             Controls.Add(dataGVVuelos);
@@ -207,5 +248,7 @@
         private DataGridViewTextBoxColumn ColumAvion;
         private DataGridViewTextBoxColumn ColumWifi;
         private DataGridViewTextBoxColumn ColumComida;
+        private Button btnVolver;
+        private Button btnSeleccionar;
     }
 }

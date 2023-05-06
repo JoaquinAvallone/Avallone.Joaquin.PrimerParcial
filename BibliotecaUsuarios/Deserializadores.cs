@@ -42,6 +42,22 @@ namespace Biblioteca
         }
 
 
+        public static List<Vuelos> DeserializarPasajerosJson()
+        {
+            if (!File.Exists("Pasajeros.json"))
+            {
+                return null;
+            }
+            using (StreamReader sr = new StreamReader("Pasajeros.json"))
+            {
+                string stringJson = sr.ReadToEnd();
+
+                List<Vuelos>? objeto = (List<Vuelos>?)JsonSerializer.Deserialize<List<Vuelos>>(stringJson);
+
+                return objeto;
+            }
+        }
+
         public static Usuarios DeserializarUsuarioActualJson()
         {
             if (!File.Exists("UsuarioActual.json"))

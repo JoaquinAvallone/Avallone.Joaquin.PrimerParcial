@@ -82,7 +82,7 @@
             // 
             // txtBMail
             // 
-            txtBMail.BackColor = Color.FromArgb(34, 36, 49);
+            txtBMail.BackColor = Color.FromArgb(35, 32, 39);
             txtBMail.BorderStyle = BorderStyle.None;
             txtBMail.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtBMail.ForeColor = SystemColors.Window;
@@ -110,7 +110,7 @@
             // 
             // txtBContraseña
             // 
-            txtBContraseña.BackColor = Color.FromArgb(34, 36, 49);
+            txtBContraseña.BackColor = Color.FromArgb(35, 32, 39);
             txtBContraseña.BorderStyle = BorderStyle.None;
             txtBContraseña.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtBContraseña.ForeColor = SystemColors.Window;
@@ -188,7 +188,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(34, 36, 49);
+            BackColor = Color.FromArgb(35, 32, 39);
             ClientSize = new Size(286, 345);
             Controls.Add(picBEyeBlind);
             Controls.Add(picBEye);

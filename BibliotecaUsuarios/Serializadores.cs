@@ -53,7 +53,7 @@ namespace Biblioteca
             int indiceAux = indice;
             for ( int i = indiceAux  ; i < cantidadHarcodeo; i++)
             {
-                if(indice >= 0 && cantidadHarcodeo < lista.Count())
+                if(indice >= 0 && cantidadHarcodeo <= lista.Count())
                 {
                     pasajeros.Add(lista[i]);
                 }

@@ -129,6 +129,11 @@ namespace PrimerParcialLabo
             AbrirFormulario<FrmVentaViaje>();
         }
 
+        private void btnModPasa_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmCrudPasajero>();
+        }
+
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form? formulario;
