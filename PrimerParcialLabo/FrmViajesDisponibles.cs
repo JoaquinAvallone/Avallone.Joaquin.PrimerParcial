@@ -15,23 +15,25 @@ namespace PrimerParcialLabo
 {
     public partial class FrmViajesDisponibles : Form
     {
-        List<Vuelos> vuelos;
+        List<Vuelos>? vuelos;
         public FrmViajesDisponibles()
         {
             InitializeComponent();
-            vuelos = new List<Vuelos>();
-            vuelos = Serializadores.HardCodeoVuelos();
-            RellenarGrid();
+
         }
 
         private void FrmViajesDisponibles_Load(object sender, EventArgs e)
         {
+            vuelos = new List<Vuelos>();
+            RellenarGrid();
             dataGVInfoPasajeros.Visible = false;
             btnVolver.Visible = false;
         }
 
         private void RellenarGrid()
         {
+            dataGVVuelos.Rows.Clear();
+            vuelos = Deserializadores.DeserializarVuelosJson();
             foreach (Vuelos item in vuelos)
             {
                 int rowIndex = dataGVVuelos.Rows.Add();

@@ -9,7 +9,7 @@ namespace Biblioteca
 {
     public class Deserializadores
     {
-        public static List<Usuarios> DeserializarUsuariosJson()
+        public static List<Usuarios>? DeserializarUsuariosJson()
         {
             if (!File.Exists("MOCK_DATA.json"))
             {
@@ -25,7 +25,7 @@ namespace Biblioteca
             }
         }
 
-        public static List<Vuelos> DeserializarVuelosJson()
+        public static List<Vuelos>? DeserializarVuelosJson()
         {
             if (!File.Exists("Vuelos.json"))
             {
@@ -40,9 +40,57 @@ namespace Biblioteca
                 return objeto;
             }
         }
+        public static Vuelos? DeserializarUnVueloJson()
+        {
+            if (!File.Exists("VueloSeleccionado.json"))
+            {
+                return null;
+            }
+            using (StreamReader sr = new StreamReader("VueloSeleccionado.json"))
+            {
+                string stringJson = sr.ReadToEnd();
+
+                Vuelos? objeto = (Vuelos?)JsonSerializer.Deserialize<Vuelos>(stringJson);
+
+                return objeto;
+            }
+        }
+
+        public static List<Aeronaves>? DeserializarAeronavesJson()
+        {
+            if (!File.Exists("Aeronaves.json"))
+            {
+                return null;
+            }
+            using (StreamReader sr = new StreamReader("Aeronaves.json"))
+            {
+                string stringJson = sr.ReadToEnd();
+
+                List<Aeronaves>? objeto = (List<Aeronaves>?)JsonSerializer.Deserialize<List<Aeronaves>>(stringJson);
+
+                return objeto;
+            }
+        }
+
+        public static Aeronaves? DeserializarUnaAeronavesJson()
+        {
+            if (!File.Exists("AvionSeleccionado.json"))
+            {
+                return null;
+            }
+            using (StreamReader sr = new StreamReader("AvionSeleccionado.json"))
+            {
+                string stringJson = sr.ReadToEnd();
+
+                Aeronaves? objeto = (Aeronaves?)JsonSerializer.Deserialize<Aeronaves>(stringJson);
+
+                return objeto;
+            }
+        }
 
 
-        public static List<Vuelos> DeserializarPasajerosJson()
+
+        public static List<Pasajeros>? DeserializarPasajerosJson()
         {
             if (!File.Exists("Pasajeros.json"))
             {
@@ -52,13 +100,29 @@ namespace Biblioteca
             {
                 string stringJson = sr.ReadToEnd();
 
-                List<Vuelos>? objeto = (List<Vuelos>?)JsonSerializer.Deserialize<List<Vuelos>>(stringJson);
+                List<Pasajeros>? objeto = (List<Pasajeros>?)JsonSerializer.Deserialize<List<Pasajeros>>(stringJson);
 
                 return objeto;
             }
         }
 
-        public static Usuarios DeserializarUsuarioActualJson()
+        public static Pasajeros? DeserializarUnPasajeroJson()
+        {
+            if (!File.Exists("PasajeroSeleccionado.json"))
+            {
+                return null;
+            }
+            using (StreamReader sr = new StreamReader("PasajeroSeleccionado.json"))
+            {
+                string stringJson = sr.ReadToEnd();
+
+                Pasajeros? objeto = (Pasajeros?)JsonSerializer.Deserialize<Pasajeros>(stringJson);
+
+                return objeto;
+            }
+        }
+
+        public static Usuarios? DeserializarUsuarioActualJson()
         {
             if (!File.Exists("UsuarioActual.json"))
             {
@@ -74,11 +138,10 @@ namespace Biblioteca
             }
         }
 
-        public static string DeserializarFotoJson(Usuarios usuario)
+        public static string? DeserializarFotoJson(Usuarios usuario)
         {
-            string? pathFoto = null;
             string path = usuario.Nombre + "Foto.json";
-            string nuevoPath = null;
+            string? nuevoPath = null;
 
             switch (usuario.Nombre)
             {
@@ -100,7 +163,7 @@ namespace Biblioteca
             }
             return nuevoPath;            
         }
-        private static string DeserializarFotoConPathJson(string path)
+        private static string? DeserializarFotoConPathJson(string path)
         {
             if (!File.Exists(path))
             {

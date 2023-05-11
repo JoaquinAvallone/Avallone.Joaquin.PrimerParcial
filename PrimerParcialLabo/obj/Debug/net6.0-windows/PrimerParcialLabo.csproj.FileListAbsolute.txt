@@ -26,3 +26,9 @@ C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\o
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmVentaViaje.resources
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmCrudPasajero.resources
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmAgregarPasajero.resources
+C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmModificarPasajero.resources
+C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmPasajeroAVuelo.resources
+C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmCrudAeronaves.resources
+C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmAgregarAeronave.resources
+C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmModificarAeronave.resources
+C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmCrudVuelos.resources

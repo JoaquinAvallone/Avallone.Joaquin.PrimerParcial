@@ -15,6 +15,7 @@ namespace PrimerParcialLabo
     public partial class FrmAgregarPasajero : Form
     {
         List<Pasajeros>? pasajeros;
+
         public FrmAgregarPasajero()
         {
             InitializeComponent();
@@ -23,36 +24,82 @@ namespace PrimerParcialLabo
         private void FrmAgregarPasajero_Load(object sender, EventArgs e)
         {
             pasajeros = new List<Pasajeros>();
-            Serializadores.HardCodeoPasajeros(0, 16, pasajeros);
+            pasajeros = Deserializadores.DeserializarPasajerosJson();
+
         }
+
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            int dniAux;
-            if (int.TryParse(txtBDni.Text, out dniAux))
+            string apellido = txtBApellido.Text;
+            string nombre = txtBNombre.Text;
+            int dni;
+            int edad;
+            bool equipajeMano = checkBEquipajeMano.Checked;
+            bool equipajeBodega = checkBEquipajeBodega.Checked;
+            int pesoEquipaje;
+            string clase = "";
+
+            bool todoOk = true;
+
+            if (!int.TryParse(txtBDni.Text, out dni) || dni < 10000000)
             {
-                foreach (Pasajeros item in pasajeros)
-                {
-                    if (item.Dni == dniAux)
-                    {
-                        MessageBox.Show("El pasajero que intenta agregar ya existe", "Alert", MessageBoxButtons.OK);
-                        break;
-                    }
-                    else
-                    {
-                        pasajeros.Add(item);
-                        Serializadores.SerializarJson("Pasajeros.json", pasajeros);
-                    }
-                }
+                MessageBox.Show("El DNI ingresado no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                todoOk = false;
+            }
+
+            if (!int.TryParse(txtBEdad.Text, out edad) || edad > 100)
+            {
+                MessageBox.Show("La edad ingresada no es válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                todoOk = false;
+            }
+
+            if (radioBTurista.Checked)
+            {
+                clase = "Turista";
+            }
+            else if (radioBPremium.Checked)
+            {
+                clase = "Premium";
             }
             else
             {
-                MessageBox.Show("El dni ingresado es invalido", "Alert", MessageBoxButtons.OK);
+                MessageBox.Show("Debe elegir una clase", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                todoOk = false;
             }
 
-            this.Close();
-        }
+            if (!int.TryParse(txtBPesoEquipaje.Text, out pesoEquipaje))
+            {
+                MessageBox.Show("El peso del equipaje es incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                todoOk = false;
+            }
+            else if (clase == "Turista" && pesoEquipaje > 25)
+            {
+                MessageBox.Show("El peso del equipaje es mayor al permitido para su clase", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                todoOk = false;
+            }
+            else if (clase == "Premium" && pesoEquipaje > 42)
+            {
+                MessageBox.Show("El peso del equipaje es mayor al permitido para su clase", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                todoOk = false;
+            }
 
+            if (todoOk)
+            {
+                Pasajeros newPasajero = new Pasajeros(apellido, nombre, dni, edad, equipajeMano, equipajeBodega, pesoEquipaje, clase);
+                foreach (Pasajeros item in pasajeros)
+                {
+                    if (item.Dni == newPasajero.Dni)
+                    {
+                        MessageBox.Show("El pasajero que intenta agregar ya existe", "Alert", MessageBoxButtons.OK);
+                        return;
+                    }
+                }
+                pasajeros.Add(newPasajero);
+                Serializadores.SerializarJson("Pasajeros.json", pasajeros);
+                this.Close();
+            }
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -46,6 +46,7 @@
             picbMini = new PictureBox();
             picBSettings = new PictureBox();
             picBEscape = new PictureBox();
+            panelFormularios = new Panel();
             picBoxLogo = new PictureBox();
             panelSideMenu.SuspendLayout();
             panelSubMenuModif.SuspendLayout();
@@ -59,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)picbMini).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picBSettings).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picBEscape).BeginInit();
+            panelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picBoxLogo).BeginInit();
             SuspendLayout();
             // 
@@ -118,6 +120,7 @@
             btnModPasa.Text = "Modificar Pasajeros";
             btnModPasa.TextAlign = ContentAlignment.MiddleLeft;
             btnModPasa.UseVisualStyleBackColor = true;
+            btnModPasa.Click += btnModPasa_Click;
             // 
             // btnModificaciones
             // 
@@ -283,16 +286,25 @@
             picBEscape.TabIndex = 2;
             picBEscape.TabStop = false;
             // 
+            // panelFormularios
+            // 
+            panelFormularios.Controls.Add(picBoxLogo);
+            panelFormularios.Dock = DockStyle.Fill;
+            panelFormularios.Location = new Point(200, 34);
+            panelFormularios.Name = "panelFormularios";
+            panelFormularios.Size = new Size(711, 379);
+            panelFormularios.TabIndex = 6;
+            // 
             // picBoxLogo
             // 
             picBoxLogo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             picBoxLogo.BackgroundImage = Properties.Resources.email_send_96px2;
             picBoxLogo.BackgroundImageLayout = ImageLayout.Center;
-            picBoxLogo.Location = new Point(440, 122);
+            picBoxLogo.Location = new Point(205, 66);
             picBoxLogo.Name = "picBoxLogo";
-            picBoxLogo.Size = new Size(209, 177);
+            picBoxLogo.Size = new Size(301, 246);
             picBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            picBoxLogo.TabIndex = 6;
+            picBoxLogo.TabIndex = 2;
             picBoxLogo.TabStop = false;
             // 
             // FrmSupervisor
@@ -302,7 +314,7 @@
             BackColor = Color.FromArgb(35, 32, 39);
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(911, 413);
-            Controls.Add(picBoxLogo);
+            Controls.Add(panelFormularios);
             Controls.Add(panelTop);
             Controls.Add(panelSideMenu);
             DoubleBuffered = true;
@@ -326,6 +338,7 @@
             ((System.ComponentModel.ISupportInitialize)picbMini).EndInit();
             ((System.ComponentModel.ISupportInitialize)picBSettings).EndInit();
             ((System.ComponentModel.ISupportInitialize)picBEscape).EndInit();
+            panelFormularios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)picBoxLogo).EndInit();
             ResumeLayout(false);
         }
@@ -345,10 +358,11 @@
         private PictureBox picBEscape;
         private PictureBox picBMinimize;
         private PictureBox pictureBEscape;
-        private PictureBox picBoxLogo;
         private PictureBox picBRestore;
         private PictureBox picBMaximize;
         private Label lblPerfil;
         private Label lblNombreUsuario;
+        private Panel panelFormularios;
+        private PictureBox picBoxLogo;
     }
 }

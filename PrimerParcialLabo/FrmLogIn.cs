@@ -5,16 +5,40 @@ namespace PrimerParcialLabo
 {
     public partial class FrmLogIn : Form
     {
-        protected List<Usuarios> list;
+        List<Usuarios>? list;
+        List<Aeronaves>? listA;
+        List<Pasajeros>? listP;
+        List<Vuelos>? listV;
+
         public FrmLogIn()
         {
             InitializeComponent();
-            list = new List<Usuarios>();
-            list = Deserializadores.DeserializarUsuariosJson();
+
         }
 
         public void FrmLogIn_Load(object sender, EventArgs e)
         {
+            list = new List<Usuarios>();
+            list = Deserializadores.DeserializarUsuariosJson();
+            
+            listA = new List<Aeronaves>();
+            listP = new List<Pasajeros>();
+            listV = new List<Vuelos>();
+            if(!File.Exists("Aeronaves.json"))
+            {
+                listA = HardCodeo.HardCodeoAeronaves();
+                Serializadores.SerializarJson("Aeronaves.json", listA);
+            }
+            if(!File.Exists("Vuelos.json"))
+            {
+                listV = HardCodeo.HardCodeoVuelos();
+                Serializadores.SerializarJson("Vuelos.json", listV);
+            }
+            if(!File.Exists("Pasajeros.json"))
+            {
+                listP = HardCodeo.HardCodeoPasajeros();
+                Serializadores.SerializarJson("Pasajeros.json", listP);
+            }           
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {

@@ -16,6 +16,7 @@ namespace PrimerParcialLabo
     {
         List<Pasajeros>? pasajeros;
         Pasajeros? pasajeroSeleccionado;
+        bool seleccionado = false;
         public FrmCrudPasajero()
         {
             InitializeComponent();
@@ -24,7 +25,6 @@ namespace PrimerParcialLabo
         private void FrmCrudPasajero_Load(object sender, EventArgs e)
         {
             pasajeros = new List<Pasajeros>();
-            Serializadores.HardCodeoPasajeros(0, 16, pasajeros);
             btnVolver.Visible = false;
 
             RellenarGrid();
@@ -33,6 +33,7 @@ namespace PrimerParcialLabo
         private void RellenarGrid()
         {
             dataGVPasajeros.Rows.Clear();
+            pasajeros = Deserializadores.DeserializarPasajerosJson();
             foreach (Pasajeros item in pasajeros)
             {
                 int rowIndex = dataGVPasajeros.Rows.Add();
@@ -53,6 +54,7 @@ namespace PrimerParcialLabo
             int indice;
             indice = e.RowIndex;
             btnVolver.Visible = true;
+            txtBDni.Visible = false;
 
             if (indice >= 0 && indice < pasajeros.Count)
             {
@@ -69,49 +71,112 @@ namespace PrimerParcialLabo
                 row.Cells[5].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeBodega);
                 row.Cells[6].Value = pasajeroSeleccionado.PesoEquipaje + "kg.";
                 row.Cells[7].Value = pasajeroSeleccionado.Clase;
+                seleccionado = true;
+                Serializadores.SerializarJson("PasajeroSeleccionado.json", pasajeroSeleccionado);
             }
         }
 
 
+        private void FiltrarPorDni()
+        {
+            dataGVPasajeros.Rows.Clear();
+            string filtro = txtBDni.Text;
+            pasajeros = Deserializadores.DeserializarPasajerosJson();
+
+            foreach (Pasajeros item in pasajeros)
+            {
+                string dni = item.Dni.ToString();
+                bool empiezaCon = true;
+
+                for (int i = 0; i < filtro.Length; i++)
+                {
+                    if (dni[i] != filtro[i])
+                    {
+                        empiezaCon = false;
+                        break;
+                    }
+                }
+
+                if (empiezaCon)
+                {
+                    int rowIndex = dataGVPasajeros.Rows.Add();
+                    DataGridViewRow row = dataGVPasajeros.Rows[rowIndex];
+                    row.Cells[0].Value = item.Apellido;
+                    row.Cells[1].Value = item.Nombre;
+                    row.Cells[2].Value = item.Dni;
+                    row.Cells[3].Value = item.Edad;
+                    row.Cells[4].Value = item.TipoEquipaje(item.EquipajeMano);
+                    row.Cells[5].Value = item.TipoEquipaje(item.EquipajeBodega);
+                    row.Cells[6].Value = item.PesoEquipaje + "kg.";
+                    row.Cells[7].Value = item.Clase;
+                }
+            }
+        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             int? dni = pasajeroSeleccionado?.Dni;
 
-            DialogResult result = MessageBox.Show("Esta seguro de eliminar el pasajero?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            if (!seleccionado)
             {
-                foreach (Pasajeros item in pasajeros)
+                MessageBox.Show("Primero debe seleccionar un pasajero", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Esta seguro de eliminar el pasajero?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
                 {
-                    if (item.Dni == dni)
+                    foreach (Pasajeros item in pasajeros)
                     {
-                        pasajeros.Remove(item);
-                        Serializadores.SerializarJson("Pasajeros.json", pasajeros);
-                        btnVolver.Visible = false;
-                        RellenarGrid();
-                        break;
+                        if (item.Dni == dni)
+                        {
+                            pasajeros.Remove(item);
+                            Serializadores.SerializarJson("Pasajeros.json", pasajeros);
+                            btnVolver.Visible = false;
+                            RellenarGrid();
+                            break;
+                        }
                     }
                 }
             }
         }
+        
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FrmAgregarPasajero frmAgregarPasajero = new FrmAgregarPasajero();
             frmAgregarPasajero.ShowDialog();
-
-            
-            
+            seleccionado = false;
+            RellenarGrid();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
             btnVolver.Visible = false;
+            seleccionado = false;
+            txtBDni.Visible = true;
             RellenarGrid();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-           
+            if (!seleccionado)
+            {
+                MessageBox.Show("Primero debe seleccionar un pasajero", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                FrmModificarPasajero frmModificarPasajero = new FrmModificarPasajero();
+                frmModificarPasajero.ShowDialog();
+                RellenarGrid();
+                txtBDni.Visible = true;
+            }
+            btnVolver.Visible = false;
+            seleccionado = false;
+        }
+
+        private void txtBDni_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarPorDni();
         }
     }
 }

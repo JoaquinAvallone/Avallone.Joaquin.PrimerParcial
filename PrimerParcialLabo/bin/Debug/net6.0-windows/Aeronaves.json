@@ -1,0 +1,50 @@
+[
+  {
+    "Matricula": "FC5EA1CD",
+    "CantidadAsientos": 150,
+    "CantidadBa\u00F1os": 4,
+    "Internet": true,
+    "Comida": true,
+    "CapacidadBodega": 1600
+  },
+  {
+    "Matricula": "Y45TS67M",
+    "CantidadAsientos": 250,
+    "CantidadBa\u00F1os": 6,
+    "Internet": false,
+    "Comida": true,
+    "CapacidadBodega": 3100
+  },
+  {
+    "Matricula": "LA31YTE6",
+    "CantidadAsientos": 170,
+    "CantidadBa\u00F1os": 5,
+    "Internet": true,
+    "Comida": true,
+    "CapacidadBodega": 5000
+  },
+  {
+    "Matricula": "UTR43Y21",
+    "CantidadAsientos": 120,
+    "CantidadBa\u00F1os": 3,
+    "Internet": false,
+    "Comida": false,
+    "CapacidadBodega": 4600
+  },
+  {
+    "Matricula": "8S7HY5A3",
+    "CantidadAsientos": 200,
+    "CantidadBa\u00F1os": 5,
+    "Internet": true,
+    "Comida": true,
+    "CapacidadBodega": 7000
+  },
+  {
+    "Matricula": "AG5GF3AE",
+    "CantidadAsientos": 150,
+    "CantidadBa\u00F1os": 4,
+    "Internet": false,
+    "Comida": false,
+    "CapacidadBodega": 8000
+  }
+]

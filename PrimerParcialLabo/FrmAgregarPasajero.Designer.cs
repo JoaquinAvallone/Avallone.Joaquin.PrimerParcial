@@ -45,8 +45,6 @@
             lblClase = new Label();
             panel7 = new Panel();
             checkBEquipajeMano = new CheckBox();
-            checkBPremium = new CheckBox();
-            checkBTurista = new CheckBox();
             checkBEquipajeBodega = new CheckBox();
             txtBApellido = new TextBox();
             txtBNombre = new TextBox();
@@ -55,6 +53,12 @@
             txtBPesoEquipaje = new TextBox();
             btnAceptar = new Button();
             btnCancelar = new Button();
+            radioBTurista = new RadioButton();
+            radioBPremium = new RadioButton();
+            panel8 = new Panel();
+            panel9 = new Panel();
+            panel10 = new Panel();
+            panel11 = new Panel();
             SuspendLayout();
             // 
             // panelContrseña
@@ -221,30 +225,6 @@
             checkBEquipajeMano.Text = "Lleva";
             checkBEquipajeMano.UseVisualStyleBackColor = true;
             // 
-            // checkBPremium
-            // 
-            checkBPremium.AutoSize = true;
-            checkBPremium.Cursor = Cursors.Hand;
-            checkBPremium.ForeColor = Color.WhiteSmoke;
-            checkBPremium.Location = new Point(198, 344);
-            checkBPremium.Name = "checkBPremium";
-            checkBPremium.Size = new Size(75, 19);
-            checkBPremium.TabIndex = 34;
-            checkBPremium.Text = "Premium";
-            checkBPremium.UseVisualStyleBackColor = true;
-            // 
-            // checkBTurista
-            // 
-            checkBTurista.AutoSize = true;
-            checkBTurista.Cursor = Cursors.Hand;
-            checkBTurista.ForeColor = Color.WhiteSmoke;
-            checkBTurista.Location = new Point(118, 345);
-            checkBTurista.Name = "checkBTurista";
-            checkBTurista.Size = new Size(61, 19);
-            checkBTurista.TabIndex = 35;
-            checkBTurista.Text = "Turista";
-            checkBTurista.UseVisualStyleBackColor = true;
-            // 
             // checkBEquipajeBodega
             // 
             checkBEquipajeBodega.AutoSize = true;
@@ -286,6 +266,7 @@
             txtBDni.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtBDni.ForeColor = Color.WhiteSmoke;
             txtBDni.Location = new Point(85, 129);
+            txtBDni.MaxLength = 8;
             txtBDni.Name = "txtBDni";
             txtBDni.Size = new Size(191, 16);
             txtBDni.TabIndex = 41;
@@ -297,6 +278,7 @@
             txtBEdad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtBEdad.ForeColor = Color.WhiteSmoke;
             txtBEdad.Location = new Point(92, 173);
+            txtBEdad.MaxLength = 3;
             txtBEdad.Name = "txtBEdad";
             txtBEdad.Size = new Size(184, 16);
             txtBEdad.TabIndex = 42;
@@ -308,6 +290,7 @@
             txtBPesoEquipaje.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtBPesoEquipaje.ForeColor = Color.WhiteSmoke;
             txtBPesoEquipaje.Location = new Point(146, 305);
+            txtBPesoEquipaje.MaxLength = 6;
             txtBPesoEquipaje.Name = "txtBPesoEquipaje";
             txtBPesoEquipaje.Size = new Size(133, 16);
             txtBPesoEquipaje.TabIndex = 43;
@@ -348,12 +331,76 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
+            // radioBTurista
+            // 
+            radioBTurista.AutoSize = true;
+            radioBTurista.Cursor = Cursors.Hand;
+            radioBTurista.ForeColor = Color.WhiteSmoke;
+            radioBTurista.Location = new Point(119, 343);
+            radioBTurista.Name = "radioBTurista";
+            radioBTurista.Size = new Size(60, 19);
+            radioBTurista.TabIndex = 46;
+            radioBTurista.TabStop = true;
+            radioBTurista.Text = "Turista";
+            radioBTurista.UseVisualStyleBackColor = true;
+            // 
+            // radioBPremium
+            // 
+            radioBPremium.AutoSize = true;
+            radioBPremium.Cursor = Cursors.Hand;
+            radioBPremium.ForeColor = Color.WhiteSmoke;
+            radioBPremium.Location = new Point(197, 343);
+            radioBPremium.Name = "radioBPremium";
+            radioBPremium.Size = new Size(74, 19);
+            radioBPremium.TabIndex = 47;
+            radioBPremium.TabStop = true;
+            radioBPremium.Text = "Premium";
+            radioBPremium.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.WhiteSmoke;
+            panel8.Location = new Point(338, 0);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(1, 472);
+            panel8.TabIndex = 48;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = Color.WhiteSmoke;
+            panel9.Location = new Point(0, 0);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(1, 472);
+            panel9.TabIndex = 49;
+            // 
+            // panel10
+            // 
+            panel10.BackColor = Color.WhiteSmoke;
+            panel10.Location = new Point(-1, 0);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(339, 1);
+            panel10.TabIndex = 50;
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.WhiteSmoke;
+            panel11.Location = new Point(0, 471);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(339, 1);
+            panel11.TabIndex = 51;
+            // 
             // FrmAgregarPasajero
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(35, 32, 39);
             ClientSize = new Size(339, 472);
+            Controls.Add(panel11);
+            Controls.Add(panel10);
+            Controls.Add(panel9);
+            Controls.Add(panel8);
+            Controls.Add(radioBPremium);
+            Controls.Add(radioBTurista);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(txtBPesoEquipaje);
@@ -362,8 +409,6 @@
             Controls.Add(txtBNombre);
             Controls.Add(txtBApellido);
             Controls.Add(checkBEquipajeBodega);
-            Controls.Add(checkBTurista);
-            Controls.Add(checkBPremium);
             Controls.Add(checkBEquipajeMano);
             Controls.Add(lblClase);
             Controls.Add(panel7);
@@ -383,6 +428,7 @@
             Controls.Add(panelContrseña);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmAgregarPasajero";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmAgregarPasajero";
             Load += FrmAgregarPasajero_Load;
             ResumeLayout(false);
@@ -390,32 +436,36 @@
         }
 
         #endregion
-        private Panel panelContrseña;
-        private Label lblApellido;
-        private Label lblNombre;
-        private Panel panel1;
-        private Label lblDni;
-        private Panel panel2;
-        private Label lblEdad;
-        private Panel panel3;
-        private Label llblEquipajeMano;
-        private Panel panel4;
-        private Label lblEquipajeBodega;
-        private Panel panel5;
-        private Label lblPesoEquipaje;
-        private Panel panel6;
-        private Label lblClase;
-        private Panel panel7;
-        private CheckBox checkBEquipajeMano;
-        private CheckBox checkBPremium;
-        private CheckBox checkBTurista;
-        private CheckBox checkBEquipajeBodega;
-        private TextBox txtBApellido;
-        private TextBox txtBNombre;
-        private TextBox txtBDni;
-        private TextBox txtBEdad;
-        private TextBox txtBPesoEquipaje;
-        private Button btnAceptar;
-        private Button btnCancelar;
+        private Panel panel8;
+        private Panel panel9;
+        private Panel panel10;
+        private Panel panel11;
+        protected Panel panelContrseña;
+        protected Label lblApellido;
+        protected Label lblNombre;
+        protected Panel panel1;
+        protected Label lblDni;
+        protected Panel panel2;
+        protected Label lblEdad;
+        protected Panel panel3;
+        protected Label llblEquipajeMano;
+        protected Panel panel4;
+        protected Label lblEquipajeBodega;
+        protected Panel panel5;
+        protected Label lblPesoEquipaje;
+        protected Panel panel6;
+        protected Label lblClase;
+        protected Panel panel7;
+        protected CheckBox checkBEquipajeMano;
+        protected CheckBox checkBEquipajeBodega;
+        protected TextBox txtBApellido;
+        protected TextBox txtBNombre;
+        protected TextBox txtBDni;
+        protected TextBox txtBEdad;
+        protected TextBox txtBPesoEquipaje;
+        protected Button btnAceptar;
+        protected Button btnCancelar;
+        protected RadioButton radioBTurista;
+        protected RadioButton radioBPremium;
     }
 }

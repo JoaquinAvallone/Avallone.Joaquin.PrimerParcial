@@ -15,9 +15,10 @@ namespace Biblioteca
         private bool comida;
         private int capacidadBodega;
 
-        public Aeronaves( int cantidadAsientos, int cantidadBaños, bool internet, bool comida, int capacidadBodega)
+
+        public Aeronaves( string matricula, int cantidadAsientos, int cantidadBaños, bool internet, bool comida, int capacidadBodega)
         {
-            this.matricula = Matricula;
+            this.matricula = matricula;
             this.cantidadAsientos = cantidadAsientos;
             this.cantidadBaños = cantidadBaños;
             this.internet = internet;
@@ -25,14 +26,14 @@ namespace Biblioteca
             this.capacidadBodega = capacidadBodega;
         }
 
-        public string Matricula { get => GenerateMatricula();}
-        public int CantidadAsientos { get => cantidadAsientos;}
-        public int CantidadBaños { get => cantidadBaños;}
-        public bool Internet { get => internet; }
-        public bool Comida { get => comida; }
-        public int CapacidadBodega { get => capacidadBodega; }
+        public string Matricula { get => matricula; set => matricula = value; }
+        public int CantidadAsientos { get => cantidadAsientos; set => cantidadAsientos = value; }
+        public int CantidadBaños { get => cantidadBaños; set => cantidadBaños = value; }
+        public bool Internet { get => internet; set => internet = value; }
+        public bool Comida { get => comida; set => comida = value; }
+        public int CapacidadBodega { get => capacidadBodega; set => capacidadBodega = value; }
 
-        private string GenerateMatricula()
+        public static string GenerateMatricula()
         {
             string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
             string numeros = "0123456789";

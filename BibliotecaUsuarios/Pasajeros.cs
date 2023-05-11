@@ -20,13 +20,13 @@ namespace Biblioteca
             this.pesoEquipaje = pesoEquipaje;
             this.clase = clase;
         }
-        
-        public int Dni { get => dni; }
-        public int Edad { get => edad;  }
-        public bool EquipajeMano { get => equipajeMano;  }
-        public bool EquipajeBodega { get => equipajeBodega; }
-        public float PesoEquipaje { get => pesoEquipaje; }
-        public string Clase { get => clase; }
+
+        public int Dni { get => dni; set => dni = value; }
+        public int Edad { get => edad; set => edad = value; }
+        public bool EquipajeMano { get => equipajeMano; set => equipajeMano = value; }
+        public bool EquipajeBodega { get => equipajeBodega; set => equipajeBodega = value; }
+        public float PesoEquipaje { get => pesoEquipaje; set => pesoEquipaje = value; }
+        public string Clase { get => clase; set => clase = value; }
 
         public string TipoEquipaje(bool equipaje)
         {

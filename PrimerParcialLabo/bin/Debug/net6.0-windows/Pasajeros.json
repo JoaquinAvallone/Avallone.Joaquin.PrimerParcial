@@ -1,5 +1,35 @@
 [
   {
+    "Dni": 40796568,
+    "Edad": 25,
+    "EquipajeMano": true,
+    "EquipajeBodega": false,
+    "PesoEquipaje": 30,
+    "Clase": "Premium",
+    "Apellido": "Avallone",
+    "Nombre": "Joaquin"
+  },
+  {
+    "Dni": 44157922,
+    "Edad": 30,
+    "EquipajeMano": true,
+    "EquipajeBodega": true,
+    "PesoEquipaje": 40,
+    "Clase": "Premium",
+    "Apellido": "Fernando",
+    "Nombre": "Gago"
+  },
+  {
+    "Dni": 40456568,
+    "Edad": 27,
+    "EquipajeMano": true,
+    "EquipajeBodega": false,
+    "PesoEquipaje": 22,
+    "Clase": "Turista",
+    "Apellido": "Martinez",
+    "Nombre": "Dibu"
+  },
+  {
     "Dni": 44157652,
     "Edad": 22,
     "EquipajeMano": true,
@@ -18,6 +48,16 @@
     "Clase": "Turista",
     "Apellido": "Jenner",
     "Nombre": "Kendall"
+  },
+  {
+    "Dni": 44327922,
+    "Edad": 24,
+    "EquipajeMano": true,
+    "EquipajeBodega": true,
+    "PesoEquipaje": 38,
+    "Clase": "Premium",
+    "Apellido": "Holland",
+    "Nombre": "Tom"
   },
   {
     "Dni": 43196568,
@@ -48,6 +88,16 @@
     "Clase": "Turista",
     "Apellido": "Hadid",
     "Nombre": "Gigi"
+  },
+  {
+    "Dni": 38108922,
+    "Edad": 40,
+    "EquipajeMano": true,
+    "EquipajeBodega": true,
+    "PesoEquipaje": 32,
+    "Clase": "Premium",
+    "Apellido": "Jackie",
+    "Nombre": "Chan"
   },
   {
     "Dni": 37719568,

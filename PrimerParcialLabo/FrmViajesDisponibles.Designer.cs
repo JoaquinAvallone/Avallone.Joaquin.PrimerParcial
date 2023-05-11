@@ -76,6 +76,7 @@
             dataGVVuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGVVuelos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGVVuelos.Columns.AddRange(new DataGridViewColumn[] { ColumFecha, ColumOrigen, ColumDestino, ColumPrecio, ColumPrecioP, ColumAvion });
+            dataGVVuelos.Cursor = Cursors.Hand;
             dataGVVuelos.Dock = DockStyle.Fill;
             dataGVVuelos.EnableHeadersVisualStyles = false;
             dataGVVuelos.GridColor = Color.FromArgb(35, 32, 39);

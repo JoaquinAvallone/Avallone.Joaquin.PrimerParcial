@@ -4,13 +4,31 @@
     <Compile Update="FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmAgregarAeronave.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmAgregarPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmCrudAeronaves.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmCrudPasajero.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmCrudVuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmModificarAeronave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmModificarPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmPasajeroAVuelo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmSupervisor.cs">

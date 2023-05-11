@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,7 +20,6 @@ namespace Biblioteca
             this.apellido = apellido;
             this.nombre = nombre;
         }
-
 
         public override string ToString()
         {

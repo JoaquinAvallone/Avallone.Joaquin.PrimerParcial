@@ -13,12 +13,12 @@ namespace PrimerParcialLabo
 {
     public partial class FrmVentaViaje : Form
     {
-        List<Vuelos> vuelos;
+        List<Vuelos>? vuelos;
         public FrmVentaViaje()
         {
             InitializeComponent();
             vuelos = new List<Vuelos>();
-            vuelos = Serializadores.HardCodeoVuelos();
+            vuelos = Deserializadores.DeserializarVuelosJson();
             btnVolver.Visible = false;
             btnSeleccionar.Visible = false;
             RellenarGrid();
@@ -31,6 +31,7 @@ namespace PrimerParcialLabo
         private void RellenarGrid()
         {
             dataGVVuelos.Rows.Clear();
+            vuelos = Deserializadores.DeserializarVuelosJson();
             foreach (Vuelos item in vuelos)
             {
                 int rowIndex = dataGVVuelos.Rows.Add();
@@ -43,6 +44,7 @@ namespace PrimerParcialLabo
                 row.Cells[5].Value = item.Avion.Matricula;
                 row.Cells[6].Value = item.Avion.BoolAString(item.Avion.Internet);
                 row.Cells[7].Value = item.Avion.BoolAString(item.Avion.Comida);
+                row.Cells[8].Value = item.Avion.CantidadAsientos;
             }
         }
 
@@ -77,6 +79,7 @@ namespace PrimerParcialLabo
                     row.Cells[5].Value = item.Avion.Matricula;
                     row.Cells[6].Value = item.Avion.BoolAString(item.Avion.Internet);
                     row.Cells[7].Value = item.Avion.BoolAString(item.Avion.Comida);
+                    row.Cells[8].Value = item.Avion.CantidadAsientos;
                 }
 
             }
@@ -100,6 +103,7 @@ namespace PrimerParcialLabo
                     row.Cells[5].Value = item.Avion.Matricula;
                     row.Cells[6].Value = item.Avion.BoolAString(item.Avion.Internet);
                     row.Cells[7].Value = item.Avion.BoolAString(item.Avion.Comida);
+                    row.Cells[8].Value = item.Avion.CantidadAsientos;
                 }
 
             }
@@ -130,7 +134,6 @@ namespace PrimerParcialLabo
                 btnSeleccionar.Visible = true;
                 checkBComida.Visible = false;
                 checkBInternet.Visible = false;
-                dataGVVuelos.Size = new Size(709, 55);
 
                 int rowIndex = dataGVVuelos.Rows.Add();
                 DataGridViewRow row = dataGVVuelos.Rows[rowIndex];
@@ -142,6 +145,8 @@ namespace PrimerParcialLabo
                 row.Cells[5].Value = vueloSeleccionado.Avion.Matricula;
                 row.Cells[6].Value = vueloSeleccionado.Avion.BoolAString(vueloSeleccionado.Avion.Internet);
                 row.Cells[7].Value = vueloSeleccionado.Avion.BoolAString(vueloSeleccionado.Avion.Comida);
+                row.Cells[8].Value = vueloSeleccionado.Avion.CantidadAsientos;
+                Serializadores.SerializarJson("VueloSeleccionado.json", vueloSeleccionado);
             }
         }
 
@@ -152,12 +157,13 @@ namespace PrimerParcialLabo
             btnSeleccionar.Visible = false;
             checkBComida.Visible = true;
             checkBInternet.Visible = true;
-            dataGVVuelos.Size = new Size(709, 350);
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-
+            FrmAgregarPasajero frmAgregarPasajero = new FrmAgregarPasajero();
+            frmAgregarPasajero.ShowDialog();
+            RellenarGrid();
         }
     }
 }

@@ -1,0 +1,40 @@
+{
+  "CiudadPartida": 4,
+  "CiudadDestino": 0,
+  "FechaVuelo": "2023-06-12T14:40:00",
+  "Avion": {
+    "Matricula": "Y45TS67M",
+    "CantidadAsientos": 250,
+    "CantidadBa\u00F1os": 6,
+    "Internet": false,
+    "Comida": true,
+    "CapacidadBodega": 3100
+  },
+  "CantidadAsientosPrem": 50,
+  "CantidadAsientosTuris": 200,
+  "PrecioTurista": 100,
+  "PrecioPrem": 135,
+  "DuracionVuelo": 2,
+  "Pasajeros": [
+    {
+      "Dni": 40456568,
+      "Edad": 27,
+      "EquipajeMano": true,
+      "EquipajeBodega": false,
+      "PesoEquipaje": 22,
+      "Clase": "Turista",
+      "Apellido": "Martinez",
+      "Nombre": "Dibu"
+    },
+    {
+      "Dni": 44157652,
+      "Edad": 22,
+      "EquipajeMano": true,
+      "EquipajeBodega": true,
+      "PesoEquipaje": 27,
+      "Clase": "Premium",
+      "Apellido": "Messi",
+      "Nombre": "Leonel"
+    }
+  ]
+}

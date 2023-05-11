@@ -44,6 +44,7 @@
             btnAgregar = new Button();
             btnModificar = new Button();
             btnVolver = new Button();
+            txtBDni = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGVPasajeros).BeginInit();
             SuspendLayout();
             // 
@@ -72,7 +73,7 @@
             dataGVPasajeros.Cursor = Cursors.Hand;
             dataGVPasajeros.EnableHeadersVisualStyles = false;
             dataGVPasajeros.GridColor = Color.FromArgb(35, 32, 39);
-            dataGVPasajeros.Location = new Point(4, 6);
+            dataGVPasajeros.Location = new Point(4, 2);
             dataGVPasajeros.Name = "dataGVPasajeros";
             dataGVPasajeros.ReadOnly = true;
             dataGVPasajeros.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -93,7 +94,7 @@
             dataGVPasajeros.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGVPasajeros.RowTemplate.Height = 25;
             dataGVPasajeros.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dataGVPasajeros.Size = new Size(727, 345);
+            dataGVPasajeros.Size = new Size(703, 331);
             dataGVPasajeros.TabIndex = 3;
             dataGVPasajeros.CellClick += dataGVPasajeros_CellClick;
             // 
@@ -153,7 +154,7 @@
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnEliminar.ForeColor = Color.WhiteSmoke;
-            btnEliminar.Location = new Point(432, 358);
+            btnEliminar.Location = new Point(418, 344);
             btnEliminar.MaximumSize = new Size(116, 25);
             btnEliminar.MinimumSize = new Size(116, 25);
             btnEliminar.Name = "btnEliminar";
@@ -171,7 +172,7 @@
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnAgregar.ForeColor = Color.WhiteSmoke;
-            btnAgregar.Location = new Point(304, 357);
+            btnAgregar.Location = new Point(292, 344);
             btnAgregar.MaximumSize = new Size(116, 25);
             btnAgregar.MinimumSize = new Size(116, 25);
             btnAgregar.Name = "btnAgregar";
@@ -189,7 +190,7 @@
             btnModificar.FlatStyle = FlatStyle.Flat;
             btnModificar.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnModificar.ForeColor = Color.WhiteSmoke;
-            btnModificar.Location = new Point(189, 358);
+            btnModificar.Location = new Point(171, 344);
             btnModificar.MaximumSize = new Size(116, 25);
             btnModificar.MinimumSize = new Size(116, 25);
             btnModificar.Name = "btnModificar";
@@ -207,7 +208,7 @@
             btnVolver.FlatStyle = FlatStyle.Flat;
             btnVolver.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnVolver.ForeColor = Color.WhiteSmoke;
-            btnVolver.Location = new Point(615, 358);
+            btnVolver.Location = new Point(292, 344);
             btnVolver.MaximumSize = new Size(116, 25);
             btnVolver.MinimumSize = new Size(116, 25);
             btnVolver.Name = "btnVolver";
@@ -217,12 +218,28 @@
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
             // 
+            // txtBDni
+            // 
+            txtBDni.Anchor = AnchorStyles.Bottom;
+            txtBDni.BackColor = Color.FromArgb(35, 32, 39);
+            txtBDni.BorderStyle = BorderStyle.None;
+            txtBDni.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            txtBDni.ForeColor = Color.WhiteSmoke;
+            txtBDni.Location = new Point(553, 347);
+            txtBDni.MaxLength = 8;
+            txtBDni.Name = "txtBDni";
+            txtBDni.PlaceholderText = "Filtrar por DNI";
+            txtBDni.Size = new Size(143, 15);
+            txtBDni.TabIndex = 43;
+            txtBDni.TextChanged += txtBDni_TextChanged;
+            // 
             // FrmCrudPasajero
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(35, 32, 39);
-            ClientSize = new Size(735, 393);
+            ClientSize = new Size(711, 379);
+            Controls.Add(txtBDni);
             Controls.Add(btnVolver);
             Controls.Add(btnModificar);
             Controls.Add(btnAgregar);
@@ -234,6 +251,7 @@
             Load += FrmCrudPasajero_Load;
             ((System.ComponentModel.ISupportInitialize)dataGVPasajeros).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -251,5 +269,6 @@
         private Button btnAgregar;
         private Button btnModificar;
         private Button btnVolver;
+        protected TextBox txtBDni;
     }
 }

@@ -105,5 +105,37 @@ namespace PrimerParcialLabo
         {
             Serializadores.SerializarFotoperfilJson(usuarioActual, pathFotoUsuario);
         }
+
+        private void btnModifAeronaves_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmCrudAeronaves>();
+        }
+
+        private void btnModifViajes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmCrudVuelos>();
+        }
+
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form? formulario;
+            formulario = panelFormularios.Controls.OfType<MiForm>().FirstOrDefault(); // busca en la coleccion el formulario
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                panelFormularios.Controls.Add(formulario);
+                panelFormularios.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            else
+            {
+                formulario.BringToFront();
+
+            }
+        }
     }
 }

@@ -32,6 +32,10 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dataGVVuelos = new DataGridView();
+            checkBInternet = new CheckBox();
+            checkBComida = new CheckBox();
+            btnVolver = new Button();
+            btnSeleccionar = new Button();
             ColumFecha = new DataGridViewTextBoxColumn();
             ColumOrigen = new DataGridViewTextBoxColumn();
             ColumDestino = new DataGridViewTextBoxColumn();
@@ -40,10 +44,7 @@
             ColumAvion = new DataGridViewTextBoxColumn();
             ColumWifi = new DataGridViewTextBoxColumn();
             ColumComida = new DataGridViewTextBoxColumn();
-            checkBInternet = new CheckBox();
-            checkBComida = new CheckBox();
-            btnVolver = new Button();
-            btnSeleccionar = new Button();
+            ColumAsientos = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGVVuelos).BeginInit();
             SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGVVuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGVVuelos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGVVuelos.Columns.AddRange(new DataGridViewColumn[] { ColumFecha, ColumOrigen, ColumDestino, ColumPrecio, ColumPrecioP, ColumAvion, ColumWifi, ColumComida });
+            dataGVVuelos.Columns.AddRange(new DataGridViewColumn[] { ColumFecha, ColumOrigen, ColumDestino, ColumPrecio, ColumPrecioP, ColumAvion, ColumWifi, ColumComida, ColumAsientos });
             dataGVVuelos.Cursor = Cursors.Hand;
             dataGVVuelos.EnableHeadersVisualStyles = false;
             dataGVVuelos.GridColor = Color.FromArgb(35, 32, 39);
@@ -96,54 +97,6 @@
             dataGVVuelos.Size = new Size(709, 350);
             dataGVVuelos.TabIndex = 1;
             dataGVVuelos.CellClick += dataGVVuelos_CellClick;
-            // 
-            // ColumFecha
-            // 
-            ColumFecha.HeaderText = "FECHA Y HS.";
-            ColumFecha.Name = "ColumFecha";
-            ColumFecha.ReadOnly = true;
-            // 
-            // ColumOrigen
-            // 
-            ColumOrigen.HeaderText = "ORIGEN";
-            ColumOrigen.Name = "ColumOrigen";
-            ColumOrigen.ReadOnly = true;
-            // 
-            // ColumDestino
-            // 
-            ColumDestino.HeaderText = "DESTINO";
-            ColumDestino.Name = "ColumDestino";
-            ColumDestino.ReadOnly = true;
-            // 
-            // ColumPrecio
-            // 
-            ColumPrecio.HeaderText = "PRECIO T.";
-            ColumPrecio.Name = "ColumPrecio";
-            ColumPrecio.ReadOnly = true;
-            // 
-            // ColumPrecioP
-            // 
-            ColumPrecioP.HeaderText = "PRECIO P.";
-            ColumPrecioP.Name = "ColumPrecioP";
-            ColumPrecioP.ReadOnly = true;
-            // 
-            // ColumAvion
-            // 
-            ColumAvion.HeaderText = "AVION";
-            ColumAvion.Name = "ColumAvion";
-            ColumAvion.ReadOnly = true;
-            // 
-            // ColumWifi
-            // 
-            ColumWifi.HeaderText = "WIFI";
-            ColumWifi.Name = "ColumWifi";
-            ColumWifi.ReadOnly = true;
-            // 
-            // ColumComida
-            // 
-            ColumComida.HeaderText = "COMIDA";
-            ColumComida.Name = "ColumComida";
-            ColumComida.ReadOnly = true;
             // 
             // checkBInternet
             // 
@@ -215,6 +168,60 @@
             btnSeleccionar.UseVisualStyleBackColor = true;
             btnSeleccionar.Click += btnSeleccionar_Click;
             // 
+            // ColumFecha
+            // 
+            ColumFecha.HeaderText = "FECHA/HS.";
+            ColumFecha.Name = "ColumFecha";
+            ColumFecha.ReadOnly = true;
+            // 
+            // ColumOrigen
+            // 
+            ColumOrigen.HeaderText = "ORIGEN";
+            ColumOrigen.Name = "ColumOrigen";
+            ColumOrigen.ReadOnly = true;
+            // 
+            // ColumDestino
+            // 
+            ColumDestino.HeaderText = "DESTINO";
+            ColumDestino.Name = "ColumDestino";
+            ColumDestino.ReadOnly = true;
+            // 
+            // ColumPrecio
+            // 
+            ColumPrecio.HeaderText = "PRECIO T.";
+            ColumPrecio.Name = "ColumPrecio";
+            ColumPrecio.ReadOnly = true;
+            // 
+            // ColumPrecioP
+            // 
+            ColumPrecioP.HeaderText = "PRECIO P.";
+            ColumPrecioP.Name = "ColumPrecioP";
+            ColumPrecioP.ReadOnly = true;
+            // 
+            // ColumAvion
+            // 
+            ColumAvion.HeaderText = "AVION";
+            ColumAvion.Name = "ColumAvion";
+            ColumAvion.ReadOnly = true;
+            // 
+            // ColumWifi
+            // 
+            ColumWifi.HeaderText = "WIFI";
+            ColumWifi.Name = "ColumWifi";
+            ColumWifi.ReadOnly = true;
+            // 
+            // ColumComida
+            // 
+            ColumComida.HeaderText = "COMIDA";
+            ColumComida.Name = "ColumComida";
+            ColumComida.ReadOnly = true;
+            // 
+            // ColumAsientos
+            // 
+            ColumAsientos.HeaderText = "ASIENTOS";
+            ColumAsientos.Name = "ColumAsientos";
+            ColumAsientos.ReadOnly = true;
+            // 
             // FrmVentaViaje
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -240,6 +247,8 @@
         private DataGridView dataGVVuelos;
         private CheckBox checkBInternet;
         private CheckBox checkBComida;
+        private Button btnVolver;
+        private Button btnSeleccionar;
         private DataGridViewTextBoxColumn ColumFecha;
         private DataGridViewTextBoxColumn ColumOrigen;
         private DataGridViewTextBoxColumn ColumDestino;
@@ -248,7 +257,6 @@
         private DataGridViewTextBoxColumn ColumAvion;
         private DataGridViewTextBoxColumn ColumWifi;
         private DataGridViewTextBoxColumn ColumComida;
-        private Button btnVolver;
-        private Button btnSeleccionar;
+        private DataGridViewTextBoxColumn ColumAsientos;
     }
 }
