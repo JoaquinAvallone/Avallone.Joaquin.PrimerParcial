@@ -10,6 +10,9 @@
     <Compile Update="FrmAgregarPasajero.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmAgregarVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmCrudAeronaves.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -101,7 +101,7 @@ namespace PrimerParcialLabo
                 row.Cells[2].Value = avionSeleccionado.CantidadBaños;
                 row.Cells[3].Value = avionSeleccionado.BoolAString(avionSeleccionado.Internet);
                 row.Cells[4].Value = avionSeleccionado.BoolAString(avionSeleccionado.Comida);
-                row.Cells[5].Value = avionSeleccionado.CapacidadBodega + "Kg."; ;
+                row.Cells[5].Value = avionSeleccionado.CapacidadBodega + "Kg."; 
                 seleccionado = true;
                 Serializadores.SerializarJson("AvionSeleccionado.json", avionSeleccionado);
             }

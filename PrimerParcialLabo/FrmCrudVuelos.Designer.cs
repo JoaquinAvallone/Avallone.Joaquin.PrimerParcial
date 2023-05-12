@@ -37,12 +37,15 @@
             ColumDestino = new DataGridViewTextBoxColumn();
             ColumPrecio = new DataGridViewTextBoxColumn();
             ColumPrecioP = new DataGridViewTextBoxColumn();
+            ColumTurista = new DataGridViewTextBoxColumn();
+            ColumPremium = new DataGridViewTextBoxColumn();
             ColumAvion = new DataGridViewTextBoxColumn();
             txtBMatricula = new TextBox();
             btnVolver = new Button();
             btnModificar = new Button();
             btnAgregar = new Button();
             btnEliminar = new Button();
+            panelFormularios = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGVVuelos).BeginInit();
             SuspendLayout();
             // 
@@ -60,18 +63,20 @@
             dataGVVuelos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(35, 32, 39);
             dataGridViewCellStyle1.SelectionForeColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGVVuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGVVuelos.ColumnHeadersHeight = 32;
             dataGVVuelos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGVVuelos.Columns.AddRange(new DataGridViewColumn[] { ColumFecha, ColumOrigen, ColumDestino, ColumPrecio, ColumPrecioP, ColumAvion });
+            dataGVVuelos.Columns.AddRange(new DataGridViewColumn[] { ColumFecha, ColumOrigen, ColumDestino, ColumPrecio, ColumPrecioP, ColumTurista, ColumPremium, ColumAvion });
             dataGVVuelos.Cursor = Cursors.Hand;
             dataGVVuelos.EnableHeadersVisualStyles = false;
             dataGVVuelos.GridColor = Color.FromArgb(35, 32, 39);
-            dataGVVuelos.Location = new Point(5, 3);
+            dataGVVuelos.Location = new Point(6, 3);
+            dataGVVuelos.MultiSelect = false;
             dataGVVuelos.Name = "dataGVVuelos";
             dataGVVuelos.ReadOnly = true;
             dataGVVuelos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -94,6 +99,7 @@
             dataGVVuelos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGVVuelos.Size = new Size(703, 331);
             dataGVVuelos.TabIndex = 1;
+            dataGVVuelos.CellClick += dataGVVuelos_CellClick;
             // 
             // ColumFecha
             // 
@@ -125,6 +131,18 @@
             ColumPrecioP.Name = "ColumPrecioP";
             ColumPrecioP.ReadOnly = true;
             // 
+            // ColumTurista
+            // 
+            ColumTurista.HeaderText = "ASIENTOS TURIS.";
+            ColumTurista.Name = "ColumTurista";
+            ColumTurista.ReadOnly = true;
+            // 
+            // ColumPremium
+            // 
+            ColumPremium.HeaderText = "ASIENTOS PREM.";
+            ColumPremium.Name = "ColumPremium";
+            ColumPremium.ReadOnly = true;
+            // 
             // ColumAvion
             // 
             ColumAvion.HeaderText = "AVION";
@@ -144,6 +162,7 @@
             txtBMatricula.PlaceholderText = "Filtrar por matricula";
             txtBMatricula.Size = new Size(143, 15);
             txtBMatricula.TabIndex = 49;
+            txtBMatricula.TextChanged += txtBMatricula_TextChanged;
             // 
             // btnVolver
             // 
@@ -153,7 +172,7 @@
             btnVolver.FlatStyle = FlatStyle.Flat;
             btnVolver.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnVolver.ForeColor = Color.WhiteSmoke;
-            btnVolver.Location = new Point(40, 342);
+            btnVolver.Location = new Point(49, 347);
             btnVolver.MaximumSize = new Size(116, 25);
             btnVolver.MinimumSize = new Size(116, 25);
             btnVolver.Name = "btnVolver";
@@ -161,6 +180,7 @@
             btnVolver.TabIndex = 48;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnVolver_Click;
             // 
             // btnModificar
             // 
@@ -195,6 +215,7 @@
             btnAgregar.TabIndex = 46;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnEliminar
             // 
@@ -212,6 +233,15 @@
             btnEliminar.TabIndex = 45;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
+            // 
+            // panelFormularios
+            // 
+            panelFormularios.Dock = DockStyle.Fill;
+            panelFormularios.Location = new Point(0, 0);
+            panelFormularios.Name = "panelFormularios";
+            panelFormularios.Size = new Size(711, 379);
+            panelFormularios.TabIndex = 50;
             // 
             // FrmCrudVuelos
             // 
@@ -225,6 +255,7 @@
             Controls.Add(btnAgregar);
             Controls.Add(btnEliminar);
             Controls.Add(dataGVVuelos);
+            Controls.Add(panelFormularios);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmCrudVuelos";
             Text = "FrmCrudVuelos";
@@ -247,6 +278,9 @@
         private DataGridViewTextBoxColumn ColumDestino;
         private DataGridViewTextBoxColumn ColumPrecio;
         private DataGridViewTextBoxColumn ColumPrecioP;
+        private DataGridViewTextBoxColumn ColumTurista;
+        private DataGridViewTextBoxColumn ColumPremium;
         private DataGridViewTextBoxColumn ColumAvion;
+        private Panel panelFormularios;
     }
 }

@@ -1,7 +1,7 @@
 [
   {
-    "CiudadPartida": 10,
-    "CiudadDestino": 0,
+    "CiudadPartida": "Salta",
+    "CiudadDestino": "BuenosAires",
     "FechaVuelo": "2023-04-22T06:10:00",
     "Avion": {
       "Matricula": "FC5EA1CD",
@@ -40,8 +40,8 @@
     ]
   },
   {
-    "CiudadPartida": 4,
-    "CiudadDestino": 0,
+    "CiudadPartida": "C\u00F3rdoba",
+    "CiudadDestino": "BuenosAires",
     "FechaVuelo": "2023-06-12T14:40:00",
     "Avion": {
       "Matricula": "Y45TS67M",
@@ -80,8 +80,8 @@
     ]
   },
   {
-    "CiudadPartida": 0,
-    "CiudadDestino": 17,
+    "CiudadPartida": "BuenosAires",
+    "CiudadDestino": "Roma",
     "FechaVuelo": "2023-05-24T16:20:00",
     "Avion": {
       "Matricula": "LA31YTE6",
@@ -130,8 +130,8 @@
     ]
   },
   {
-    "CiudadPartida": 0,
-    "CiudadDestino": 19,
+    "CiudadPartida": "BuenosAires",
+    "CiudadDestino": "Miami",
     "FechaVuelo": "2023-09-10T20:30:00",
     "Avion": {
       "Matricula": "UTR43Y21",
@@ -180,8 +180,8 @@
     ]
   },
   {
-    "CiudadPartida": 13,
-    "CiudadDestino": 2,
+    "CiudadPartida": "Tucum\u00E1n",
+    "CiudadDestino": "Bariloche",
     "FechaVuelo": "2023-06-15T10:00:00",
     "Avion": {
       "Matricula": "8S7HY5A3",
@@ -230,8 +230,8 @@
     ]
   },
   {
-    "CiudadPartida": 0,
-    "CiudadDestino": 15,
+    "CiudadPartida": "BuenosAires",
+    "CiudadDestino": "Ushuaia",
     "FechaVuelo": "2023-05-16T08:00:00",
     "Avion": {
       "Matricula": "AG5GF3AE",

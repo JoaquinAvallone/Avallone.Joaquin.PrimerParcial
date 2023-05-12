@@ -9,8 +9,8 @@ namespace Biblioteca
 {
     public class Vuelos
     {       
-        private Destinos ciudadPartida;
-        private Destinos ciudadDestino;
+        private string ciudadPartida;
+        private string ciudadDestino;
         private DateTime fechaVuelo;
         private Aeronaves avion;
         private int cantidadAsientosPrem;
@@ -24,7 +24,7 @@ namespace Biblioteca
         {
             Pasajeros = new List<Pasajeros>();
         }
-        public Vuelos(Destinos ciudadPartida, Destinos ciudadDestino, DateTime fechaVuelo, Aeronaves aeronaves, int cantidadAsientosPrem, int cantidadAsientosTuris, float precioTurista, float precioPrem, float duracionVuelo,List<Pasajeros> pasajeros):this()
+        public Vuelos(string ciudadPartida, string ciudadDestino, DateTime fechaVuelo, Aeronaves aeronaves, int cantidadAsientosPrem, int cantidadAsientosTuris, float precioTurista, float precioPrem, float duracionVuelo,List<Pasajeros> pasajeros):this()
         {
             this.ciudadPartida = ciudadPartida;
             this.ciudadDestino = ciudadDestino;
@@ -38,8 +38,9 @@ namespace Biblioteca
             this.Pasajeros = pasajeros;
         }
 
-        public Destinos CiudadPartida { get => ciudadPartida; set => ciudadPartida = value; }
-        public Destinos CiudadDestino { get => ciudadDestino; set => ciudadDestino = value; }
+
+        public string CiudadPartida { get => ciudadPartida; set => ciudadPartida = value; }
+        public string CiudadDestino { get => ciudadDestino; set => ciudadDestino = value; }
         public DateTime FechaVuelo { get => fechaVuelo; set => fechaVuelo = value; }
         public Aeronaves Avion { get => avion; set => avion = value; }
         public int CantidadAsientosPrem { get => cantidadAsientosPrem; set => cantidadAsientosPrem = value; }
@@ -49,28 +50,52 @@ namespace Biblioteca
         public float DuracionVuelo { get => duracionVuelo; set => duracionVuelo = value; }
         public List<Pasajeros> Pasajeros { get => pasajeros; set => pasajeros = value; }
 
-        public enum Destinos
+       
+        public static int GenerarDuracionNacional()
         {
-            BuenosAires,
-            SantaRosa,
-            Bariloche,
-            Corrientes,
-            Córdoba,
-            Jujuy,
-            Mendoza,
-            Neuquén,
-            Posadas,
-            Iguazú,
-            Salta,
-            SantiagoDelEstero,
-            Trelew,
-            Tucumán,
-            PuertoMadryn,
-            Ushuaia,
-            Recife,
-            Roma,
-            Acapulco,
-            Miami
+            Random random = new Random();
+
+            return random.Next(2, 4 + 1);
+        }
+
+        public static int GenerarDuracionIntenacional()
+        {
+            Random random = new Random();
+
+            return random.Next(8, 12 + 1);
+        }
+
+        public static int GenerarPrecioNacional(bool premium, int duracion)
+        {
+            int precioTurista;
+            int precioPremium;
+            int porcentaje;
+
+            precioTurista = duracion * 50;
+            if (premium)
+            {
+                porcentaje = (35 * precioTurista) / 100;
+                precioPremium = precioTurista + porcentaje;
+                return precioPremium;
+            }            
+            return precioTurista;
+        }
+
+        public static int GenerarPrecioInternacional(bool premium, int duracion)
+        {
+            int precioTurista;
+            int precioPremium;
+            int porcentaje;
+
+            precioTurista = duracion * 100;
+            if (premium)
+            {
+                porcentaje = (35 * precioTurista) / 100;
+                precioPremium = precioTurista + porcentaje;
+                return precioPremium;
+            }
+
+            return precioTurista;
         }
 
         public static bool operator ==(Pasajeros pasajero, Vuelos vuelo)
