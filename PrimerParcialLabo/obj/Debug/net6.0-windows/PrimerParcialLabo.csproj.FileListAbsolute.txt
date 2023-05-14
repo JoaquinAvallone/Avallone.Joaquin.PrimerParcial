@@ -33,3 +33,4 @@ C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\o
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmModificarAeronave.resources
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmCrudVuelos.resources
 C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmAgregarVuelo.resources
+C:\Users\Usuario\source\repos\Avallone.Joaquin.PrimerParcial\PrimerParcialLabo\obj\Debug\net6.0-windows\PrimerParcialLabo.FrmModificarVuelo.resources

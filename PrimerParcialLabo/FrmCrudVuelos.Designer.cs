@@ -172,7 +172,7 @@
             btnVolver.FlatStyle = FlatStyle.Flat;
             btnVolver.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnVolver.ForeColor = Color.WhiteSmoke;
-            btnVolver.Location = new Point(49, 347);
+            btnVolver.Location = new Point(292, 344);
             btnVolver.MaximumSize = new Size(116, 25);
             btnVolver.MinimumSize = new Size(116, 25);
             btnVolver.Name = "btnVolver";
@@ -198,6 +198,7 @@
             btnModificar.TabIndex = 47;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Click += btnModificar_Click;
             // 
             // btnAgregar
             // 

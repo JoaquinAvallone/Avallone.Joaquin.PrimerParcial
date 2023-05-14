@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dataGVAviones = new DataGridView();
             ColumMatricula = new DataGridViewTextBoxColumn();
             ColumAsientos = new DataGridViewTextBoxColumn();
@@ -42,7 +42,7 @@
             lblPartida = new Label();
             lblDestino = new Label();
             lblFecha = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dateTPFechaVuelo = new DateTimePicker();
             comboBPartida = new ComboBox();
             comboBDestino = new ComboBox();
             lblHora = new Label();
@@ -53,6 +53,10 @@
             btnCancelar = new Button();
             checkBInternacional = new CheckBox();
             lblMatricula = new Label();
+            panel8 = new Panel();
+            panel1 = new Panel();
+            panel11 = new Panel();
+            panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGVAviones).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUDHora).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUDMinutos).BeginInit();
@@ -70,41 +74,41 @@
             dataGVAviones.BorderStyle = BorderStyle.None;
             dataGVAviones.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGVAviones.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle4.SelectionForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dataGVAviones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle1.SelectionForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGVAviones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGVAviones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGVAviones.Columns.AddRange(new DataGridViewColumn[] { ColumMatricula, ColumAsientos, ColumBaños, ColumInternet, ColumComida, ColumBodega });
             dataGVAviones.Cursor = Cursors.Hand;
             dataGVAviones.EnableHeadersVisualStyles = false;
             dataGVAviones.GridColor = Color.FromArgb(35, 32, 39);
-            dataGVAviones.Location = new Point(2, 1);
+            dataGVAviones.Location = new Point(2, 3);
             dataGVAviones.Name = "dataGVAviones";
             dataGVAviones.ReadOnly = true;
             dataGVAviones.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.DarkGray;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle5.SelectionForeColor = Color.DarkGray;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGVAviones.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.DarkGray;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle2.SelectionForeColor = Color.DarkGray;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGVAviones.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGVAviones.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.LightGray;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            dataGVAviones.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.LightGray;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGVAviones.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGVAviones.RowTemplate.Height = 25;
             dataGVAviones.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dataGVAviones.Size = new Size(706, 210);
+            dataGVAviones.Size = new Size(825, 261);
             dataGVAviones.TabIndex = 5;
             dataGVAviones.CellClick += dataGVAviones_CellClick;
             // 
@@ -151,83 +155,89 @@
             txtBMatricula.BorderStyle = BorderStyle.None;
             txtBMatricula.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             txtBMatricula.ForeColor = Color.WhiteSmoke;
-            txtBMatricula.Location = new Point(549, 275);
+            txtBMatricula.Location = new Point(677, 271);
             txtBMatricula.MaxLength = 8;
             txtBMatricula.Name = "txtBMatricula";
-            txtBMatricula.PlaceholderText = "Buscar...";
+            txtBMatricula.PlaceholderText = "Avion a asignar";
             txtBMatricula.Size = new Size(143, 16);
             txtBMatricula.TabIndex = 45;
             txtBMatricula.TextChanged += txtBMatricula_TextChanged_1;
             // 
             // lblPartida
             // 
+            lblPartida.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblPartida.AutoSize = true;
-            lblPartida.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPartida.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblPartida.ForeColor = Color.WhiteSmoke;
-            lblPartida.Location = new Point(6, 329);
+            lblPartida.Location = new Point(524, 341);
             lblPartida.Name = "lblPartida";
-            lblPartida.Size = new Size(105, 15);
+            lblPartida.Size = new Size(111, 15);
             lblPartida.TabIndex = 56;
             lblPartida.Text = "Ciudad De Partida:";
             // 
             // lblDestino
             // 
+            lblDestino.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblDestino.AutoSize = true;
-            lblDestino.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDestino.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblDestino.ForeColor = Color.WhiteSmoke;
-            lblDestino.Location = new Point(2, 276);
+            lblDestino.Location = new Point(226, 341);
             lblDestino.Name = "lblDestino";
-            lblDestino.Size = new Size(109, 15);
+            lblDestino.Size = new Size(113, 15);
             lblDestino.TabIndex = 57;
             lblDestino.Text = "Ciudad De Destino:";
             // 
             // lblFecha
             // 
+            lblFecha.Anchor = AnchorStyles.Bottom;
             lblFecha.AutoSize = true;
-            lblFecha.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFecha.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblFecha.ForeColor = Color.WhiteSmoke;
-            lblFecha.Location = new Point(277, 230);
+            lblFecha.Location = new Point(21, 270);
             lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(41, 15);
+            lblFecha.Size = new Size(44, 15);
             lblFecha.TabIndex = 58;
             lblFecha.Text = "Fecha:";
             // 
-            // dateTimePicker1
+            // dateTPFechaVuelo
             // 
-            dateTimePicker1.CalendarForeColor = Color.WhiteSmoke;
-            dateTimePicker1.CalendarMonthBackground = Color.FromArgb(35, 32, 39);
-            dateTimePicker1.CalendarTitleBackColor = Color.FromArgb(35, 32, 39);
-            dateTimePicker1.CalendarTitleForeColor = Color.WhiteSmoke;
-            dateTimePicker1.CalendarTrailingForeColor = Color.WhiteSmoke;
-            dateTimePicker1.Cursor = Cursors.Hand;
-            dateTimePicker1.Location = new Point(324, 227);
-            dateTimePicker1.MinDate = new DateTime(2023, 5, 11, 0, 0, 0, 0);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 65;
+            dateTPFechaVuelo.Anchor = AnchorStyles.Bottom;
+            dateTPFechaVuelo.CalendarForeColor = Color.WhiteSmoke;
+            dateTPFechaVuelo.CalendarMonthBackground = Color.FromArgb(35, 32, 39);
+            dateTPFechaVuelo.CalendarTitleBackColor = Color.FromArgb(35, 32, 39);
+            dateTPFechaVuelo.CalendarTitleForeColor = Color.WhiteSmoke;
+            dateTPFechaVuelo.CalendarTrailingForeColor = Color.WhiteSmoke;
+            dateTPFechaVuelo.Cursor = Cursors.Hand;
+            dateTPFechaVuelo.Location = new Point(70, 267);
+            dateTPFechaVuelo.MinDate = new DateTime(2023, 5, 12, 0, 0, 0, 0);
+            dateTPFechaVuelo.Name = "dateTPFechaVuelo";
+            dateTPFechaVuelo.Size = new Size(200, 23);
+            dateTPFechaVuelo.TabIndex = 65;
             // 
             // comboBPartida
             // 
+            comboBPartida.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             comboBPartida.BackColor = Color.FromArgb(35, 32, 39);
             comboBPartida.Cursor = Cursors.Hand;
             comboBPartida.FlatStyle = FlatStyle.Flat;
             comboBPartida.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             comboBPartida.ForeColor = Color.WhiteSmoke;
             comboBPartida.FormattingEnabled = true;
-            comboBPartida.Location = new Point(117, 326);
+            comboBPartida.Location = new Point(641, 338);
             comboBPartida.Name = "comboBPartida";
             comboBPartida.Size = new Size(121, 23);
             comboBPartida.TabIndex = 66;
             // 
             // comboBDestino
             // 
+            comboBDestino.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             comboBDestino.BackColor = Color.FromArgb(35, 32, 39);
             comboBDestino.Cursor = Cursors.Hand;
             comboBDestino.FlatStyle = FlatStyle.Flat;
             comboBDestino.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             comboBDestino.ForeColor = Color.WhiteSmoke;
             comboBDestino.FormattingEnabled = true;
-            comboBDestino.Location = new Point(117, 273);
+            comboBDestino.Location = new Point(344, 338);
             comboBDestino.Name = "comboBDestino";
             comboBDestino.Size = new Size(121, 23);
             comboBDestino.TabIndex = 67;
@@ -235,50 +245,54 @@
             // 
             // lblHora
             // 
+            lblHora.Anchor = AnchorStyles.Bottom;
             lblHora.AutoSize = true;
-            lblHora.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblHora.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblHora.ForeColor = Color.WhiteSmoke;
-            lblHora.Location = new Point(277, 276);
+            lblHora.Location = new Point(283, 270);
             lblHora.Name = "lblHora";
-            lblHora.Size = new Size(36, 15);
+            lblHora.Size = new Size(37, 15);
             lblHora.TabIndex = 68;
             lblHora.Text = "Hora:";
             // 
             // numericUDHora
             // 
+            numericUDHora.Anchor = AnchorStyles.Bottom;
             numericUDHora.BackColor = Color.FromArgb(35, 32, 39);
             numericUDHora.BorderStyle = BorderStyle.None;
             numericUDHora.Cursor = Cursors.Hand;
             numericUDHora.ForeColor = Color.WhiteSmoke;
-            numericUDHora.Location = new Point(335, 276);
+            numericUDHora.Location = new Point(326, 271);
             numericUDHora.Maximum = new decimal(new int[] { 23, 0, 0, 0 });
             numericUDHora.Name = "numericUDHora";
-            numericUDHora.Size = new Size(99, 19);
+            numericUDHora.Size = new Size(101, 19);
             numericUDHora.TabIndex = 77;
             numericUDHora.TextAlign = HorizontalAlignment.Center;
             // 
             // numericUDMinutos
             // 
+            numericUDMinutos.Anchor = AnchorStyles.Bottom;
             numericUDMinutos.BackColor = Color.FromArgb(35, 32, 39);
             numericUDMinutos.BorderStyle = BorderStyle.None;
             numericUDMinutos.Cursor = Cursors.Hand;
             numericUDMinutos.ForeColor = Color.WhiteSmoke;
             numericUDMinutos.Increment = new decimal(new int[] { 10, 0, 0, 0 });
-            numericUDMinutos.Location = new Point(339, 327);
+            numericUDMinutos.Location = new Point(498, 271);
             numericUDMinutos.Maximum = new decimal(new int[] { 50, 0, 0, 0 });
             numericUDMinutos.Name = "numericUDMinutos";
-            numericUDMinutos.Size = new Size(95, 19);
+            numericUDMinutos.Size = new Size(99, 19);
             numericUDMinutos.TabIndex = 78;
             numericUDMinutos.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Bottom;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.WhiteSmoke;
-            label1.Location = new Point(277, 329);
+            label1.Location = new Point(440, 271);
             label1.Name = "label1";
-            label1.Size = new Size(54, 15);
+            label1.Size = new Size(55, 15);
             label1.TabIndex = 79;
             label1.Text = "Minutos:";
             // 
@@ -288,9 +302,9 @@
             btnAceptar.Cursor = Cursors.Hand;
             btnAceptar.FlatAppearance.BorderSize = 0;
             btnAceptar.FlatStyle = FlatStyle.Flat;
-            btnAceptar.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAceptar.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAceptar.ForeColor = Color.WhiteSmoke;
-            btnAceptar.Location = new Point(461, 321);
+            btnAceptar.Location = new Point(283, 409);
             btnAceptar.MaximumSize = new Size(116, 25);
             btnAceptar.MinimumSize = new Size(116, 25);
             btnAceptar.Name = "btnAceptar";
@@ -298,6 +312,7 @@
             btnAceptar.TabIndex = 80;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // btnCancelar
             // 
@@ -305,9 +320,9 @@
             btnCancelar.Cursor = Cursors.Hand;
             btnCancelar.FlatAppearance.BorderSize = 0;
             btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancelar.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancelar.ForeColor = Color.WhiteSmoke;
-            btnCancelar.Location = new Point(583, 321);
+            btnCancelar.Location = new Point(431, 409);
             btnCancelar.MaximumSize = new Size(116, 25);
             btnCancelar.MinimumSize = new Size(116, 25);
             btnCancelar.Name = "btnCancelar";
@@ -319,15 +334,16 @@
             // 
             // checkBInternacional
             // 
+            checkBInternacional.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             checkBInternacional.AutoSize = true;
             checkBInternacional.CheckAlign = ContentAlignment.MiddleRight;
             checkBInternacional.Cursor = Cursors.Hand;
             checkBInternacional.FlatAppearance.BorderSize = 0;
-            checkBInternacional.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBInternacional.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             checkBInternacional.ForeColor = Color.WhiteSmoke;
-            checkBInternacional.Location = new Point(2, 232);
+            checkBInternacional.Location = new Point(21, 340);
             checkBInternacional.Name = "checkBInternacional";
-            checkBInternacional.Size = new Size(130, 19);
+            checkBInternacional.Size = new Size(135, 19);
             checkBInternacional.TabIndex = 82;
             checkBInternacional.Text = "Vuelo Internacional";
             checkBInternacional.UseVisualStyleBackColor = true;
@@ -335,21 +351,58 @@
             // 
             // lblMatricula
             // 
+            lblMatricula.Anchor = AnchorStyles.Bottom;
             lblMatricula.AutoSize = true;
-            lblMatricula.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMatricula.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblMatricula.ForeColor = Color.WhiteSmoke;
-            lblMatricula.Location = new Point(488, 275);
+            lblMatricula.Location = new Point(614, 271);
             lblMatricula.Name = "lblMatricula";
-            lblMatricula.Size = new Size(60, 15);
+            lblMatricula.Size = new Size(63, 15);
             lblMatricula.TabIndex = 83;
             lblMatricula.Text = "Matricula:";
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.WhiteSmoke;
+            panel8.Location = new Point(829, -9);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(1, 472);
+            panel8.TabIndex = 84;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.WhiteSmoke;
+            panel1.Location = new Point(0, -9);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1, 472);
+            panel1.TabIndex = 85;
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.WhiteSmoke;
+            panel11.Location = new Point(2, 454);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(830, 1);
+            panel11.TabIndex = 86;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.WhiteSmoke;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(830, 1);
+            panel2.TabIndex = 87;
             // 
             // FrmAgregarVuelo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(35, 32, 39);
-            ClientSize = new Size(711, 379);
+            ClientSize = new Size(830, 455);
+            Controls.Add(panel2);
+            Controls.Add(panel11);
+            Controls.Add(panel1);
+            Controls.Add(panel8);
             Controls.Add(lblMatricula);
             Controls.Add(checkBInternacional);
             Controls.Add(btnCancelar);
@@ -360,7 +413,7 @@
             Controls.Add(lblHora);
             Controls.Add(comboBDestino);
             Controls.Add(comboBPartida);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dateTPFechaVuelo);
             Controls.Add(lblFecha);
             Controls.Add(lblDestino);
             Controls.Add(lblPartida);
@@ -368,6 +421,7 @@
             Controls.Add(dataGVAviones);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmAgregarVuelo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmAgregarVuelo";
             Load += FrmAgregarVuelo_Load;
             ((System.ComponentModel.ISupportInitialize)dataGVAviones).EndInit();
@@ -390,7 +444,7 @@
         protected Label lblPartida;
         protected Label lblDestino;
         protected Label lblFecha;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTPFechaVuelo;
         private ComboBox comboBPartida;
         private ComboBox comboBDestino;
         protected Label lblHora;
@@ -401,5 +455,9 @@
         protected Button btnCancelar;
         private CheckBox checkBInternacional;
         protected Label lblMatricula;
+        private Panel panel8;
+        private Panel panel1;
+        private Panel panel11;
+        private Panel panel2;
     }
 }

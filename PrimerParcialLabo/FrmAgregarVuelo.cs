@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,6 +32,7 @@ namespace PrimerParcialLabo
             RellenarComboBox();
             comboBPartida.Enabled = false;
             RellenarGrid();
+            dateTPFechaVuelo.MinDate = DateTime.Now;
         }
 
         private void RellenarComboBox()
@@ -40,12 +42,22 @@ namespace PrimerParcialLabo
                 comboBDestino.Items.Add(item);
                 comboBPartida.Items.Add(item);
             }
-
         }
 
         private void comboBDestino_TextChanged(object sender, EventArgs e)
         {
             comboBPartida.Enabled = true;
+
+            if (!checkBInternacional.Checked)
+            {
+                foreach (Enumerados.Nacional item in comboBPartida.Items)
+                {
+                    if (comboBDestino.Text == item.ToString())
+                    {
+                        comboBPartida.Items.Remove(item);
+                    }
+                }
+            }
         }
 
         private void checkBInternacional_CheckedChanged(object sender, EventArgs e)
@@ -149,14 +161,6 @@ namespace PrimerParcialLabo
             }
         }
 
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            seleccionado = false;
-            txtBMatricula.Visible = true;
-            RellenarGrid();
-        }
-
         private void txtBMatricula_TextChanged_1(object sender, EventArgs e)
         {
             FiltrarPorMatricula();
@@ -165,6 +169,94 @@ namespace PrimerParcialLabo
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            string? partida;
+            string? destino;
+            DateTime dateTime;
+            int cantidadAsientosTuris = 0;
+            int cantidadAsientosPrem = 0;
+            int precioTurista;
+            int precioPrem;
+            int duracion;
+            bool todoOk = true;
+            Aeronaves? avionSelect = null;
+
+            if (checkBInternacional.Checked)
+            {
+                duracion = Vuelos.GenerarDuracionIntenacional();
+                precioTurista = Vuelos.GenerarPrecioInternacional(false, duracion);
+                precioPrem = Vuelos.GenerarPrecioInternacional(true, duracion); ;
+            }
+            else
+            {
+                duracion = Vuelos.GenerarDuracionNacional();
+                precioTurista = Vuelos.GenerarPrecioNacional(false, duracion);
+                precioPrem = Vuelos.GenerarPrecioNacional(true, duracion);
+            }
+
+            foreach (Aeronaves item in aviones)
+            {
+                if (item.Matricula == txtBMatricula.Text)
+                {
+                    cantidadAsientosPrem = Vuelos.GeneradorCantidadAsientos(true, item.CantidadAsientos);
+                    cantidadAsientosTuris = Vuelos.GeneradorCantidadAsientos(false, item.CantidadAsientos);
+                    avionSelect = item;
+                }
+            }
+
+            dateTime = dateTPFechaVuelo.Value;
+            dateTime = dateTime.Date.AddHours((int)numericUDHora.Value).AddMinutes((int)numericUDMinutos.Value);
+
+            if (txtBMatricula.Text != "")
+            {
+                foreach (Vuelos item in vuelos)
+                {
+                    if (item.Avion.Matricula == txtBMatricula.Text)
+                    {
+                        if (item.FechaVuelo == dateTime)
+                        {
+                            MessageBox.Show("El avion seleccionado tiene un vuelo en la fecha asignada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            todoOk = false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar la matricula del avion a asignar el viaje", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                todoOk = false;
+            }
+
+            if (dateTime <= DateTime.Now)
+            {
+                MessageBox.Show("El horario seleccionado es invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                todoOk = false;
+            }
+
+
+            if (comboBDestino.Text == "")
+            {
+                MessageBox.Show("Debe elegir un destino", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                todoOk = false;
+            }
+            if (comboBPartida.Text == "")
+            {
+                MessageBox.Show("Debe elegir el lugar de partida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                todoOk = false;
+            }
+
+            if (todoOk)
+            {
+                partida = comboBPartida.Text;
+                destino = comboBDestino.Text;
+                Vuelos newVuelo = new Vuelos(partida, destino, dateTime, avionSelect, cantidadAsientosPrem, cantidadAsientosTuris, precioTurista, precioPrem, duracion);
+                vuelos.Add(newVuelo);
+                Serializadores.SerializarJson("Vuelos.json", vuelos);
+                this.Close();
+            }
         }
     }
 }

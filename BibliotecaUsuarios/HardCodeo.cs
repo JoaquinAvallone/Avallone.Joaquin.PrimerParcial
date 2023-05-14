@@ -84,32 +84,30 @@ namespace Biblioteca
             List<Pasajeros> pasajeros = new List<Pasajeros>();
             pasajeros = HardCodeoPasajeros();
 
-            pasajerosVuelo1.Add(pasajeros[0]);
-            pasajerosVuelo1.Add(pasajeros[1]);
-            pasajerosVuelo2.Add(pasajeros[2]);
-            pasajerosVuelo2.Add(pasajeros[3]);
-            pasajerosVuelo3.Add(pasajeros[4]);
-            pasajerosVuelo3.Add(pasajeros[5]);
-            pasajerosVuelo3.Add(pasajeros[6]);
-            pasajerosVuelo4.Add(pasajeros[7]);
-            pasajerosVuelo4.Add(pasajeros[8]);
-            pasajerosVuelo4.Add(pasajeros[9]);
-            pasajerosVuelo5.Add(pasajeros[10]);
-            pasajerosVuelo5.Add(pasajeros[11]);
-            pasajerosVuelo5.Add(pasajeros[12]);
-            pasajerosVuelo6.Add(pasajeros[13]);
-            pasajerosVuelo6.Add(pasajeros[14]);
-            pasajerosVuelo6.Add(pasajeros[15]);
+            Vuelos vuelo1 = new Vuelos("Salta", "BuenosAires", new DateTime(2023, 4, 22, 06, 10, 00), aviones[0], 30, 120, 150, 202.5F, 3);
+            Vuelos vuelo2 = new Vuelos("Córdoba", "BuenosAires", new DateTime(2023, 6, 12, 14, 40, 00), aviones[1], 50, 200, 100, 135F, 2);
+            Vuelos vuelo3 = new Vuelos("BuenosAires", "Roma", new DateTime(2023, 5, 24, 16, 20, 00), aviones[2], 34, 136, 1300, 1755F, 12);
+            Vuelos vuelo4 = new Vuelos("BuenosAires", "Miami", new DateTime(2023, 9, 10, 20, 30, 00), aviones[3], 24, 96, 1000, 1350F, 10);
+            Vuelos vuelo5 = new Vuelos("Tucumán", "Bariloche", new DateTime(2023, 6, 15, 10, 00, 00), aviones[4], 40, 160, 150, 202.5F, 3);
+            Vuelos vuelo6 = new Vuelos("BuenosAires", "Ushuaia", new DateTime(2023, 5, 16, 08, 00, 00), aviones[5], 30, 120, 150, 202.5F, 4);
 
-
-            Vuelos vuelo1 = new Vuelos("Salta", "BuenosAires", new DateTime(2023, 4, 22, 06, 10, 00), aviones[0], 30, 120, 150, 202.5F, 3.00F, pasajerosVuelo1);
-            Vuelos vuelo2 = new Vuelos("Córdoba", "BuenosAires", new DateTime(2023, 6, 12, 14, 40, 00), aviones[1], 50, 200, 100, 135F, 2.00F, pasajerosVuelo2);
-            Vuelos vuelo3 = new Vuelos("BuenosAires", "Roma", new DateTime(2023, 5, 24, 16, 20, 00), aviones[2], 34, 136, 1300, 1755F, 13.00F, pasajerosVuelo3);
-            Vuelos vuelo4 = new Vuelos("BuenosAires", "Miami", new DateTime(2023, 9, 10, 20, 30, 00), aviones[3], 24, 96, 1000, 1350F, 10.00F, pasajerosVuelo4);
-            Vuelos vuelo5 = new Vuelos("Tucumán", "Bariloche", new DateTime(2023, 6, 15, 10, 00, 00), aviones[4], 40, 160, 150, 202.5F, 3.00F, pasajerosVuelo5);
-            Vuelos vuelo6 = new Vuelos("BuenosAires", "Ushuaia", new DateTime(2023, 5, 16, 08, 00, 00), aviones[5], 30, 120, 150, 202.5F, 3.00F, pasajerosVuelo6);
-
-
+            vuelo1.Pasajeros.Add(pasajeros[0]);
+            vuelo1.Pasajeros.Add(pasajeros[1]);
+            vuelo2.Pasajeros.Add(pasajeros[2]);
+            vuelo2.Pasajeros.Add(pasajeros[3]);
+            vuelo3.Pasajeros.Add(pasajeros[4]);
+            vuelo3.Pasajeros.Add(pasajeros[5]);
+            vuelo3.Pasajeros.Add(pasajeros[6]);
+            vuelo4.Pasajeros.Add(pasajeros[7]);
+            vuelo4.Pasajeros.Add(pasajeros[8]);
+            vuelo4.Pasajeros.Add(pasajeros[9]);
+            vuelo5.Pasajeros.Add(pasajeros[10]);
+            vuelo5.Pasajeros.Add(pasajeros[11]);
+            vuelo5.Pasajeros.Add(pasajeros[12]);
+            vuelo6.Pasajeros.Add(pasajeros[13]);
+            vuelo6.Pasajeros.Add(pasajeros[14]);
+            vuelo6.Pasajeros.Add(pasajeros[15]);
+           
             vuelos.Add(vuelo1);
             vuelos.Add(vuelo2);
             vuelos.Add(vuelo3);

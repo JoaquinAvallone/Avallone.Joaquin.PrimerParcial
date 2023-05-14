@@ -117,28 +117,11 @@ namespace PrimerParcialLabo
                 }
             }
         }
-
-        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Form? formulario;
-            formulario = panelFormularios.Controls.OfType<MiForm>().FirstOrDefault(); // busca en la coleccion el formulario
-            if (formulario == null)
-            {
-                formulario = new MiForm();
-                formulario.TopLevel = false;
-                formulario.FormBorderStyle = FormBorderStyle.None;
-                formulario.Dock = DockStyle.Fill;
-                panelFormularios.Controls.Add(formulario);
-                panelFormularios.Tag = formulario;
-                panelFormularios.BringToFront();
-                formulario.Show();
-                formulario.BringToFront();
-            }
-            else
-            {
-                formulario.BringToFront();
-                panelFormularios.BringToFront();
-            }
+            FrmAgregarVuelo frmAgregarVuelo = new FrmAgregarVuelo();
+            frmAgregarVuelo.ShowDialog();
+            RellenarGrid();
         }
 
         private void txtBMatricula_TextChanged(object sender, EventArgs e)
@@ -148,12 +131,81 @@ namespace PrimerParcialLabo
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            string matricula = vueloSeleccionado.Avion.Matricula;
+            bool vueloRealizado = true;
 
+            if (!seleccionado)
+            {
+                MessageBox.Show("Primero debe seleccionar un vuelo", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                foreach (Vuelos vuelo in vuelos)
+                {
+                    if (vuelo.FechaVuelo > DateTime.Today)
+                    {
+                        vueloRealizado = false;
+                        break;
+                    }
+                }
+                if (vueloRealizado)
+                {
+                    MessageBox.Show("No se puede eliminar un vuelo realizado.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    foreach (Vuelos vuelo in vuelos)
+                    {
+                        if (vuelo.Avion.Matricula == matricula && vuelo.FechaVuelo == vueloSeleccionado.FechaVuelo)
+                        {
+                            DialogResult result = MessageBox.Show("Esta seguro de eliminar el vuelo?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (result == DialogResult.Yes)
+                            {
+                                vuelos.Remove(vuelo);
+                                Serializadores.SerializarJson("Vuelos.json", vuelos);
+                                btnVolver.Visible = false;
+                                seleccionado = false;
+                                RellenarGrid();
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmAgregarVuelo>();
+            FrmModificarVuelo frmModificarVuelo = new FrmModificarVuelo();
+            bool vueloRealizado = true;
+
+            if (!seleccionado)
+            {
+                MessageBox.Show("Primero debe seleccionar un vuelo", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                foreach (Vuelos vuelo in vuelos)
+                {
+                    if (vuelo.FechaVuelo > DateTime.Today)
+                    {
+                        vueloRealizado = false;
+                        break;
+                    }
+                }
+                if (vueloRealizado)
+                {
+                    MessageBox.Show("No se puede modificar un vuelo realizado.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    frmModificarVuelo.ShowDialog();
+                    RellenarGrid();
+                    txtBMatricula.Visible = true;
+                }
+            }
+            btnVolver.Visible = false;
+            seleccionado = false;
         }
     }
 }

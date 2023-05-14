@@ -164,6 +164,7 @@ namespace PrimerParcialLabo
                                 aviones.Remove(item);
                                 Serializadores.SerializarJson("Aeronaves.json", aviones);
                                 btnVolver.Visible = false;
+                                seleccionado = false;
                                 RellenarGrid();
                                 break;
                             }

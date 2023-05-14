@@ -4,7 +4,7 @@
     "CiudadDestino": "BuenosAires",
     "FechaVuelo": "2023-04-22T06:10:00",
     "Avion": {
-      "Matricula": "FC5EA1CD",
+      "Matricula": "M2AF45SE",
       "CantidadAsientos": 150,
       "CantidadBa\u00F1os": 4,
       "Internet": true,
@@ -80,106 +80,6 @@
     ]
   },
   {
-    "CiudadPartida": "BuenosAires",
-    "CiudadDestino": "Roma",
-    "FechaVuelo": "2023-05-24T16:20:00",
-    "Avion": {
-      "Matricula": "LA31YTE6",
-      "CantidadAsientos": 170,
-      "CantidadBa\u00F1os": 5,
-      "Internet": true,
-      "Comida": true,
-      "CapacidadBodega": 5000
-    },
-    "CantidadAsientosPrem": 34,
-    "CantidadAsientosTuris": 136,
-    "PrecioTurista": 1300,
-    "PrecioPrem": 1755,
-    "DuracionVuelo": 13,
-    "Pasajeros": [
-      {
-        "Dni": 41796568,
-        "Edad": 27,
-        "EquipajeMano": true,
-        "EquipajeBodega": false,
-        "PesoEquipaje": 21,
-        "Clase": "Turista",
-        "Apellido": "Jenner",
-        "Nombre": "Kendall"
-      },
-      {
-        "Dni": 44327922,
-        "Edad": 24,
-        "EquipajeMano": true,
-        "EquipajeBodega": true,
-        "PesoEquipaje": 38,
-        "Clase": "Premium",
-        "Apellido": "Holland",
-        "Nombre": "Tom"
-      },
-      {
-        "Dni": 43196568,
-        "Edad": 25,
-        "EquipajeMano": true,
-        "EquipajeBodega": false,
-        "PesoEquipaje": 15,
-        "Clase": "Turista",
-        "Apellido": "Lopez",
-        "Nombre": "Zendaya"
-      }
-    ]
-  },
-  {
-    "CiudadPartida": "BuenosAires",
-    "CiudadDestino": "Miami",
-    "FechaVuelo": "2023-09-10T20:30:00",
-    "Avion": {
-      "Matricula": "UTR43Y21",
-      "CantidadAsientos": 120,
-      "CantidadBa\u00F1os": 3,
-      "Internet": false,
-      "Comida": false,
-      "CapacidadBodega": 4600
-    },
-    "CantidadAsientosPrem": 24,
-    "CantidadAsientosTuris": 96,
-    "PrecioTurista": 1000,
-    "PrecioPrem": 1350,
-    "DuracionVuelo": 10,
-    "Pasajeros": [
-      {
-        "Dni": 40787922,
-        "Edad": 28,
-        "EquipajeMano": true,
-        "EquipajeBodega": true,
-        "PesoEquipaje": 23,
-        "Clase": "Premium",
-        "Apellido": "Hadid",
-        "Nombre": "Bella"
-      },
-      {
-        "Dni": 42795468,
-        "Edad": 27,
-        "EquipajeMano": true,
-        "EquipajeBodega": false,
-        "PesoEquipaje": 20,
-        "Clase": "Turista",
-        "Apellido": "Hadid",
-        "Nombre": "Gigi"
-      },
-      {
-        "Dni": 38108922,
-        "Edad": 40,
-        "EquipajeMano": true,
-        "EquipajeBodega": true,
-        "PesoEquipaje": 32,
-        "Clase": "Premium",
-        "Apellido": "Jackie",
-        "Nombre": "Chan"
-      }
-    ]
-  },
-  {
     "CiudadPartida": "Tucum\u00E1n",
     "CiudadDestino": "Bariloche",
     "FechaVuelo": "2023-06-15T10:00:00",
@@ -231,10 +131,10 @@
   },
   {
     "CiudadPartida": "BuenosAires",
-    "CiudadDestino": "Ushuaia",
-    "FechaVuelo": "2023-05-16T08:00:00",
+    "CiudadDestino": "SantaRosa",
+    "FechaVuelo": "2023-05-16T12:00:00",
     "Avion": {
-      "Matricula": "AG5GF3AE",
+      "Matricula": "76TS4SRA",
       "CantidadAsientos": 150,
       "CantidadBa\u00F1os": 4,
       "Internet": false,
@@ -244,7 +144,7 @@
     "CantidadAsientosPrem": 30,
     "CantidadAsientosTuris": 120,
     "PrecioTurista": 150,
-    "PrecioPrem": 202.5,
+    "PrecioPrem": 202,
     "DuracionVuelo": 3,
     "Pasajeros": [
       {
@@ -276,6 +176,36 @@
         "Clase": "Premium",
         "Apellido": "Avallone",
         "Nombre": "Paloma"
+      }
+    ]
+  },
+  {
+    "CiudadPartida": "BuenosAires",
+    "CiudadDestino": "Recife",
+    "FechaVuelo": "2023-05-13T00:00:00-03:00",
+    "Avion": {
+      "Matricula": "UTR43Y21",
+      "CantidadAsientos": 120,
+      "CantidadBa\u00F1os": 3,
+      "Internet": false,
+      "Comida": false,
+      "CapacidadBodega": 4600
+    },
+    "CantidadAsientosPrem": 23,
+    "CantidadAsientosTuris": 96,
+    "PrecioTurista": 800,
+    "PrecioPrem": 1080,
+    "DuracionVuelo": 8,
+    "Pasajeros": [
+      {
+        "Dni": 40796568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 30,
+        "Clase": "Premium",
+        "Apellido": "Avallone",
+        "Nombre": "Joaquin"
       }
     ]
   }

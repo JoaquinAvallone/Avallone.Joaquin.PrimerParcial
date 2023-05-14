@@ -1,8 +1,8 @@
 {
-  "Matricula": "DE4DE0BB",
+  "Matricula": "76TS4SRA",
   "CantidadAsientos": 150,
-  "CantidadBa\u00F1os": 1,
-  "Internet": true,
+  "CantidadBa\u00F1os": 4,
+  "Internet": false,
   "Comida": false,
-  "CapacidadBodega": 1000
+  "CapacidadBodega": 8000
 }

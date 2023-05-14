@@ -17,14 +17,14 @@ namespace Biblioteca
         private int cantidadAsientosTuris;
         private float precioTurista;
         private float precioPrem;
-        private float duracionVuelo;
+        private int duracionVuelo;
         private List<Pasajeros> pasajeros;
 
         public Vuelos()
         {
             Pasajeros = new List<Pasajeros>();
         }
-        public Vuelos(string ciudadPartida, string ciudadDestino, DateTime fechaVuelo, Aeronaves aeronaves, int cantidadAsientosPrem, int cantidadAsientosTuris, float precioTurista, float precioPrem, float duracionVuelo,List<Pasajeros> pasajeros):this()
+        public Vuelos(string ciudadPartida, string ciudadDestino, DateTime fechaVuelo, Aeronaves aeronaves, int cantidadAsientosPrem, int cantidadAsientosTuris, float precioTurista, float precioPrem, int duracionVuelo):this()
         {
             this.ciudadPartida = ciudadPartida;
             this.ciudadDestino = ciudadDestino;
@@ -47,10 +47,25 @@ namespace Biblioteca
         public int CantidadAsientosTuris { get => cantidadAsientosTuris; set => cantidadAsientosTuris = value; }
         public float PrecioTurista { get => precioTurista; set => precioTurista = value; }
         public float PrecioPrem { get => precioPrem; set => precioPrem = value; }
-        public float DuracionVuelo { get => duracionVuelo; set => duracionVuelo = value; }
+        public int DuracionVuelo { get => duracionVuelo; set => duracionVuelo = value; }
         public List<Pasajeros> Pasajeros { get => pasajeros; set => pasajeros = value; }
 
        
+        public static int GeneradorCantidadAsientos(bool premium, int asientosTotales)
+        {
+            int asientosPrem;
+            int asientosTuris;
+
+            asientosPrem = (20 * asientosTotales) / 100;
+            if (!premium)
+            {
+                asientosTuris = asientosTotales - asientosPrem;
+                return asientosTuris;
+            }
+
+            return asientosPrem;            
+        }
+
         public static int GenerarDuracionNacional()
         {
             Random random = new Random();
@@ -119,33 +134,34 @@ namespace Biblioteca
             return !(pasajero == vuelo);
         }
 
-        public static Vuelos? operator +(Vuelos vuelo, Pasajeros pasajero)
+        public static bool operator +(Vuelos vuelo, Pasajeros pasajero)
         {
             if (vuelo is null || pasajero is null)
             {
-                return null;
+                return false;
             }
-            else if (pasajero == vuelo)
+            else if (pasajero != vuelo)
             {
                 vuelo.Pasajeros.Add(pasajero);
-                return vuelo;
+                return true;
             }
-            return null;
+            return false;
         }
 
-        public static Vuelos? operator -(Vuelos vuelo, Pasajeros pasajero)
+        public static bool operator -(Vuelos vuelo, Pasajeros pasajero)
         {
             if (vuelo is null || pasajero is null)
             {
-                return null;
+                return false;
             }
             if (pasajero == vuelo)
             {
                 vuelo.Pasajeros.Remove(pasajero);
-                return vuelo;
+                return true;
             }
-            return null;
+            return false;
         }
+
 
         public override string ToString()
         {

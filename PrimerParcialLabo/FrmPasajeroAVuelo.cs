@@ -104,16 +104,24 @@ namespace PrimerParcialLabo
                         if(newPasajero.Clase == "Premium" && item.CantidadAsientosPrem > 0)
                         {
                             item.CantidadAsientosPrem--;
-                            item.Avion.CantidadAsientos--;
                             item.Pasajeros.Add(newPasajero);
+                            MessageBox.Show("Pasajero agregado con exito", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             break;
                         }
-                        else if(newPasajero.Clase == "Turista" && item.CantidadAsientosPrem > 0)
+                        else
+                        {
+                            MessageBox.Show("No quedan mas asientos de clase premium en el vuelo seleccionado", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        if(newPasajero.Clase == "Turista" && item.CantidadAsientosPrem > 0)
                         {
                             item.CantidadAsientosTuris--;
-                            item.Avion.CantidadAsientos--;
                             item.Pasajeros.Add(newPasajero);
+                            MessageBox.Show("Pasajero agregado con exito", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             break;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No quedan mas asientos de clase turista en el vuelo seleccionado", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

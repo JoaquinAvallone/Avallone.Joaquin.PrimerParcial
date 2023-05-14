@@ -1,40 +1,40 @@
 {
-  "CiudadPartida": 10,
-  "CiudadDestino": 0,
-  "FechaVuelo": "2023-04-22T06:10:00",
+  "CiudadPartida": "C\u00F3rdoba",
+  "CiudadDestino": "BuenosAires",
+  "FechaVuelo": "2023-06-12T14:40:00",
   "Avion": {
-    "Matricula": "FC5EA1CD",
-    "CantidadAsientos": 150,
-    "CantidadBa\u00F1os": 4,
-    "Internet": true,
+    "Matricula": "Y45TS67M",
+    "CantidadAsientos": 250,
+    "CantidadBa\u00F1os": 6,
+    "Internet": false,
     "Comida": true,
-    "CapacidadBodega": 1600
+    "CapacidadBodega": 3100
   },
-  "CantidadAsientosPrem": 30,
-  "CantidadAsientosTuris": 120,
-  "PrecioTurista": 150,
-  "PrecioPrem": 202.5,
-  "DuracionVuelo": 3,
+  "CantidadAsientosPrem": 50,
+  "CantidadAsientosTuris": 200,
+  "PrecioTurista": 100,
+  "PrecioPrem": 135,
+  "DuracionVuelo": 2,
   "Pasajeros": [
     {
-      "Dni": 40796568,
-      "Edad": 25,
+      "Dni": 40456568,
+      "Edad": 27,
       "EquipajeMano": true,
       "EquipajeBodega": false,
-      "PesoEquipaje": 30,
-      "Clase": "Premium",
-      "Apellido": "Avallone",
-      "Nombre": "Joaquin"
+      "PesoEquipaje": 22,
+      "Clase": "Turista",
+      "Apellido": "Martinez",
+      "Nombre": "Dibu"
     },
     {
-      "Dni": 44157922,
-      "Edad": 30,
+      "Dni": 44157652,
+      "Edad": 22,
       "EquipajeMano": true,
       "EquipajeBodega": true,
-      "PesoEquipaje": 40,
+      "PesoEquipaje": 27,
       "Clase": "Premium",
-      "Apellido": "Fernando",
-      "Nombre": "Gago"
+      "Apellido": "Messi",
+      "Nombre": "Leonel"
     }
   ]
 }
