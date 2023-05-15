@@ -6,6 +6,7 @@
     "EquipajeBodega": false,
     "PesoEquipaje": 30,
     "Clase": "Premium",
+    "CantidadVuelos": 0,
     "Apellido": "Avallone",
     "Nombre": "Joaquin"
   },
@@ -16,6 +17,7 @@
     "EquipajeBodega": true,
     "PesoEquipaje": 40,
     "Clase": "Premium",
+    "CantidadVuelos": 0,
     "Apellido": "Fernando",
     "Nombre": "Gago"
   },
@@ -26,6 +28,7 @@
     "EquipajeBodega": false,
     "PesoEquipaje": 22,
     "Clase": "Turista",
+    "CantidadVuelos": 0,
     "Apellido": "Martinez",
     "Nombre": "Dibu"
   },
@@ -36,6 +39,7 @@
     "EquipajeBodega": true,
     "PesoEquipaje": 27,
     "Clase": "Premium",
+    "CantidadVuelos": 0,
     "Apellido": "Messi",
     "Nombre": "Leonel"
   },
@@ -46,6 +50,7 @@
     "EquipajeBodega": false,
     "PesoEquipaje": 21,
     "Clase": "Turista",
+    "CantidadVuelos": 0,
     "Apellido": "Jenner",
     "Nombre": "Kendall"
   },
@@ -56,6 +61,7 @@
     "EquipajeBodega": true,
     "PesoEquipaje": 38,
     "Clase": "Premium",
+    "CantidadVuelos": 0,
     "Apellido": "Holland",
     "Nombre": "Tom"
   },
@@ -66,6 +72,7 @@
     "EquipajeBodega": false,
     "PesoEquipaje": 15,
     "Clase": "Turista",
+    "CantidadVuelos": 0,
     "Apellido": "Lopez",
     "Nombre": "Zendaya"
   },
@@ -76,6 +83,7 @@
     "EquipajeBodega": true,
     "PesoEquipaje": 23,
     "Clase": "Premium",
+    "CantidadVuelos": 0,
     "Apellido": "Hadid",
     "Nombre": "Bella"
   },
@@ -86,6 +94,7 @@
     "EquipajeBodega": false,
     "PesoEquipaje": 20,
     "Clase": "Turista",
+    "CantidadVuelos": 0,
     "Apellido": "Hadid",
     "Nombre": "Gigi"
   },
@@ -96,6 +105,7 @@
     "EquipajeBodega": true,
     "PesoEquipaje": 32,
     "Clase": "Premium",
+    "CantidadVuelos": 0,
     "Apellido": "Jackie",
     "Nombre": "Chan"
   },
@@ -106,6 +116,7 @@
     "EquipajeBodega": false,
     "PesoEquipaje": 16,
     "Clase": "Turista",
+    "CantidadVuelos": 0,
     "Apellido": "Potato",
     "Nombre": "Hernan"
   },
@@ -116,6 +127,7 @@
     "EquipajeBodega": true,
     "PesoEquipaje": 20,
     "Clase": "Premium",
+    "CantidadVuelos": 0,
     "Apellido": "Forti",
     "Nombre": "Agustin"
   },
@@ -126,6 +138,7 @@
     "EquipajeBodega": false,
     "PesoEquipaje": 17,
     "Clase": "Turista",
+    "CantidadVuelos": 0,
     "Apellido": "Smith",
     "Nombre": "Ignacio"
   },
@@ -136,6 +149,7 @@
     "EquipajeBodega": true,
     "PesoEquipaje": 39,
     "Clase": "Premium",
+    "CantidadVuelos": 0,
     "Apellido": "Marini",
     "Nombre": "Nicolas"
   },
@@ -146,6 +160,7 @@
     "EquipajeBodega": false,
     "PesoEquipaje": 15,
     "Clase": "Turista",
+    "CantidadVuelos": 0,
     "Apellido": "Garcia",
     "Nombre": "Bautista"
   },
@@ -156,6 +171,7 @@
     "EquipajeBodega": true,
     "PesoEquipaje": 32,
     "Clase": "Premium",
+    "CantidadVuelos": 0,
     "Apellido": "Avallone",
     "Nombre": "Paloma"
   }

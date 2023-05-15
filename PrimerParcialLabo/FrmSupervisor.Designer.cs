@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSupervisor));
             panelSideMenu = new Panel();
+            panelEstadisticas = new Panel();
+            btnHorasVuelos = new Button();
+            btnDestinoMasElegido = new Button();
+            btnPasajerosFrecuentes = new Button();
+            btnFacturacionDestinos = new Button();
+            lblFecha = new Label();
             btnEstadisticas = new Button();
             panelSubMenuModif = new Panel();
             btnModPasa = new Button();
@@ -49,6 +55,7 @@
             panelFormularios = new Panel();
             picBoxLogo = new PictureBox();
             panelSideMenu.SuspendLayout();
+            panelEstadisticas.SuspendLayout();
             panelSubMenuModif.SuspendLayout();
             panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picBoxUser).BeginInit();
@@ -67,6 +74,8 @@
             // panelSideMenu
             // 
             panelSideMenu.BackColor = Color.FromArgb(11, 7, 17);
+            panelSideMenu.Controls.Add(panelEstadisticas);
+            panelSideMenu.Controls.Add(lblFecha);
             panelSideMenu.Controls.Add(btnEstadisticas);
             panelSideMenu.Controls.Add(panelSubMenuModif);
             panelSideMenu.Controls.Add(btnModificaciones);
@@ -76,6 +85,99 @@
             panelSideMenu.Name = "panelSideMenu";
             panelSideMenu.Size = new Size(200, 413);
             panelSideMenu.TabIndex = 0;
+            // 
+            // panelEstadisticas
+            // 
+            panelEstadisticas.BackColor = Color.FromArgb(35, 32, 39);
+            panelEstadisticas.Controls.Add(btnHorasVuelos);
+            panelEstadisticas.Controls.Add(btnDestinoMasElegido);
+            panelEstadisticas.Controls.Add(btnPasajerosFrecuentes);
+            panelEstadisticas.Controls.Add(btnFacturacionDestinos);
+            panelEstadisticas.Cursor = Cursors.Hand;
+            panelEstadisticas.Dock = DockStyle.Top;
+            panelEstadisticas.Location = new Point(0, 160);
+            panelEstadisticas.Name = "panelEstadisticas";
+            panelEstadisticas.Size = new Size(200, 121);
+            panelEstadisticas.TabIndex = 15;
+            // 
+            // btnHorasVuelos
+            // 
+            btnHorasVuelos.Dock = DockStyle.Top;
+            btnHorasVuelos.FlatAppearance.BorderSize = 0;
+            btnHorasVuelos.FlatStyle = FlatStyle.Flat;
+            btnHorasVuelos.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnHorasVuelos.ForeColor = Color.LightGray;
+            btnHorasVuelos.Location = new Point(0, 89);
+            btnHorasVuelos.Name = "btnHorasVuelos";
+            btnHorasVuelos.Padding = new Padding(30, 0, 0, 0);
+            btnHorasVuelos.Size = new Size(200, 29);
+            btnHorasVuelos.TabIndex = 5;
+            btnHorasVuelos.Text = "Horas De Vuelo";
+            btnHorasVuelos.TextAlign = ContentAlignment.MiddleLeft;
+            btnHorasVuelos.UseVisualStyleBackColor = true;
+            btnHorasVuelos.Click += btnHorasVuelos_Click;
+            // 
+            // btnDestinoMasElegido
+            // 
+            btnDestinoMasElegido.Dock = DockStyle.Top;
+            btnDestinoMasElegido.FlatAppearance.BorderSize = 0;
+            btnDestinoMasElegido.FlatStyle = FlatStyle.Flat;
+            btnDestinoMasElegido.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDestinoMasElegido.ForeColor = Color.LightGray;
+            btnDestinoMasElegido.Location = new Point(0, 60);
+            btnDestinoMasElegido.Name = "btnDestinoMasElegido";
+            btnDestinoMasElegido.Padding = new Padding(30, 0, 0, 0);
+            btnDestinoMasElegido.Size = new Size(200, 29);
+            btnDestinoMasElegido.TabIndex = 4;
+            btnDestinoMasElegido.Text = "Destino Mas Elegido";
+            btnDestinoMasElegido.TextAlign = ContentAlignment.MiddleLeft;
+            btnDestinoMasElegido.UseVisualStyleBackColor = true;
+            btnDestinoMasElegido.Click += btnDestinoMasElegido_Click;
+            // 
+            // btnPasajerosFrecuentes
+            // 
+            btnPasajerosFrecuentes.Dock = DockStyle.Top;
+            btnPasajerosFrecuentes.FlatAppearance.BorderSize = 0;
+            btnPasajerosFrecuentes.FlatStyle = FlatStyle.Flat;
+            btnPasajerosFrecuentes.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPasajerosFrecuentes.ForeColor = Color.LightGray;
+            btnPasajerosFrecuentes.Location = new Point(0, 31);
+            btnPasajerosFrecuentes.Name = "btnPasajerosFrecuentes";
+            btnPasajerosFrecuentes.Padding = new Padding(30, 0, 0, 0);
+            btnPasajerosFrecuentes.Size = new Size(200, 29);
+            btnPasajerosFrecuentes.TabIndex = 3;
+            btnPasajerosFrecuentes.Text = "Pasajeros Frecuentes";
+            btnPasajerosFrecuentes.TextAlign = ContentAlignment.MiddleLeft;
+            btnPasajerosFrecuentes.UseVisualStyleBackColor = true;
+            btnPasajerosFrecuentes.Click += btnPasajerosFrecuentes_Click;
+            // 
+            // btnFacturacionDestinos
+            // 
+            btnFacturacionDestinos.Cursor = Cursors.Hand;
+            btnFacturacionDestinos.Dock = DockStyle.Top;
+            btnFacturacionDestinos.FlatAppearance.BorderSize = 0;
+            btnFacturacionDestinos.FlatStyle = FlatStyle.Flat;
+            btnFacturacionDestinos.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFacturacionDestinos.ForeColor = Color.LightGray;
+            btnFacturacionDestinos.Location = new Point(0, 0);
+            btnFacturacionDestinos.Name = "btnFacturacionDestinos";
+            btnFacturacionDestinos.Padding = new Padding(30, 0, 0, 0);
+            btnFacturacionDestinos.Size = new Size(200, 31);
+            btnFacturacionDestinos.TabIndex = 2;
+            btnFacturacionDestinos.Text = "Facturación Destinos";
+            btnFacturacionDestinos.TextAlign = ContentAlignment.MiddleLeft;
+            btnFacturacionDestinos.UseVisualStyleBackColor = true;
+            btnFacturacionDestinos.Click += btnFacturacionDestinos_Click;
+            // 
+            // lblFecha
+            // 
+            lblFecha.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblFecha.AutoSize = true;
+            lblFecha.ForeColor = Color.Gainsboro;
+            lblFecha.Location = new Point(3, 394);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(0, 15);
+            lblFecha.TabIndex = 12;
             // 
             // btnEstadisticas
             // 
@@ -93,6 +195,7 @@
             btnEstadisticas.Text = "Estadisticas Historicas";
             btnEstadisticas.TextAlign = ContentAlignment.MiddleLeft;
             btnEstadisticas.UseVisualStyleBackColor = true;
+            btnEstadisticas.Click += btnEstadisticas_Click;
             // 
             // panelSubMenuModif
             // 
@@ -326,6 +429,8 @@
             FormClosing += FrmSupervisor_FormClosing;
             Load += FrmSupervisor_Load;
             panelSideMenu.ResumeLayout(false);
+            panelSideMenu.PerformLayout();
+            panelEstadisticas.ResumeLayout(false);
             panelSubMenuModif.ResumeLayout(false);
             panelUsuario.ResumeLayout(false);
             panelUsuario.PerformLayout();
@@ -364,5 +469,11 @@
         private Label lblNombreUsuario;
         private Panel panelFormularios;
         private PictureBox picBoxLogo;
+        private Label lblFecha;
+        private Panel panelEstadisticas;
+        private Button btnHorasVuelos;
+        private Button btnDestinoMasElegido;
+        private Button btnPasajerosFrecuentes;
+        private Button btnFacturacionDestinos;
     }
 }

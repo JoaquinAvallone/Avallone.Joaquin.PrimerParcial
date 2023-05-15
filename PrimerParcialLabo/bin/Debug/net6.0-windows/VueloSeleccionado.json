@@ -1,40 +1,66 @@
 {
-  "CiudadPartida": "C\u00F3rdoba",
-  "CiudadDestino": "BuenosAires",
-  "FechaVuelo": "2023-06-12T14:40:00",
+  "CiudadPartida": "BuenosAires",
+  "CiudadDestino": "Roma",
+  "FechaVuelo": "2023-05-24T16:20:00",
   "Avion": {
-    "Matricula": "Y45TS67M",
-    "CantidadAsientos": 250,
-    "CantidadBa\u00F1os": 6,
-    "Internet": false,
+    "Matricula": "LA31YTE6",
+    "CantidadAsientos": 170,
+    "CantidadBa\u00F1os": 5,
+    "Internet": true,
     "Comida": true,
-    "CapacidadBodega": 3100
+    "CapacidadBodega": 4977
   },
-  "CantidadAsientosPrem": 50,
-  "CantidadAsientosTuris": 200,
-  "PrecioTurista": 100,
-  "PrecioPrem": 135,
-  "DuracionVuelo": 2,
+  "CantidadAsientosPrem": 33,
+  "CantidadAsientosTuris": 136,
+  "PrecioTurista": 1452,
+  "PrecioPrem": 1960.2,
+  "DuracionVuelo": 12,
   "Pasajeros": [
     {
-      "Dni": 40456568,
+      "Dni": 41796568,
       "Edad": 27,
       "EquipajeMano": true,
       "EquipajeBodega": false,
-      "PesoEquipaje": 22,
+      "PesoEquipaje": 21,
       "Clase": "Turista",
-      "Apellido": "Martinez",
-      "Nombre": "Dibu"
+      "CantidadVuelos": 1,
+      "Apellido": "Jenner",
+      "Nombre": "Kendall"
     },
     {
-      "Dni": 44157652,
-      "Edad": 22,
+      "Dni": 44327922,
+      "Edad": 24,
       "EquipajeMano": true,
       "EquipajeBodega": true,
-      "PesoEquipaje": 27,
+      "PesoEquipaje": 38,
       "Clase": "Premium",
-      "Apellido": "Messi",
-      "Nombre": "Leonel"
+      "CantidadVuelos": 1,
+      "Apellido": "Holland",
+      "Nombre": "Tom"
+    },
+    {
+      "Dni": 43196568,
+      "Edad": 25,
+      "EquipajeMano": true,
+      "EquipajeBodega": false,
+      "PesoEquipaje": 15,
+      "Clase": "Turista",
+      "CantidadVuelos": 1,
+      "Apellido": "Lopez",
+      "Nombre": "Zendaya"
+    },
+    {
+      "Dni": 40787922,
+      "Edad": 28,
+      "EquipajeMano": true,
+      "EquipajeBodega": true,
+      "PesoEquipaje": 23,
+      "Clase": "Premium",
+      "CantidadVuelos": 1,
+      "Apellido": "Hadid",
+      "Nombre": "Bella"
     }
-  ]
+  ],
+  "GananciasTuris": 2904,
+  "GananciasPrem": 3920.4
 }

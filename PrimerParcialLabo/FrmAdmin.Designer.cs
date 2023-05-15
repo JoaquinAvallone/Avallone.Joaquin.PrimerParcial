@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
             panelSideMenu = new Panel();
+            lblFecha = new Label();
             panelSubMenuModif = new Panel();
             btnModifAeronaves = new Button();
             btnModifViajes = new Button();
@@ -73,6 +74,7 @@
             // panelSideMenu
             // 
             panelSideMenu.BackColor = Color.FromArgb(11, 7, 17);
+            panelSideMenu.Controls.Add(lblFecha);
             panelSideMenu.Controls.Add(panelSubMenuModif);
             panelSideMenu.Controls.Add(btnModificaciones);
             panelSideMenu.Controls.Add(panelUsuario);
@@ -81,6 +83,16 @@
             panelSideMenu.Name = "panelSideMenu";
             panelSideMenu.Size = new Size(200, 413);
             panelSideMenu.TabIndex = 1;
+            // 
+            // lblFecha
+            // 
+            lblFecha.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblFecha.AutoSize = true;
+            lblFecha.ForeColor = Color.Gainsboro;
+            lblFecha.Location = new Point(5, 393);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(0, 15);
+            lblFecha.TabIndex = 13;
             // 
             // panelSubMenuModif
             // 
@@ -367,6 +379,7 @@
             FormClosing += FrmAdmin_FormClosing;
             Load += FrmAdmin_Load;
             panelSideMenu.ResumeLayout(false);
+            panelSideMenu.PerformLayout();
             panelSubMenuModif.ResumeLayout(false);
             panelUsuario.ResumeLayout(false);
             panelUsuario.PerformLayout();
@@ -411,5 +424,6 @@
         private Label lblNombreUsuario;
         private Panel panelFormularios;
         private PictureBox picBoxLogo;
+        private Label lblFecha;
     }
 }

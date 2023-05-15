@@ -16,6 +16,7 @@ namespace PrimerParcialLabo
     {
         List<Pasajeros>? pasajeros;
         Pasajeros? pasajeroSeleccionado;
+        List<Pasajeros>? pasajerosPorDni;
         bool seleccionado = false;
         public FrmCrudPasajero()
         {
@@ -25,6 +26,7 @@ namespace PrimerParcialLabo
         private void FrmCrudPasajero_Load(object sender, EventArgs e)
         {
             pasajeros = new List<Pasajeros>();
+            pasajerosPorDni = new List<Pasajeros>();
             btnVolver.Visible = false;
 
             RellenarGrid();
@@ -56,24 +58,55 @@ namespace PrimerParcialLabo
             btnVolver.Visible = true;
             txtBDni.Visible = false;
 
-            if (indice >= 0 && indice < pasajeros.Count)
+            if (indice == -1)
             {
-                pasajeroSeleccionado = pasajeros[indice];
-                dataGVPasajeros.Rows.Clear();
-
-                int rowIndex = dataGVPasajeros.Rows.Add();
-                DataGridViewRow row = dataGVPasajeros.Rows[rowIndex];
-                row.Cells[0].Value = pasajeroSeleccionado.Apellido;
-                row.Cells[1].Value = pasajeroSeleccionado.Nombre;
-                row.Cells[2].Value = pasajeroSeleccionado.Dni;
-                row.Cells[3].Value = pasajeroSeleccionado.Edad;
-                row.Cells[4].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeMano);
-                row.Cells[5].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeBodega);
-                row.Cells[6].Value = pasajeroSeleccionado.PesoEquipaje + "kg.";
-                row.Cells[7].Value = pasajeroSeleccionado.Clase;
-                seleccionado = true;
-                Serializadores.SerializarJson("PasajeroSeleccionado.json", pasajeroSeleccionado);
+                return;
             }
+
+            if (dataGVPasajeros.Rows.Count == pasajeros.Count)
+            {
+                if (indice >= 0 && indice < pasajeros.Count)
+                {
+                    pasajeroSeleccionado = pasajeros[indice];
+                    dataGVPasajeros.Rows.Clear();
+
+                    int rowIndex = dataGVPasajeros.Rows.Add();
+                    DataGridViewRow row = dataGVPasajeros.Rows[rowIndex];
+                    row.Cells[0].Value = pasajeroSeleccionado.Apellido;
+                    row.Cells[1].Value = pasajeroSeleccionado.Nombre;
+                    row.Cells[2].Value = pasajeroSeleccionado.Dni;
+                    row.Cells[3].Value = pasajeroSeleccionado.Edad;
+                    row.Cells[4].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeMano);
+                    row.Cells[5].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeBodega);
+                    row.Cells[6].Value = pasajeroSeleccionado.PesoEquipaje + "kg.";
+                    row.Cells[7].Value = pasajeroSeleccionado.Clase;
+                    seleccionado = true;
+                    Serializadores.SerializarJson("PasajeroSeleccionado.json", pasajeroSeleccionado);
+                }
+            }
+            else
+            {
+                if (indice >= 0 && indice < pasajerosPorDni.Count)
+                {
+                    pasajeroSeleccionado = pasajerosPorDni[indice];
+                    dataGVPasajeros.Rows.Clear();
+
+                    int rowIndex = dataGVPasajeros.Rows.Add();
+                    DataGridViewRow row = dataGVPasajeros.Rows[rowIndex];
+                    row.Cells[0].Value = pasajeroSeleccionado.Apellido;
+                    row.Cells[1].Value = pasajeroSeleccionado.Nombre;
+                    row.Cells[2].Value = pasajeroSeleccionado.Dni;
+                    row.Cells[3].Value = pasajeroSeleccionado.Edad;
+                    row.Cells[4].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeMano);
+                    row.Cells[5].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeBodega);
+                    row.Cells[6].Value = pasajeroSeleccionado.PesoEquipaje + "kg.";
+                    row.Cells[7].Value = pasajeroSeleccionado.Clase;
+                    seleccionado = true;
+                    Serializadores.SerializarJson("PasajeroSeleccionado.json", pasajeroSeleccionado);
+                }
+            }
+                       
+
         }
 
 
@@ -82,6 +115,12 @@ namespace PrimerParcialLabo
             dataGVPasajeros.Rows.Clear();
             string filtro = txtBDni.Text;
             pasajeros = Deserializadores.DeserializarPasajerosJson();
+
+            for (int i = pasajerosPorDni.Count - 1; i >= 0; i--)
+            {
+                Pasajeros item = pasajerosPorDni[i];
+                pasajerosPorDni.Remove(item);
+            }
 
             foreach (Pasajeros item in pasajeros)
             {
@@ -109,8 +148,20 @@ namespace PrimerParcialLabo
                     row.Cells[5].Value = item.TipoEquipaje(item.EquipajeBodega);
                     row.Cells[6].Value = item.PesoEquipaje + "kg.";
                     row.Cells[7].Value = item.Clase;
+                    pasajeroSeleccionado = item;
+                    pasajerosPorDni.Add(item);
                 }
             }
+
+            if (dataGVPasajeros.Rows.Count == 1)
+            {
+                seleccionado = true;
+                Serializadores.SerializarJson("PasajeroSeleccionado.json", pasajeroSeleccionado);
+            }
+        }
+        private void txtBDni_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarPorDni();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -174,9 +225,5 @@ namespace PrimerParcialLabo
             seleccionado = false;
         }
 
-        private void txtBDni_TextChanged(object sender, EventArgs e)
-        {
-            FiltrarPorDni();
-        }
     }
 }

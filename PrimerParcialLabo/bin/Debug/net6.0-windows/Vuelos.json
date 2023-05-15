@@ -13,8 +13,8 @@
     },
     "CantidadAsientosPrem": 30,
     "CantidadAsientosTuris": 120,
-    "PrecioTurista": 150,
-    "PrecioPrem": 202.5,
+    "PrecioTurista": 181.5,
+    "PrecioPrem": 248.65,
     "DuracionVuelo": 3,
     "Pasajeros": [
       {
@@ -24,6 +24,7 @@
         "EquipajeBodega": false,
         "PesoEquipaje": 30,
         "Clase": "Premium",
+        "CantidadVuelos": 1,
         "Apellido": "Avallone",
         "Nombre": "Joaquin"
       },
@@ -34,10 +35,13 @@
         "EquipajeBodega": true,
         "PesoEquipaje": 40,
         "Clase": "Premium",
+        "CantidadVuelos": 1,
         "Apellido": "Fernando",
         "Nombre": "Gago"
       }
-    ]
+    ],
+    "GananciasTuris": 0,
+    "GananciasPrem": 497.3
   },
   {
     "CiudadPartida": "C\u00F3rdoba",
@@ -53,8 +57,8 @@
     },
     "CantidadAsientosPrem": 50,
     "CantidadAsientosTuris": 200,
-    "PrecioTurista": 100,
-    "PrecioPrem": 135,
+    "PrecioTurista": 121,
+    "PrecioPrem": 163.35,
     "DuracionVuelo": 2,
     "Pasajeros": [
       {
@@ -64,6 +68,7 @@
         "EquipajeBodega": false,
         "PesoEquipaje": 22,
         "Clase": "Turista",
+        "CantidadVuelos": 1,
         "Apellido": "Martinez",
         "Nombre": "Dibu"
       },
@@ -74,10 +79,145 @@
         "EquipajeBodega": true,
         "PesoEquipaje": 27,
         "Clase": "Premium",
+        "CantidadVuelos": 1,
         "Apellido": "Messi",
         "Nombre": "Leonel"
       }
-    ]
+    ],
+    "GananciasTuris": 121,
+    "GananciasPrem": 163.35
+  },
+  {
+    "CiudadPartida": "BuenosAires",
+    "CiudadDestino": "Roma",
+    "FechaVuelo": "2023-05-24T16:20:00",
+    "Avion": {
+      "Matricula": "LA31YTE6",
+      "CantidadAsientos": 170,
+      "CantidadBa\u00F1os": 5,
+      "Internet": true,
+      "Comida": true,
+      "CapacidadBodega": 4957
+    },
+    "CantidadAsientosPrem": 32,
+    "CantidadAsientosTuris": 136,
+    "PrecioTurista": 1452,
+    "PrecioPrem": 1960.2,
+    "DuracionVuelo": 12,
+    "Pasajeros": [
+      {
+        "Dni": 41796568,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 21,
+        "Clase": "Turista",
+        "CantidadVuelos": 1,
+        "Apellido": "Jenner",
+        "Nombre": "Kendall"
+      },
+      {
+        "Dni": 44327922,
+        "Edad": 24,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 38,
+        "Clase": "Premium",
+        "CantidadVuelos": 1,
+        "Apellido": "Holland",
+        "Nombre": "Tom"
+      },
+      {
+        "Dni": 43196568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 15,
+        "Clase": "Turista",
+        "CantidadVuelos": 1,
+        "Apellido": "Lopez",
+        "Nombre": "Zendaya"
+      },
+      {
+        "Dni": 40787922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 23,
+        "Clase": "Premium",
+        "CantidadVuelos": 1,
+        "Apellido": "Hadid",
+        "Nombre": "Bella"
+      },
+      {
+        "Dni": 45157002,
+        "Edad": 17,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 20,
+        "Clase": "Premium",
+        "CantidadVuelos": 1,
+        "Apellido": "Forti",
+        "Nombre": "Agustin"
+      }
+    ],
+    "GananciasTuris": 2904,
+    "GananciasPrem": 5880.5996
+  },
+  {
+    "CiudadPartida": "BuenosAires",
+    "CiudadDestino": "Miami",
+    "FechaVuelo": "2023-09-10T20:30:00",
+    "Avion": {
+      "Matricula": "UTR43Y21",
+      "CantidadAsientos": 120,
+      "CantidadBa\u00F1os": 3,
+      "Internet": false,
+      "Comida": false,
+      "CapacidadBodega": 4600
+    },
+    "CantidadAsientosPrem": 24,
+    "CantidadAsientosTuris": 96,
+    "PrecioTurista": 1210,
+    "PrecioPrem": 1633.5,
+    "DuracionVuelo": 10,
+    "Pasajeros": [
+      {
+        "Dni": 40787922,
+        "Edad": 28,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 23,
+        "Clase": "Premium",
+        "CantidadVuelos": 1,
+        "Apellido": "Hadid",
+        "Nombre": "Bella"
+      },
+      {
+        "Dni": 42795468,
+        "Edad": 27,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 20,
+        "Clase": "Turista",
+        "CantidadVuelos": 1,
+        "Apellido": "Hadid",
+        "Nombre": "Gigi"
+      },
+      {
+        "Dni": 38108922,
+        "Edad": 40,
+        "EquipajeMano": true,
+        "EquipajeBodega": true,
+        "PesoEquipaje": 32,
+        "Clase": "Premium",
+        "CantidadVuelos": 1,
+        "Apellido": "Jackie",
+        "Nombre": "Chan"
+      }
+    ],
+    "GananciasTuris": 1210,
+    "GananciasPrem": 3267
   },
   {
     "CiudadPartida": "Tucum\u00E1n",
@@ -93,8 +233,8 @@
     },
     "CantidadAsientosPrem": 40,
     "CantidadAsientosTuris": 160,
-    "PrecioTurista": 150,
-    "PrecioPrem": 202.5,
+    "PrecioTurista": 181.5,
+    "PrecioPrem": 248.65,
     "DuracionVuelo": 3,
     "Pasajeros": [
       {
@@ -104,6 +244,7 @@
         "EquipajeBodega": false,
         "PesoEquipaje": 16,
         "Clase": "Turista",
+        "CantidadVuelos": 1,
         "Apellido": "Potato",
         "Nombre": "Hernan"
       },
@@ -114,6 +255,7 @@
         "EquipajeBodega": true,
         "PesoEquipaje": 20,
         "Clase": "Premium",
+        "CantidadVuelos": 1,
         "Apellido": "Forti",
         "Nombre": "Agustin"
       },
@@ -124,15 +266,18 @@
         "EquipajeBodega": false,
         "PesoEquipaje": 17,
         "Clase": "Turista",
+        "CantidadVuelos": 1,
         "Apellido": "Smith",
         "Nombre": "Ignacio"
       }
-    ]
+    ],
+    "GananciasTuris": 363,
+    "GananciasPrem": 248.65
   },
   {
     "CiudadPartida": "BuenosAires",
-    "CiudadDestino": "SantaRosa",
-    "FechaVuelo": "2023-05-16T12:00:00",
+    "CiudadDestino": "Ushuaia",
+    "FechaVuelo": "2023-05-16T08:00:00",
     "Avion": {
       "Matricula": "76TS4SRA",
       "CantidadAsientos": 150,
@@ -143,9 +288,9 @@
     },
     "CantidadAsientosPrem": 30,
     "CantidadAsientosTuris": 120,
-    "PrecioTurista": 150,
-    "PrecioPrem": 202,
-    "DuracionVuelo": 3,
+    "PrecioTurista": 242,
+    "PrecioPrem": 326.7,
+    "DuracionVuelo": 4,
     "Pasajeros": [
       {
         "Dni": 42970922,
@@ -154,6 +299,7 @@
         "EquipajeBodega": true,
         "PesoEquipaje": 39,
         "Clase": "Premium",
+        "CantidadVuelos": 1,
         "Apellido": "Marini",
         "Nombre": "Nicolas"
       },
@@ -164,6 +310,7 @@
         "EquipajeBodega": false,
         "PesoEquipaje": 15,
         "Clase": "Turista",
+        "CantidadVuelos": 1,
         "Apellido": "Garcia",
         "Nombre": "Bautista"
       },
@@ -174,39 +321,12 @@
         "EquipajeBodega": true,
         "PesoEquipaje": 32,
         "Clase": "Premium",
+        "CantidadVuelos": 1,
         "Apellido": "Avallone",
         "Nombre": "Paloma"
       }
-    ]
-  },
-  {
-    "CiudadPartida": "BuenosAires",
-    "CiudadDestino": "Recife",
-    "FechaVuelo": "2023-05-13T00:00:00-03:00",
-    "Avion": {
-      "Matricula": "UTR43Y21",
-      "CantidadAsientos": 120,
-      "CantidadBa\u00F1os": 3,
-      "Internet": false,
-      "Comida": false,
-      "CapacidadBodega": 4600
-    },
-    "CantidadAsientosPrem": 23,
-    "CantidadAsientosTuris": 96,
-    "PrecioTurista": 800,
-    "PrecioPrem": 1080,
-    "DuracionVuelo": 8,
-    "Pasajeros": [
-      {
-        "Dni": 40796568,
-        "Edad": 25,
-        "EquipajeMano": true,
-        "EquipajeBodega": false,
-        "PesoEquipaje": 30,
-        "Clase": "Premium",
-        "Apellido": "Avallone",
-        "Nombre": "Joaquin"
-      }
-    ]
+    ],
+    "GananciasTuris": 242,
+    "GananciasPrem": 653.4
   }
 ]

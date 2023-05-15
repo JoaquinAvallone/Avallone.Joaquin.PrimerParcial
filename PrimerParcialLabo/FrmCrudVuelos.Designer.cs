@@ -32,20 +32,23 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dataGVVuelos = new DataGridView();
-            ColumFecha = new DataGridViewTextBoxColumn();
-            ColumOrigen = new DataGridViewTextBoxColumn();
-            ColumDestino = new DataGridViewTextBoxColumn();
-            ColumPrecio = new DataGridViewTextBoxColumn();
-            ColumPrecioP = new DataGridViewTextBoxColumn();
-            ColumTurista = new DataGridViewTextBoxColumn();
-            ColumPremium = new DataGridViewTextBoxColumn();
-            ColumAvion = new DataGridViewTextBoxColumn();
             txtBMatricula = new TextBox();
             btnVolver = new Button();
             btnModificar = new Button();
             btnAgregar = new Button();
             btnEliminar = new Button();
             panelFormularios = new Panel();
+            ColumFecha = new DataGridViewTextBoxColumn();
+            ColumOrigen = new DataGridViewTextBoxColumn();
+            ColumDestino = new DataGridViewTextBoxColumn();
+            ColumPrecio = new DataGridViewTextBoxColumn();
+            ColumPrecioP = new DataGridViewTextBoxColumn();
+            ColumPrecioTSinIva = new DataGridViewTextBoxColumn();
+            ColumPrecioPremSinIva = new DataGridViewTextBoxColumn();
+            ColumTurista = new DataGridViewTextBoxColumn();
+            ColumPremium = new DataGridViewTextBoxColumn();
+            ColumDuracion = new DataGridViewTextBoxColumn();
+            ColumAvion = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGVVuelos).BeginInit();
             SuspendLayout();
             // 
@@ -63,15 +66,15 @@
             dataGVVuelos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Arial", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(35, 32, 39);
             dataGridViewCellStyle1.SelectionForeColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGVVuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGVVuelos.ColumnHeadersHeight = 32;
+            dataGVVuelos.ColumnHeadersHeight = 46;
             dataGVVuelos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGVVuelos.Columns.AddRange(new DataGridViewColumn[] { ColumFecha, ColumOrigen, ColumDestino, ColumPrecio, ColumPrecioP, ColumTurista, ColumPremium, ColumAvion });
+            dataGVVuelos.Columns.AddRange(new DataGridViewColumn[] { ColumFecha, ColumOrigen, ColumDestino, ColumPrecio, ColumPrecioP, ColumPrecioTSinIva, ColumPrecioPremSinIva, ColumTurista, ColumPremium, ColumDuracion, ColumAvion });
             dataGVVuelos.Cursor = Cursors.Hand;
             dataGVVuelos.EnableHeadersVisualStyles = false;
             dataGVVuelos.GridColor = Color.FromArgb(35, 32, 39);
@@ -100,54 +103,6 @@
             dataGVVuelos.Size = new Size(703, 331);
             dataGVVuelos.TabIndex = 1;
             dataGVVuelos.CellClick += dataGVVuelos_CellClick;
-            // 
-            // ColumFecha
-            // 
-            ColumFecha.HeaderText = "FECHA Y HORA";
-            ColumFecha.Name = "ColumFecha";
-            ColumFecha.ReadOnly = true;
-            // 
-            // ColumOrigen
-            // 
-            ColumOrigen.HeaderText = "ORIGEN";
-            ColumOrigen.Name = "ColumOrigen";
-            ColumOrigen.ReadOnly = true;
-            // 
-            // ColumDestino
-            // 
-            ColumDestino.HeaderText = "DESTINO";
-            ColumDestino.Name = "ColumDestino";
-            ColumDestino.ReadOnly = true;
-            // 
-            // ColumPrecio
-            // 
-            ColumPrecio.HeaderText = "PRECIO TURIS.";
-            ColumPrecio.Name = "ColumPrecio";
-            ColumPrecio.ReadOnly = true;
-            // 
-            // ColumPrecioP
-            // 
-            ColumPrecioP.HeaderText = "PRECIO PREM.";
-            ColumPrecioP.Name = "ColumPrecioP";
-            ColumPrecioP.ReadOnly = true;
-            // 
-            // ColumTurista
-            // 
-            ColumTurista.HeaderText = "ASIENTOS TURIS.";
-            ColumTurista.Name = "ColumTurista";
-            ColumTurista.ReadOnly = true;
-            // 
-            // ColumPremium
-            // 
-            ColumPremium.HeaderText = "ASIENTOS PREM.";
-            ColumPremium.Name = "ColumPremium";
-            ColumPremium.ReadOnly = true;
-            // 
-            // ColumAvion
-            // 
-            ColumAvion.HeaderText = "AVION";
-            ColumAvion.Name = "ColumAvion";
-            ColumAvion.ReadOnly = true;
             // 
             // txtBMatricula
             // 
@@ -244,6 +199,94 @@
             panelFormularios.Size = new Size(711, 379);
             panelFormularios.TabIndex = 50;
             // 
+            // ColumFecha
+            // 
+            ColumFecha.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumFecha.HeaderText = "FECHA Y HORA";
+            ColumFecha.Name = "ColumFecha";
+            ColumFecha.ReadOnly = true;
+            ColumFecha.Width = 65;
+            // 
+            // ColumOrigen
+            // 
+            ColumOrigen.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumOrigen.HeaderText = "ORIGEN";
+            ColumOrigen.Name = "ColumOrigen";
+            ColumOrigen.ReadOnly = true;
+            ColumOrigen.Width = 69;
+            // 
+            // ColumDestino
+            // 
+            ColumDestino.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumDestino.HeaderText = "DESTINO";
+            ColumDestino.Name = "ColumDestino";
+            ColumDestino.ReadOnly = true;
+            ColumDestino.Width = 75;
+            // 
+            // ColumPrecio
+            // 
+            ColumPrecio.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumPrecio.HeaderText = "PRECIO TURIS. C/IVA";
+            ColumPrecio.Name = "ColumPrecio";
+            ColumPrecio.ReadOnly = true;
+            ColumPrecio.Width = 88;
+            // 
+            // ColumPrecioP
+            // 
+            ColumPrecioP.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumPrecioP.HeaderText = "PRECIO PREM. C/IVA";
+            ColumPrecioP.Name = "ColumPrecioP";
+            ColumPrecioP.ReadOnly = true;
+            ColumPrecioP.Width = 87;
+            // 
+            // ColumPrecioTSinIva
+            // 
+            ColumPrecioTSinIva.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumPrecioTSinIva.HeaderText = "PRECIO TURIS. S/IVA";
+            ColumPrecioTSinIva.Name = "ColumPrecioTSinIva";
+            ColumPrecioTSinIva.ReadOnly = true;
+            ColumPrecioTSinIva.Width = 87;
+            // 
+            // ColumPrecioPremSinIva
+            // 
+            ColumPrecioPremSinIva.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumPrecioPremSinIva.HeaderText = "PRECIO PREM. S/IVA";
+            ColumPrecioPremSinIva.Name = "ColumPrecioPremSinIva";
+            ColumPrecioPremSinIva.ReadOnly = true;
+            ColumPrecioPremSinIva.Width = 86;
+            // 
+            // ColumTurista
+            // 
+            ColumTurista.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumTurista.HeaderText = "ASIENTOS TURIS.";
+            ColumTurista.Name = "ColumTurista";
+            ColumTurista.ReadOnly = true;
+            ColumTurista.Width = 110;
+            // 
+            // ColumPremium
+            // 
+            ColumPremium.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumPremium.HeaderText = "ASIENTOS PREM.";
+            ColumPremium.Name = "ColumPremium";
+            ColumPremium.ReadOnly = true;
+            ColumPremium.Width = 109;
+            // 
+            // ColumDuracion
+            // 
+            ColumDuracion.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumDuracion.HeaderText = "DURACION";
+            ColumDuracion.Name = "ColumDuracion";
+            ColumDuracion.ReadOnly = true;
+            ColumDuracion.Width = 85;
+            // 
+            // ColumAvion
+            // 
+            ColumAvion.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumAvion.HeaderText = "AVION";
+            ColumAvion.Name = "ColumAvion";
+            ColumAvion.ReadOnly = true;
+            ColumAvion.Width = 63;
+            // 
             // FrmCrudVuelos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -274,14 +317,17 @@
         private Button btnModificar;
         private Button btnAgregar;
         private Button btnEliminar;
+        private Panel panelFormularios;
         private DataGridViewTextBoxColumn ColumFecha;
         private DataGridViewTextBoxColumn ColumOrigen;
         private DataGridViewTextBoxColumn ColumDestino;
         private DataGridViewTextBoxColumn ColumPrecio;
         private DataGridViewTextBoxColumn ColumPrecioP;
+        private DataGridViewTextBoxColumn ColumPrecioTSinIva;
+        private DataGridViewTextBoxColumn ColumPrecioPremSinIva;
         private DataGridViewTextBoxColumn ColumTurista;
         private DataGridViewTextBoxColumn ColumPremium;
+        private DataGridViewTextBoxColumn ColumDuracion;
         private DataGridViewTextBoxColumn ColumAvion;
-        private Panel panelFormularios;
     }
 }

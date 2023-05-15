@@ -44,12 +44,17 @@ namespace PrimerParcialLabo
                 row.Cells[3].Value = "$" + item.PrecioTurista;
                 row.Cells[4].Value = "$" + item.PrecioPrem;
                 row.Cells[5].Value = item.Avion.Matricula;
+                row.Cells[6].Value = item.DuracionVuelo;
             }
         }
         private void dataGVVuelos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int indice;
             indice = e.RowIndex;
+            if (indice == -1)
+            {
+                return;
+            }
             RellenarGridPasajeross(indice);
         }
 

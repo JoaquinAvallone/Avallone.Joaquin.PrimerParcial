@@ -53,7 +53,7 @@ namespace Biblioteca
         {
             List<Aeronaves> aviones = new List<Aeronaves>();
 
-            Aeronaves avion1 = new Aeronaves("M2AF45SE",150, 4, true, true, 1600);
+            Aeronaves avion1 = new Aeronaves("M2AF45SE", 150, 4, true, true, 1600);
             Aeronaves avion2 = new Aeronaves("Y45TS67M",250, 6, false, true, 3100);
             Aeronaves avion3 = new Aeronaves("LA31YTE6",170, 5, true, true, 5000);
             Aeronaves avion4 = new Aeronaves("UTR43Y21",120, 3, false, false, 4600);
@@ -75,39 +75,49 @@ namespace Biblioteca
             List<Vuelos> vuelos = new List<Vuelos>();
             List<Aeronaves>? aviones = new List<Aeronaves>();
             aviones = Deserializadores.DeserializarAeronavesJson();
-            List<Pasajeros> pasajerosVuelo1 = new List<Pasajeros>();
-            List<Pasajeros> pasajerosVuelo2 = new List<Pasajeros>();
-            List<Pasajeros> pasajerosVuelo3 = new List<Pasajeros>();
-            List<Pasajeros> pasajerosVuelo4 = new List<Pasajeros>();
-            List<Pasajeros> pasajerosVuelo5 = new List<Pasajeros>();
-            List<Pasajeros> pasajerosVuelo6 = new List<Pasajeros>();
             List<Pasajeros> pasajeros = new List<Pasajeros>();
             pasajeros = HardCodeoPasajeros();
+            foreach(Pasajeros item in pasajeros)
+            {
+                item.CantidadVuelos++;
+            }
 
-            Vuelos vuelo1 = new Vuelos("Salta", "BuenosAires", new DateTime(2023, 4, 22, 06, 10, 00), aviones[0], 30, 120, 150, 202.5F, 3);
-            Vuelos vuelo2 = new Vuelos("Córdoba", "BuenosAires", new DateTime(2023, 6, 12, 14, 40, 00), aviones[1], 50, 200, 100, 135F, 2);
-            Vuelos vuelo3 = new Vuelos("BuenosAires", "Roma", new DateTime(2023, 5, 24, 16, 20, 00), aviones[2], 34, 136, 1300, 1755F, 12);
-            Vuelos vuelo4 = new Vuelos("BuenosAires", "Miami", new DateTime(2023, 9, 10, 20, 30, 00), aviones[3], 24, 96, 1000, 1350F, 10);
-            Vuelos vuelo5 = new Vuelos("Tucumán", "Bariloche", new DateTime(2023, 6, 15, 10, 00, 00), aviones[4], 40, 160, 150, 202.5F, 3);
-            Vuelos vuelo6 = new Vuelos("BuenosAires", "Ushuaia", new DateTime(2023, 5, 16, 08, 00, 00), aviones[5], 30, 120, 150, 202.5F, 4);
+            Vuelos vuelo1 = new Vuelos("Salta", "BuenosAires", new DateTime(2023, 4, 22, 06, 10, 00), aviones[0], 30, 120, 181.5F, 248.65F, 3);
+            Vuelos vuelo2 = new Vuelos("Córdoba", "BuenosAires", new DateTime(2023, 6, 12, 14, 40, 00), aviones[1], 50, 200, 121, 163.35F, 2);
+            Vuelos vuelo3 = new Vuelos("BuenosAires", "Roma", new DateTime(2023, 5, 24, 16, 20, 00), aviones[2], 34, 136, 1452, 1960.2F, 12);
+            Vuelos vuelo4 = new Vuelos("BuenosAires", "Miami", new DateTime(2023, 9, 10, 20, 30, 00), aviones[3], 24, 96, 1210, 1633.5F, 10);
+            Vuelos vuelo5 = new Vuelos("Tucumán", "Bariloche", new DateTime(2023, 6, 15, 10, 00, 00), aviones[4], 40, 160, 181.5F, 248.65F, 3);
+            Vuelos vuelo6 = new Vuelos("BuenosAires", "Ushuaia", new DateTime(2023, 5, 16, 08, 00, 00), aviones[5], 30, 120, 242, 326.7F, 4);
 
             vuelo1.Pasajeros.Add(pasajeros[0]);
             vuelo1.Pasajeros.Add(pasajeros[1]);
+            vuelo1.GananciasPrem = 248.65F * 2;
             vuelo2.Pasajeros.Add(pasajeros[2]);
             vuelo2.Pasajeros.Add(pasajeros[3]);
+            vuelo2.GananciasPrem = 163.35F;
+            vuelo2.GananciasTuris = 121;
             vuelo3.Pasajeros.Add(pasajeros[4]);
             vuelo3.Pasajeros.Add(pasajeros[5]);
             vuelo3.Pasajeros.Add(pasajeros[6]);
+            vuelo3.GananciasPrem = 1960.2F;
+            vuelo3.GananciasTuris = 1452 * 2;
             vuelo4.Pasajeros.Add(pasajeros[7]);
             vuelo4.Pasajeros.Add(pasajeros[8]);
             vuelo4.Pasajeros.Add(pasajeros[9]);
+            vuelo4.GananciasPrem = 1633.5F * 2;
+            vuelo4.GananciasTuris = 1210;
             vuelo5.Pasajeros.Add(pasajeros[10]);
             vuelo5.Pasajeros.Add(pasajeros[11]);
             vuelo5.Pasajeros.Add(pasajeros[12]);
+            vuelo5.GananciasPrem = 248.65F;
+            vuelo5.GananciasTuris = 181.5F * 2;
             vuelo6.Pasajeros.Add(pasajeros[13]);
             vuelo6.Pasajeros.Add(pasajeros[14]);
             vuelo6.Pasajeros.Add(pasajeros[15]);
-           
+            vuelo6.GananciasPrem = 326.7F * 2;
+            vuelo6.GananciasTuris = 242;
+
+
             vuelos.Add(vuelo1);
             vuelos.Add(vuelo2);
             vuelos.Add(vuelo3);

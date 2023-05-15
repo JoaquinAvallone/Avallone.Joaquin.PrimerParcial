@@ -19,6 +19,8 @@ namespace Biblioteca
         private float precioPrem;
         private int duracionVuelo;
         private List<Pasajeros> pasajeros;
+        private float gananciasTuris;
+        private float gananciasPrem;
 
         public Vuelos()
         {
@@ -49,8 +51,9 @@ namespace Biblioteca
         public float PrecioPrem { get => precioPrem; set => precioPrem = value; }
         public int DuracionVuelo { get => duracionVuelo; set => duracionVuelo = value; }
         public List<Pasajeros> Pasajeros { get => pasajeros; set => pasajeros = value; }
+        public float GananciasTuris { get => gananciasTuris; set => gananciasTuris = value; }
+        public float GananciasPrem { get => gananciasPrem; set => gananciasPrem = value; }
 
-       
         public static int GeneradorCantidadAsientos(bool premium, int asientosTotales)
         {
             int asientosPrem;
@@ -80,11 +83,11 @@ namespace Biblioteca
             return random.Next(8, 12 + 1);
         }
 
-        public static int GenerarPrecioNacional(bool premium, int duracion)
+        public static float GenerarPrecioNacional(bool premium, int duracion)
         {
-            int precioTurista;
-            int precioPremium;
-            int porcentaje;
+            float precioTurista;
+            float precioPremium;
+            float porcentaje;
 
             precioTurista = duracion * 50;
             if (premium)
@@ -96,11 +99,35 @@ namespace Biblioteca
             return precioTurista;
         }
 
-        public static int GenerarPrecioInternacional(bool premium, int duracion)
+        public static float GenerarPrecioNacionalConIva(bool premium, int duracion)
         {
-            int precioTurista;
-            int precioPremium;
-            int porcentaje;
+            float precioTurista;
+            float precioPremium;
+            float porcentajePremium;
+            float porcentajeIva;
+            float precioPremIva;
+            float precioTurisIva;
+
+            precioTurista = duracion * 50;
+            porcentajeIva = (21 * precioTurista) / 100;
+            precioTurisIva = precioTurista + porcentajeIva;
+            if (premium)
+            {
+                porcentajePremium = (35 * precioTurista) / 100;
+                precioPremium = precioTurista + porcentajePremium;
+                porcentajeIva = (21 * precioPremium) / 100;
+                precioPremIva = porcentajeIva + precioPremium;
+
+                return precioPremium;
+            }
+            return precioTurisIva;
+        }
+
+        public static float GenerarPrecioInternacional(bool premium, int duracion)
+        {
+            float precioTurista;
+            float precioPremium;
+            float porcentaje;
 
             precioTurista = duracion * 100;
             if (premium)
@@ -111,6 +138,30 @@ namespace Biblioteca
             }
 
             return precioTurista;
+        }
+
+        public static float GenerarPrecioInternacionalConIva(bool premium, int duracion)
+        {
+            float precioTurista;
+            float precioPremium;
+            float porcentajePremium;
+            float porcentajeIva;
+            float precioPremIva;
+            float precioTurisIva;
+
+            precioTurista = duracion * 50;
+            porcentajeIva = (21 * precioTurista) / 100;
+            precioTurisIva = precioTurista + porcentajeIva;
+            if (premium)
+            {
+                porcentajePremium = (35 * precioTurista) / 100;
+                precioPremium = precioTurista + porcentajePremium;
+                porcentajeIva = (21 * precioPremium) / 100;
+                precioPremIva = porcentajeIva + precioPremium;
+
+                return precioPremIva;
+            }
+            return precioTurisIva;
         }
 
         public static bool operator ==(Pasajeros pasajero, Vuelos vuelo)
@@ -162,6 +213,82 @@ namespace Biblioteca
             return false;
         }
 
+        public static List<Destinos> DestinosOrdenadosPorRecaudacion()
+        {
+            Dictionary<string, float> acumuladorGanancias = new Dictionary<string, float>();
+            List<Vuelos> vuelos = Deserializadores.DeserializarVuelosJson();
+
+            foreach (Vuelos item in vuelos)
+            {
+                string destino = item.ciudadDestino.ToString();
+                float ganancias = item.GananciasTuris + item.GananciasPrem;
+
+                if (acumuladorGanancias.ContainsKey(destino))
+                {
+                    acumuladorGanancias[destino] += ganancias;
+                }
+                else
+                {
+                    acumuladorGanancias[destino] = ganancias;
+                }
+            }
+
+            List<Destinos> destinosOrdenados = new List<Destinos>();
+
+            foreach (KeyValuePair<string, float> item in acumuladorGanancias)
+            {
+                string destino = item.Key;
+                float recaudacion = item.Value;
+
+                destinosOrdenados.Add(new Destinos(destino, recaudacion));
+            }
+
+            destinosOrdenados.Sort(Destinos.RecaudacionDestinosDescendente);
+
+            return destinosOrdenados;
+        }
+
+        public static float RecaudacionInternacional()
+        {
+            List<Vuelos>? vuelos = new List<Vuelos>();
+            vuelos = Deserializadores.DeserializarVuelosJson();
+            float acumuladorGanancias = 0;
+
+            foreach (Destinos.DestinoInternacional destino in Enum.GetValues(typeof(Destinos.DestinoInternacional)))
+            {
+                foreach (Vuelos item in vuelos)
+                {
+                    if (item.ciudadDestino == destino.ToString())
+                    {
+                        float ganancias = item.GananciasTuris + item.gananciasPrem;
+                        acumuladorGanancias += ganancias;
+                    }
+                }
+            }
+
+            return acumuladorGanancias;
+        }
+
+        public static float RecaudacionNacional()
+        {
+            List<Vuelos>? vuelos = new List<Vuelos>();
+            vuelos = Deserializadores.DeserializarVuelosJson();
+            float acumuladorGanancias = 0;
+
+            foreach (Destinos.Nacional destino in Enum.GetValues(typeof(Destinos.Nacional)))
+            {
+                foreach (Vuelos item in vuelos)
+                {
+                    if (item.ciudadDestino == destino.ToString())
+                    {
+                        float ganancias = item.GananciasTuris + item.gananciasPrem;
+                        acumuladorGanancias += ganancias;
+                    }
+                }
+            }
+
+            return acumuladorGanancias;
+        }
 
         public override string ToString()
         {

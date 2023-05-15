@@ -15,10 +15,10 @@ namespace PrimerParcialLabo
     {
         Usuarios? usuarioActual;
         string? pathFotoUsuario;
+        Form? formularioAbierto = null;
         public FrmVendedor()
         {
             InitializeComponent();
-
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -27,6 +27,8 @@ namespace PrimerParcialLabo
             usuarioActual = Deserializadores.DeserializarUsuarioActualJson();
             lblNombreUsuario.Text = usuarioActual.Nombre + " " + usuarioActual.Apellido;
             lblPerfil.Text = usuarioActual.Perfil;
+            DateTime fechaActual = DateTime.Today;
+            lblFecha.Text = "Fecha: " + fechaActual.ToString("dd/MM/yyyy");
             pathFotoUsuario = Deserializadores.DeserializarFotoJson(usuarioActual);
             if (pathFotoUsuario != null)
             {
@@ -48,6 +50,10 @@ namespace PrimerParcialLabo
             {
                 panelSubMenuModif.Visible = false;
             }
+            if (panelEstadisticas.Visible == true)
+            {
+                panelEstadisticas.Visible = false;
+            }
         }
 
         private void ShowSubMenu(Panel subMenu)
@@ -64,12 +70,26 @@ namespace PrimerParcialLabo
 
         private void btnVenta_Click(object sender, EventArgs e)
         {
+            CerrarFormularioAbierto();
             ShowSubMenu(panelSubmenuVenta);
+            panelSubMenuModif.Visible = false;
+            panelEstadisticas.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            CerrarFormularioAbierto();
             ShowSubMenu(panelSubMenuModif);
+            panelSubmenuVenta.Visible = false;
+            panelEstadisticas.Visible = false;
+        }
+
+        private void btnEstadisticas_Click(object sender, EventArgs e)
+        {
+            CerrarFormularioAbierto();
+            ShowSubMenu(panelEstadisticas);
+            panelSubMenuModif.Visible = false;
+            panelSubmenuVenta.Visible = false;
         }
 
         private void picBEscape_Click(object sender, EventArgs e)
@@ -77,7 +97,7 @@ namespace PrimerParcialLabo
             DialogResult result = MessageBox.Show("Desea abandonar la aplicacion?", "AirlinesApp", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Close();
             }
         }
 
@@ -115,23 +135,50 @@ namespace PrimerParcialLabo
 
         private void FrmVendedor_FormClosing(object sender, FormClosingEventArgs e)
         {
+            CerrarFormularioAbierto();
             Serializadores.SerializarFotoperfilJson(usuarioActual, pathFotoUsuario);
         }
 
         private void btnViajesDispon_Click(object sender, EventArgs e)
         {
+            CerrarFormularioAbierto();
             AbrirFormulario<FrmViajesDisponibles>();
-
         }
 
         private void btnVender_Click(object sender, EventArgs e)
         {
+            CerrarFormularioAbierto();
             AbrirFormulario<FrmVentaViaje>();
         }
 
         private void btnModPasa_Click(object sender, EventArgs e)
         {
+            CerrarFormularioAbierto();
             AbrirFormulario<FrmCrudPasajero>();
+        }
+
+        private void btnFacturacionDestinos_Click(object sender, EventArgs e)
+        {
+            CerrarFormularioAbierto();
+            AbrirFormulario<FrmFacturacionDestinos>();
+        }
+
+        private void btnPasajerosFrecuentes_Click(object sender, EventArgs e)
+        {
+            CerrarFormularioAbierto();
+            AbrirFormulario<FrmPasajerosFrecuentes>();
+        }
+
+        private void btnDestinoMasElegido_Click(object sender, EventArgs e)
+        {
+            CerrarFormularioAbierto();
+            AbrirFormulario<FrmDestinoMasElegido>();
+        }
+
+        private void btnHorasVuelos_Click(object sender, EventArgs e)
+        {
+            CerrarFormularioAbierto();
+            AbrirFormulario<FrmHorasDeVuelo>();
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
@@ -148,12 +195,24 @@ namespace PrimerParcialLabo
                 panelFormularios.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
+
+                formularioAbierto = formulario;
             }
             else
             {
                 formulario.BringToFront();
-
+                formularioAbierto = formulario;
             }
         }
+
+        private void CerrarFormularioAbierto()
+        {
+            if (formularioAbierto != null)
+            {
+                formularioAbierto.Close();
+                formularioAbierto = null;
+            }
+        }
+
     }
 }

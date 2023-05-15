@@ -5,7 +5,7 @@ namespace PrimerParcialLabo
 {
     public partial class FrmLogIn : Form
     {
-        List<Usuarios>? list;
+        List<Usuarios>? usuarios;
         List<Aeronaves>? listA;
         List<Pasajeros>? listP;
         List<Vuelos>? listV;
@@ -18,28 +18,30 @@ namespace PrimerParcialLabo
 
         public void FrmLogIn_Load(object sender, EventArgs e)
         {
-            list = new List<Usuarios>();
-            list = Deserializadores.DeserializarUsuariosJson();
-            
+            usuarios = new List<Usuarios>();
+            usuarios = Deserializadores.DeserializarUsuariosJson();
+
             listA = new List<Aeronaves>();
             listP = new List<Pasajeros>();
             listV = new List<Vuelos>();
-            if(!File.Exists("Aeronaves.json"))
+            if (!File.Exists("Aeronaves.json"))
             {
                 listA = HardCodeo.HardCodeoAeronaves();
                 Serializadores.SerializarJson("Aeronaves.json", listA);
             }
-            if(!File.Exists("Vuelos.json"))
+            if (!File.Exists("Vuelos.json"))
             {
                 listV = HardCodeo.HardCodeoVuelos();
                 Serializadores.SerializarJson("Vuelos.json", listV);
             }
-            if(!File.Exists("Pasajeros.json"))
+            if (!File.Exists("Pasajeros.json"))
             {
                 listP = HardCodeo.HardCodeoPasajeros();
                 Serializadores.SerializarJson("Pasajeros.json", listP);
-            }           
+            }
+            comboBUsuarios.Visible = false;
         }
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             FrmVendedor frmVendedor = new FrmVendedor();
@@ -47,7 +49,7 @@ namespace PrimerParcialLabo
             FrmAdmin frmAdmin = new FrmAdmin();
             bool flagIngreso = false;
 
-            foreach (Usuarios item in list)
+            foreach (Usuarios item in usuarios)
             {
                 if (item.Clave == txtBContraseña.Text && item.Correo == txtBMail.Text)
                 {
@@ -115,6 +117,52 @@ namespace PrimerParcialLabo
             txtBContraseña.UseSystemPasswordChar = true;
             picBEye.Visible = true;
             picBEyeBlind.Visible = false;
+        }
+
+
+        private void RellenarComboBox()
+        {
+            if (checkBCompletado.Checked)
+            {
+                checkBCompletado.Visible = false;
+
+                foreach (Usuarios item in usuarios)
+                {
+                    comboBUsuarios.Items.Add(item.Nombre);
+                }
+            }
+        }
+
+        private void checkBCompletado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBCompletado.Checked)
+            {
+                comboBUsuarios.Items.Clear();
+                comboBUsuarios.Visible = false;
+            }
+            else
+            {
+                comboBUsuarios.Visible = true;
+                RellenarComboBox();
+            }
+        }
+
+        private void comboBUsuarios_TextChanged(object sender, EventArgs e)
+        {
+            foreach(Usuarios item in usuarios)
+            {
+                if(comboBUsuarios.Text == item.Nombre)
+                {
+                    txtBContraseña.Text = item.Clave;
+                    txtBMail.Text = item.Correo;
+                }
+            }
+            if(comboBUsuarios.Text == "")
+            {
+                comboBUsuarios.Visible = false;
+                checkBCompletado.Visible = true;
+                checkBCompletado.Checked = false;
+            }
         }
     }
 }

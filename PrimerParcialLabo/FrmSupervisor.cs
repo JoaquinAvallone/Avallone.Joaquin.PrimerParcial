@@ -16,6 +16,7 @@ namespace PrimerParcialLabo
     {
         Usuarios? usuarioActual;
         string? pathFotoUsuario;
+        Form? formularioAbierto = null;
         public FrmSupervisor()
         {
             InitializeComponent();
@@ -27,6 +28,8 @@ namespace PrimerParcialLabo
             usuarioActual = Deserializadores.DeserializarUsuarioActualJson();
             lblNombreUsuario.Text = usuarioActual.Nombre + " " + usuarioActual.Apellido;
             lblPerfil.Text = usuarioActual.Perfil;
+            DateTime fechaActual = DateTime.Today;
+            lblFecha.Text = "Fecha: " + fechaActual.ToString("dd/MM/yyyy");
             pathFotoUsuario = Deserializadores.DeserializarFotoJson(usuarioActual);
             if (pathFotoUsuario != null)
             {
@@ -43,6 +46,10 @@ namespace PrimerParcialLabo
             {
                 panelSubMenuModif.Visible = false;
             }
+            if (panelEstadisticas.Visible == true)
+            {
+                panelEstadisticas.Visible = false;
+            }
         }
         private void ShowSubMenu(Panel subMenu)
         {
@@ -58,7 +65,45 @@ namespace PrimerParcialLabo
 
         private void btnModificaciones_Click(object sender, EventArgs e)
         {
+            CerrarFormularioAbierto();
             ShowSubMenu(panelSubMenuModif);
+            panelEstadisticas.Visible = false;
+        }
+        private void btnModPasa_Click(object sender, EventArgs e)
+        {
+            CerrarFormularioAbierto();
+            AbrirFormulario<FrmCrudPasajero>();
+        }
+
+        private void btnEstadisticas_Click(object sender, EventArgs e)
+        {
+            CerrarFormularioAbierto();
+            ShowSubMenu(panelEstadisticas);
+            panelSubMenuModif.Visible = false;
+        }
+
+        private void btnFacturacionDestinos_Click(object sender, EventArgs e)
+        {
+            CerrarFormularioAbierto();
+            AbrirFormulario<FrmFacturacionDestinos>();
+        }
+
+        private void btnPasajerosFrecuentes_Click(object sender, EventArgs e)
+        {
+            CerrarFormularioAbierto();
+            AbrirFormulario<FrmPasajerosFrecuentes>();
+        }
+
+        private void btnDestinoMasElegido_Click(object sender, EventArgs e)
+        {
+            CerrarFormularioAbierto();
+            AbrirFormulario<FrmDestinoMasElegido>();
+        }
+
+        private void btnHorasVuelos_Click(object sender, EventArgs e)
+        {
+            CerrarFormularioAbierto();
+            AbrirFormulario<FrmHorasDeVuelo>();
         }
 
         private void pictureBEscape_Click(object sender, EventArgs e)
@@ -121,17 +166,24 @@ namespace PrimerParcialLabo
                 panelFormularios.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
+
+                formularioAbierto = formulario;
             }
             else
             {
                 formulario.BringToFront();
-
+                formularioAbierto = formulario;
             }
         }
 
-        private void btnModPasa_Click(object sender, EventArgs e)
+
+        private void CerrarFormularioAbierto()
         {
-            AbrirFormulario<FrmCrudPasajero>();
+            if (formularioAbierto != null)
+            {
+                formularioAbierto.Close();
+                formularioAbierto = null;
+            }
         }
     }
 }

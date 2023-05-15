@@ -1,10 +1,11 @@
 {
-  "Dni": 44157922,
-  "Edad": 30,
+  "Dni": 40787922,
+  "Edad": 28,
   "EquipajeMano": true,
   "EquipajeBodega": true,
-  "PesoEquipaje": 40,
+  "PesoEquipaje": 23,
   "Clase": "Premium",
-  "Apellido": "Fernando",
-  "Nombre": "Gago"
+  "CantidadVuelos": 0,
+  "Apellido": "Hadid",
+  "Nombre": "Bella"
 }

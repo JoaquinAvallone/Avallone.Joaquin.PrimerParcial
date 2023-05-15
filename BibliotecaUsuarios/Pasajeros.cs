@@ -10,6 +10,7 @@ namespace Biblioteca
         private bool equipajeBodega;
         private float pesoEquipaje;
         private string clase;
+        private int cantidadVuelos;
 
         public Pasajeros(string apellido, string nombre, int dni, int edad, bool equipajeMano, bool equipajeBodega, float pesoEquipaje, string clase) : base(apellido, nombre)
         {            
@@ -27,6 +28,7 @@ namespace Biblioteca
         public bool EquipajeBodega { get => equipajeBodega; set => equipajeBodega = value; }
         public float PesoEquipaje { get => pesoEquipaje; set => pesoEquipaje = value; }
         public string Clase { get => clase; set => clase = value; }
+        public int CantidadVuelos { get => cantidadVuelos; set => cantidadVuelos = value; }
 
         public string TipoEquipaje(bool equipaje)
         {
@@ -42,6 +44,30 @@ namespace Biblioteca
                 sb.AppendLine("No lleva");
             }
             return sb.ToString();
+        }
+
+        private static int PasajerosFrecuentesDescendente(Pasajeros a, Pasajeros b)
+        {
+            return b.cantidadVuelos - a.cantidadVuelos;
+        }
+
+        public static List<Pasajeros> PasajerosFrecuentes()
+        {
+            List<Pasajeros> pasajerosOrdenados = new List<Pasajeros>();
+            List<Vuelos>? vuelos = new List<Vuelos>();
+            vuelos = Deserializadores.DeserializarVuelosJson();
+
+            foreach(Vuelos item in vuelos)
+            {
+                foreach(Pasajeros pasajero in item.Pasajeros)
+                {
+                    pasajerosOrdenados.Add(pasajero);
+                }
+            }
+
+            pasajerosOrdenados.Sort(PasajerosFrecuentesDescendente);
+
+            return pasajerosOrdenados;
         }
 
         public override string ToString()

@@ -41,6 +41,8 @@
             pictureBMinimize = new PictureBox();
             picBEye = new PictureBox();
             picBEyeBlind = new PictureBox();
+            checkBCompletado = new CheckBox();
+            comboBUsuarios = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBEmail).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBContra).BeginInit();
@@ -184,12 +186,41 @@
             picBEyeBlind.Visible = false;
             picBEyeBlind.Click += picBEyeBlind_Click;
             // 
+            // checkBCompletado
+            // 
+            checkBCompletado.AutoSize = true;
+            checkBCompletado.FlatAppearance.BorderSize = 0;
+            checkBCompletado.FlatStyle = FlatStyle.Flat;
+            checkBCompletado.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBCompletado.ForeColor = Color.Gray;
+            checkBCompletado.Location = new Point(34, 253);
+            checkBCompletado.Name = "checkBCompletado";
+            checkBCompletado.Size = new Size(103, 19);
+            checkBCompletado.TabIndex = 12;
+            checkBCompletado.Text = "Autocompletar";
+            checkBCompletado.UseVisualStyleBackColor = true;
+            checkBCompletado.CheckedChanged += checkBCompletado_CheckedChanged;
+            // 
+            // comboBUsuarios
+            // 
+            comboBUsuarios.BackColor = Color.FromArgb(35, 32, 39);
+            comboBUsuarios.FlatStyle = FlatStyle.Flat;
+            comboBUsuarios.ForeColor = Color.WhiteSmoke;
+            comboBUsuarios.FormattingEnabled = true;
+            comboBUsuarios.Location = new Point(57, 249);
+            comboBUsuarios.Name = "comboBUsuarios";
+            comboBUsuarios.Size = new Size(172, 23);
+            comboBUsuarios.TabIndex = 13;
+            comboBUsuarios.TextChanged += comboBUsuarios_TextChanged;
+            // 
             // FrmLogIn
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(35, 32, 39);
             ClientSize = new Size(286, 345);
+            Controls.Add(comboBUsuarios);
+            Controls.Add(checkBCompletado);
             Controls.Add(picBEyeBlind);
             Controls.Add(picBEye);
             Controls.Add(pictureBMinimize);
@@ -234,5 +265,7 @@
         public TextBox txtBMail;
         private PictureBox picBEye;
         private PictureBox picBEyeBlind;
+        private CheckBox checkBCompletado;
+        private ComboBox comboBUsuarios;
     }
 }

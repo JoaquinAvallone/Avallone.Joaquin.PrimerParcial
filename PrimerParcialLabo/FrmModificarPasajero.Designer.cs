@@ -169,6 +169,7 @@
             txtBNombre.Name = "txtBNombre";
             txtBNombre.Size = new Size(167, 16);
             txtBNombre.TabIndex = 67;
+            txtBNombre.KeyPress += txtBNombre_KeyPress;
             // 
             // txtBApellido
             // 
@@ -180,6 +181,7 @@
             txtBApellido.Name = "txtBApellido";
             txtBApellido.Size = new Size(167, 16);
             txtBApellido.TabIndex = 66;
+            txtBApellido.KeyPress += txtBApellido_KeyPress;
             // 
             // checkBEquipajeBodega
             // 

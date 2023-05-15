@@ -89,6 +89,11 @@ namespace PrimerParcialLabo
             btnVolver.Visible = true;
             txtBMatricula.Visible = false;
 
+            if (indice == -1)
+            {
+                return;
+            }
+
             if (indice >= 0 && indice < aviones.Count)
             {
                 avionSeleccionado = aviones[indice];

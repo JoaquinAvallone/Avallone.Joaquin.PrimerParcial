@@ -34,6 +34,9 @@ namespace PrimerParcialLabo
             vuelos = Deserializadores.DeserializarVuelosJson();
             foreach (Vuelos item in vuelos)
             {
+                float precioTSinIva = (item.PrecioTurista * 100) / 121;
+                float precioPSinIva = (item.PrecioPrem * 100) / 121;
+
                 int rowIndex = dataGVVuelos.Rows.Add();
                 DataGridViewRow row = dataGVVuelos.Rows[rowIndex];
                 row.Cells[0].Value = item.FechaVuelo;
@@ -41,9 +44,12 @@ namespace PrimerParcialLabo
                 row.Cells[2].Value = item.CiudadDestino;
                 row.Cells[3].Value = "$" + item.PrecioTurista;
                 row.Cells[4].Value = "$" + item.PrecioPrem;
-                row.Cells[5].Value = item.CantidadAsientosTuris;
-                row.Cells[6].Value = item.CantidadAsientosPrem;
-                row.Cells[7].Value = item.Avion.Matricula;
+                row.Cells[5].Value = "$" + precioTSinIva.ToString("0.00");
+                row.Cells[6].Value = "$" + precioPSinIva.ToString("0.00");
+                row.Cells[7].Value = item.CantidadAsientosTuris;
+                row.Cells[8].Value = item.CantidadAsientosPrem;
+                row.Cells[9].Value = item.DuracionVuelo;
+                row.Cells[10].Value = item.Avion.Matricula;
             }
         }
 
@@ -54,10 +60,17 @@ namespace PrimerParcialLabo
             btnVolver.Visible = true;
             txtBMatricula.Visible = false;
 
+            if (indice == -1)
+            {
+                return;
+            }
+
             if (indice >= 0 && indice < vuelos.Count)
             {
                 vueloSeleccionado = vuelos[indice];
                 dataGVVuelos.Rows.Clear();
+                float precioTSinIva = (vueloSeleccionado.PrecioTurista * 100) / 121;
+                float precioPSinIva = (vueloSeleccionado.PrecioPrem * 100) / 121;
 
                 int rowIndex = dataGVVuelos.Rows.Add();
                 DataGridViewRow row = dataGVVuelos.Rows[rowIndex];
@@ -66,9 +79,12 @@ namespace PrimerParcialLabo
                 row.Cells[2].Value = vueloSeleccionado.CiudadDestino;
                 row.Cells[3].Value = "$" + vueloSeleccionado.PrecioTurista;
                 row.Cells[4].Value = "$" + vueloSeleccionado.PrecioPrem;
-                row.Cells[5].Value = vueloSeleccionado.CantidadAsientosTuris;
-                row.Cells[6].Value = vueloSeleccionado.CantidadAsientosPrem;
-                row.Cells[7].Value = vueloSeleccionado.Avion.Matricula;
+                row.Cells[5].Value = "$" + precioTSinIva.ToString("0.00");
+                row.Cells[6].Value = "$" + precioPSinIva.ToString("0.00");
+                row.Cells[7].Value = vueloSeleccionado.CantidadAsientosTuris;
+                row.Cells[8].Value = vueloSeleccionado.CantidadAsientosPrem;
+                row.Cells[9].Value = vueloSeleccionado.DuracionVuelo;
+                row.Cells[10].Value = vueloSeleccionado.Avion.Matricula;
                 seleccionado = true;
                 Serializadores.SerializarJson("VueloSeleccionado.json", vueloSeleccionado);
             }
@@ -104,6 +120,9 @@ namespace PrimerParcialLabo
 
                 if (empiezaCon)
                 {
+                    float precioTSinIva = (item.PrecioTurista * 100) / 121;
+                    float precioPSinIva = (item.PrecioPrem * 100) / 121;
+
                     int rowIndex = dataGVVuelos.Rows.Add();
                     DataGridViewRow row = dataGVVuelos.Rows[rowIndex];
                     row.Cells[0].Value = item.FechaVuelo;
@@ -111,9 +130,12 @@ namespace PrimerParcialLabo
                     row.Cells[2].Value = item.CiudadDestino;
                     row.Cells[3].Value = "$" + item.PrecioTurista;
                     row.Cells[4].Value = "$" + item.PrecioPrem;
-                    row.Cells[5].Value = item.CantidadAsientosTuris;
-                    row.Cells[6].Value = item.CantidadAsientosPrem;
-                    row.Cells[7].Value = item.Avion.Matricula;
+                    row.Cells[5].Value = "$" + precioTSinIva.ToString("0.00");
+                    row.Cells[6].Value = "$" + precioPSinIva.ToString("0.00");
+                    row.Cells[7].Value = item.CantidadAsientosTuris;
+                    row.Cells[8].Value = item.CantidadAsientosPrem;
+                    row.Cells[9].Value = item.DuracionVuelo;
+                    row.Cells[10].Value = item.Avion.Matricula;
                 }
             }
         }
@@ -207,5 +229,7 @@ namespace PrimerParcialLabo
             btnVolver.Visible = false;
             seleccionado = false;
         }
+
+
     }
 }

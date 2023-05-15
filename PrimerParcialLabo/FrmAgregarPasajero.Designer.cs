@@ -247,6 +247,7 @@
             txtBApellido.Name = "txtBApellido";
             txtBApellido.Size = new Size(167, 16);
             txtBApellido.TabIndex = 39;
+            txtBApellido.KeyPress += txtBApellido_KeyPress;
             // 
             // txtBNombre
             // 
@@ -258,6 +259,7 @@
             txtBNombre.Name = "txtBNombre";
             txtBNombre.Size = new Size(167, 16);
             txtBNombre.TabIndex = 40;
+            txtBNombre.KeyPress += txtBNombre_KeyPress;
             // 
             // txtBDni
             // 

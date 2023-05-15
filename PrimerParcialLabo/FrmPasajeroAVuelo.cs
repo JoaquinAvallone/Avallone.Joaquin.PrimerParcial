@@ -101,33 +101,42 @@ namespace PrimerParcialLabo
                 {
                     if(item.Avion.Matricula == vueloSeleccionado.Avion.Matricula && newPasajero != item)
                     {
-                        if(newPasajero.Clase == "Premium" && item.CantidadAsientosPrem > 0)
+                        if(newPasajero.Clase == "Premium" && item.CantidadAsientosPrem > 0 && item.Avion.CapacidadBodega > newPasajero.PesoEquipaje)
                         {
+                            item.Avion.CapacidadBodega = (int)(item.Avion.CapacidadBodega - newPasajero.PesoEquipaje);
                             item.CantidadAsientosPrem--;
                             item.Pasajeros.Add(newPasajero);
+                            newPasajero.CantidadVuelos++;
+                            item.GananciasPrem += item.PrecioPrem;
+                            Serializadores.SerializarJson("Vuelos.json", vuelos);
+                            pasajeros.Add(newPasajero);
+                            Serializadores.SerializarJson("Pasajeros.json", pasajeros);
                             MessageBox.Show("Pasajero agregado con exito", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             break;
                         }
-                        else
+                        else if(item.CantidadAsientosPrem == 0)
                         {
                             MessageBox.Show("No quedan mas asientos de clase premium en el vuelo seleccionado", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        if(newPasajero.Clase == "Turista" && item.CantidadAsientosPrem > 0)
+                        if(newPasajero.Clase == "Turista" && item.CantidadAsientosPrem > 0 && item.Avion.CapacidadBodega > newPasajero.PesoEquipaje)
                         {
+                            item.Avion.CapacidadBodega = (int)(item.Avion.CapacidadBodega - newPasajero.PesoEquipaje);
                             item.CantidadAsientosTuris--;
                             item.Pasajeros.Add(newPasajero);
+                            newPasajero.CantidadVuelos++;
+                            item.GananciasTuris += item.PrecioTurista;
+                            Serializadores.SerializarJson("Vuelos.json", vuelos);
+                            pasajeros.Add(newPasajero);
+                            Serializadores.SerializarJson("Pasajeros.json", pasajeros);
                             MessageBox.Show("Pasajero agregado con exito", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             break;
                         }
-                        else
+                        else if (item.CantidadAsientosTuris == 0)
                         {
                             MessageBox.Show("No quedan mas asientos de clase turista en el vuelo seleccionado", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                }
-                pasajeros.Add(newPasajero);
-                Serializadores.SerializarJson("Pasajeros.json", pasajeros);
-                Serializadores.SerializarJson("Vuelos.json", vuelos);
+                }                
                 this.Close();
             }
         }

@@ -61,18 +61,18 @@ namespace PrimerParcialLabo
             comboBDestino.Items.Clear();
             if (checkBInternacional.Checked)
             {
-                foreach (Enumerados.origenInternacional item in Enum.GetValues(typeof(Enumerados.origenInternacional)))
+                foreach (Destinos.origenInternacional item in Enum.GetValues(typeof(Destinos.origenInternacional)))
                 {
                     comboBPartida.Items.Add(item);
                 }
-                foreach (Enumerados.DestinoInternacional item in Enum.GetValues(typeof(Enumerados.DestinoInternacional)))
+                foreach (Destinos.DestinoInternacional item in Enum.GetValues(typeof(Destinos.DestinoInternacional)))
                 {
                     comboBDestino.Items.Add(item);
                 }
             }
             else
             {
-                foreach (Enumerados.Nacional item in Enum.GetValues(typeof(Enumerados.Nacional)))
+                foreach (Destinos.Nacional item in Enum.GetValues(typeof(Destinos.Nacional)))
                 {
                     comboBPartida.Items.Add(item);
                     comboBDestino.Items.Add(item);
@@ -140,18 +140,18 @@ namespace PrimerParcialLabo
 
             if (checkBInternacional.Checked)
             {
-                foreach (Enumerados.origenInternacional item in Enum.GetValues(typeof(Enumerados.origenInternacional)))
+                foreach (Destinos.origenInternacional item in Enum.GetValues(typeof(Destinos.origenInternacional)))
                 {
                     comboBPartida.Items.Add(item);
                 }
-                foreach (Enumerados.DestinoInternacional item in Enum.GetValues(typeof(Enumerados.DestinoInternacional)))
+                foreach (Destinos.DestinoInternacional item in Enum.GetValues(typeof(Destinos.DestinoInternacional)))
                 {
                     comboBDestino.Items.Add(item);
                 }
             }
             else
             {
-                foreach (Enumerados.Nacional item in Enum.GetValues(typeof(Enumerados.Nacional)))
+                foreach (Destinos.Nacional item in Enum.GetValues(typeof(Destinos.Nacional)))
                 {
                     comboBPartida.Items.Add(item);
                     comboBDestino.Items.Add(item);
@@ -163,7 +163,7 @@ namespace PrimerParcialLabo
         {
             if(!checkBInternacional.Checked)
             {
-                foreach(Enumerados.Nacional item in comboBPartida.Items)
+                foreach(Destinos.Nacional item in comboBPartida.Items)
                 {
                     if(comboBDestino.Text == item.ToString())
                     {
@@ -177,6 +177,11 @@ namespace PrimerParcialLabo
         {
             int indice;
             indice = e.RowIndex;
+
+            if (indice == -1)
+            {
+                return;
+            }
 
             if (indice >= 0 && indice < aviones.Count)
             {

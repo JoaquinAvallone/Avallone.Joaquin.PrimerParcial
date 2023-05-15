@@ -15,6 +15,7 @@ namespace PrimerParcialLabo
     {
         Usuarios? usuarioActual;
         string? pathFotoUsuario;
+        Form? formularioAbierto = null;
         public FrmAdmin()
         {
             InitializeComponent();
@@ -26,6 +27,8 @@ namespace PrimerParcialLabo
             usuarioActual = Deserializadores.DeserializarUsuarioActualJson();
             lblNombreUsuario.Text = usuarioActual.Nombre + " " + usuarioActual.Apellido;
             lblPerfil.Text = usuarioActual.Perfil;
+            DateTime fechaActual = DateTime.Today;
+            lblFecha.Text = "Fecha: " + fechaActual.ToString("dd/MM/yyyy");
             pathFotoUsuario = Deserializadores.DeserializarFotoJson(usuarioActual);
             if (pathFotoUsuario != null)
             {
@@ -57,6 +60,7 @@ namespace PrimerParcialLabo
 
         private void btnModificaciones_Click(object sender, EventArgs e)
         {
+            CerrarFormularioAbierto();
             ShowSubMenu(panelSubMenuModif);
         }
 
@@ -108,11 +112,13 @@ namespace PrimerParcialLabo
 
         private void btnModifAeronaves_Click(object sender, EventArgs e)
         {
+            CerrarFormularioAbierto();
             AbrirFormulario<FrmCrudAeronaves>();
         }
 
         private void btnModifViajes_Click(object sender, EventArgs e)
         {
+            CerrarFormularioAbierto();
             AbrirFormulario<FrmCrudVuelos>();
         }
 
@@ -130,11 +136,22 @@ namespace PrimerParcialLabo
                 panelFormularios.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
+
+                formularioAbierto = formulario;
             }
             else
             {
                 formulario.BringToFront();
+                formularioAbierto = formulario;
+            }
+        }
 
+        private void CerrarFormularioAbierto()
+        {
+            if (formularioAbierto != null)
+            {
+                formularioAbierto.Close();
+                formularioAbierto = null;
             }
         }
     }

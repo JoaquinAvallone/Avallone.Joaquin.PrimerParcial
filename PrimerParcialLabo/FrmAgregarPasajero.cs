@@ -104,5 +104,23 @@ namespace PrimerParcialLabo
         {
             this.Close();
         }
+
+        private void txtBApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("Solo se acepta el ingreso de letras.");
+                e.Handled = true; 
+            }
+        }
+
+        private void txtBNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("Solo se acepta el ingreso de letras.");
+                e.Handled = true;
+            }
+        }
     }
 }

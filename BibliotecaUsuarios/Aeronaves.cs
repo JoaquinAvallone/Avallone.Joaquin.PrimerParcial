@@ -14,6 +14,7 @@ namespace Biblioteca
         private bool internet;
         private bool comida;
         private int capacidadBodega;
+        private int horasDeVuelo;
 
 
         public Aeronaves( string matricula, int cantidadAsientos, int cantidadBaños, bool internet, bool comida, int capacidadBodega)
@@ -32,6 +33,7 @@ namespace Biblioteca
         public bool Internet { get => internet; set => internet = value; }
         public bool Comida { get => comida; set => comida = value; }
         public int CapacidadBodega { get => capacidadBodega; set => capacidadBodega = value; }
+        public int HorasDeVuelo { get => horasDeVuelo; set => horasDeVuelo = value; }
 
         public static string GenerateMatricula()
         {
@@ -85,6 +87,54 @@ namespace Biblioteca
                 sb.AppendLine("No");
             }
             return sb.ToString();
+        }
+
+        public static List<Aeronaves> DictionaryHorasDeVuelo()
+        {
+            Dictionary<string, int> contadorHorasVuelo = new Dictionary<string, int>();
+            List<Vuelos>? vuelos = new List<Vuelos>();
+            List<Aeronaves>? aviones = new List<Aeronaves>();
+            aviones = Deserializadores.DeserializarAeronavesJson();
+            vuelos = Deserializadores.DeserializarVuelosJson();
+
+            foreach (Vuelos item in vuelos)
+            {
+                string matricula = item.Avion.Matricula.ToString();
+                int cantidadHoras = item.DuracionVuelo;
+                
+                if (contadorHorasVuelo.ContainsKey(matricula))
+                {
+                    if (item.FechaVuelo < DateTime.Today)
+                    {
+                        contadorHorasVuelo[matricula] += cantidadHoras;
+                    }
+                }
+                else
+                {
+                    if (item.FechaVuelo < DateTime.Today)
+                    {
+                        contadorHorasVuelo[matricula] = cantidadHoras;
+                    }                    
+                }                
+            }
+
+            List<Aeronaves> avionesHorasVuelo = new List<Aeronaves>();
+
+            foreach (KeyValuePair<string, int> item in contadorHorasVuelo)
+            {
+                string matricula = item.Key;
+                int horasDeVuelo = item.Value;
+
+                foreach(Aeronaves avion in aviones)
+                {
+                    if(matricula == avion.Matricula)
+                    {
+                        avion.horasDeVuelo = horasDeVuelo;
+                        avionesHorasVuelo.Add(avion);
+                    }
+                }
+            }
+            return avionesHorasVuelo;
         }
 
         public override string ToString()

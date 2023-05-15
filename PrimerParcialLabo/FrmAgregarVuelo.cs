@@ -37,7 +37,7 @@ namespace PrimerParcialLabo
 
         private void RellenarComboBox()
         {
-            foreach (Enumerados.Nacional item in Enum.GetValues(typeof(Enumerados.Nacional)))
+            foreach (Destinos.Nacional item in Enum.GetValues(typeof(Destinos.Nacional)))
             {
                 comboBDestino.Items.Add(item);
                 comboBPartida.Items.Add(item);
@@ -50,7 +50,7 @@ namespace PrimerParcialLabo
 
             if (!checkBInternacional.Checked)
             {
-                foreach (Enumerados.Nacional item in comboBPartida.Items)
+                foreach (Destinos.Nacional item in comboBPartida.Items)
                 {
                     if (comboBDestino.Text == item.ToString())
                     {
@@ -69,18 +69,18 @@ namespace PrimerParcialLabo
 
             if (checkBInternacional.Checked)
             {
-                foreach (Enumerados.origenInternacional item in Enum.GetValues(typeof(Enumerados.origenInternacional)))
+                foreach (Destinos.origenInternacional item in Enum.GetValues(typeof(Destinos.origenInternacional)))
                 {
                     comboBPartida.Items.Add(item);
                 }
-                foreach (Enumerados.DestinoInternacional item in Enum.GetValues(typeof(Enumerados.DestinoInternacional)))
+                foreach (Destinos.DestinoInternacional item in Enum.GetValues(typeof(Destinos.DestinoInternacional)))
                 {
                     comboBDestino.Items.Add(item);
                 }
             }
             else
             {
-                foreach (Enumerados.Nacional item in Enum.GetValues(typeof(Enumerados.Nacional)))
+                foreach (Destinos.Nacional item in Enum.GetValues(typeof(Destinos.Nacional)))
                 {
                     comboBPartida.Items.Add(item);
                     comboBDestino.Items.Add(item);
@@ -143,6 +143,11 @@ namespace PrimerParcialLabo
             int indice;
             indice = e.RowIndex;
 
+            if (indice == -1)
+            {
+                return;
+            }
+
             if (indice >= 0 && indice < aviones.Count)
             {
                 avionSeleccionado = aviones[indice];
@@ -178,8 +183,8 @@ namespace PrimerParcialLabo
             DateTime dateTime;
             int cantidadAsientosTuris = 0;
             int cantidadAsientosPrem = 0;
-            int precioTurista;
-            int precioPrem;
+            float precioTurista;
+            float precioPrem;
             int duracion;
             bool todoOk = true;
             Aeronaves? avionSelect = null;
@@ -187,14 +192,14 @@ namespace PrimerParcialLabo
             if (checkBInternacional.Checked)
             {
                 duracion = Vuelos.GenerarDuracionIntenacional();
-                precioTurista = Vuelos.GenerarPrecioInternacional(false, duracion);
-                precioPrem = Vuelos.GenerarPrecioInternacional(true, duracion); ;
+                precioTurista = Vuelos.GenerarPrecioInternacionalConIva(false, duracion);
+                precioPrem = Vuelos.GenerarPrecioInternacionalConIva(true, duracion); ;
             }
             else
             {
                 duracion = Vuelos.GenerarDuracionNacional();
-                precioTurista = Vuelos.GenerarPrecioNacional(false, duracion);
-                precioPrem = Vuelos.GenerarPrecioNacional(true, duracion);
+                precioTurista = Vuelos.GenerarPrecioNacionalConIva(false, duracion);
+                precioPrem = Vuelos.GenerarPrecioNacionalConIva(true, duracion);
             }
 
             foreach (Aeronaves item in aviones)
