@@ -4,6 +4,8 @@
     "Correo": "cgorgen@vendedor.com",
     "Clave": "123abc45",
     "Perfil": "vendedor",
+    "FechaAcceso": "0001-01-01T00:00:00",
+    "FechaSalida": "0001-01-01T00:00:00",
     "Apellido": "Gorgen",
     "Nombre": "Corey"
   },
@@ -12,6 +14,8 @@
     "Correo": "iharroll@vendedor.com",
     "Clave": "qweasdzx",
     "Perfil": "vendedor",
+    "FechaAcceso": "0001-01-01T00:00:00",
+    "FechaSalida": "0001-01-01T00:00:00",
     "Apellido": "Harroll",
     "Nombre": "Ingrid"
   },
@@ -20,6 +24,8 @@
     "Correo": "sharris@maiden.com.uk",
     "Clave": "eddie666",
     "Perfil": "vendedor",
+    "FechaAcceso": "0001-01-01T00:00:00",
+    "FechaSalida": "0001-01-01T00:00:00",
     "Apellido": "Harris",
     "Nombre": "Steve"
   },
@@ -28,6 +34,8 @@
     "Correo": "trobinson@super.com",
     "Clave": "12345678",
     "Perfil": "supervisor",
+    "FechaAcceso": "0001-01-01T00:00:00",
+    "FechaSalida": "0001-01-01T00:00:00",
     "Apellido": "Robinson",
     "Nombre": "Tilda"
   },
@@ -36,6 +44,8 @@
     "Correo": "admin@admin.com",
     "Clave": "12345678",
     "Perfil": "administrador",
+    "FechaAcceso": "0001-01-01T00:00:00",
+    "FechaSalida": "0001-01-01T00:00:00",
     "Apellido": "Jordan",
     "Nombre": "Michael"
   }

@@ -8,11 +8,15 @@ namespace Biblioteca
         private string correo;
         private string clave;
         private string perfil;
+        private DateTime fechaAcceso;
+        private DateTime fechaSalida;
 
         public int Legajo { get => legajo; set => legajo = value; }
         public string Correo { get => correo; set => correo = value; }
         public string Clave { get => clave; set => clave = value; }
         public string Perfil { get => perfil; set => perfil = value; }
+        public DateTime FechaAcceso { get => fechaAcceso; set => fechaAcceso = value; }
+        public DateTime FechaSalida { get => fechaSalida; set => fechaSalida = value; }
 
         public Usuarios( string apellido, string nombre, int legajo, string correo, string clave, string perfil) : base(apellido, nombre)
         {

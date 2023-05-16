@@ -23,7 +23,7 @@ namespace Biblioteca
 
             using (StreamReader reader = new StreamReader(rutaArchivo))
             {
-                return (List<Pasajeros>)serializer.Deserialize(reader);
+                return (List<Pasajeros>?)serializer.Deserialize(reader);
             }
         }
 
@@ -40,7 +40,7 @@ namespace Biblioteca
 
             using (StreamReader reader = new StreamReader(rutaArchivo))
             {
-                return (List<Vuelos>)serializer.Deserialize(reader);
+                return (List<Vuelos>?)serializer.Deserialize(reader);
             }
         }
 
@@ -168,6 +168,22 @@ namespace Biblioteca
                 string stringJson = sr.ReadToEnd();
 
                 Usuarios? objeto = (Usuarios?)JsonSerializer.Deserialize<Usuarios>(stringJson);
+
+                return objeto;
+            }
+        }
+
+        public static List<Usuarios>? DeserializarHistorialUsuarioJson()
+        {
+            if (!File.Exists("usuarios.log"))
+            {
+                return null;
+            }
+            using (StreamReader sr = new StreamReader("usuarios.log"))
+            {
+                string stringJson = sr.ReadToEnd();
+
+                List < Usuarios >? objeto = (List<Usuarios>?)JsonSerializer.Deserialize<List<Usuarios>>(stringJson);
 
                 return objeto;
             }

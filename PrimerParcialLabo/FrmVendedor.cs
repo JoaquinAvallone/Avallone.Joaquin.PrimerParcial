@@ -14,8 +14,10 @@ namespace PrimerParcialLabo
     public partial class FrmVendedor : Form
     {
         Usuarios? usuarioActual;
+        List<Usuarios>? historialUsuarios;
         string? pathFotoUsuario;
         Form? formularioAbierto = null;
+        DateTime fechaSalida;
         public FrmVendedor()
         {
             InitializeComponent();
@@ -23,8 +25,10 @@ namespace PrimerParcialLabo
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            SubMenuVisibility();
+            historialUsuarios = new List<Usuarios>();
+            historialUsuarios = Deserializadores.DeserializarHistorialUsuarioJson();
             usuarioActual = Deserializadores.DeserializarUsuarioActualJson();
+            SubMenuVisibility();
             lblNombreUsuario.Text = usuarioActual.Nombre + " " + usuarioActual.Apellido;
             lblPerfil.Text = usuarioActual.Perfil;
             DateTime fechaActual = DateTime.Today;
@@ -38,6 +42,8 @@ namespace PrimerParcialLabo
             ToolTip toolTip = new ToolTip();
             toolTip.ShowAlways = true;
             toolTip.SetToolTip(picBoxUser, "Cambiar Foto");
+            
+            usuarioActual.FechaAcceso = fechaActual;
         }
 
         private void SubMenuVisibility()
@@ -107,13 +113,17 @@ namespace PrimerParcialLabo
 
         private void FrmVendedor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Serializadores.SerializarFotoperfilJson(usuarioActual, pathFotoUsuario);
             DialogResult result = MessageBox.Show("¿Está seguro de abandonar la aplicación?", "Confirmar cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
+            fechaSalida = DateTime.Now;
+            usuarioActual.FechaSalida = fechaSalida;
+            historialUsuarios.Add(usuarioActual);
+            Serializadores.SerializarJson("usuarios.log", historialUsuarios);
+            Serializadores.SerializarFotoperfilJson(usuarioActual, pathFotoUsuario);
         }
 
         private void btnViajesDispon_Click(object sender, EventArgs e)

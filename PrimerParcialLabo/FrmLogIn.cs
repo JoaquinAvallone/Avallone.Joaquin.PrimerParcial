@@ -6,6 +6,7 @@ namespace PrimerParcialLabo
     public partial class FrmLogIn : Form
     {
         List<Usuarios>? usuarios;
+        List<Usuarios>? historialUsuarios;
         List<Aeronaves>? listA;
         List<Pasajeros>? listP;
         List<Vuelos>? listV;
@@ -19,10 +20,15 @@ namespace PrimerParcialLabo
         public void FrmLogIn_Load(object sender, EventArgs e)
         {
             usuarios = new List<Usuarios>();
+            historialUsuarios = new List<Usuarios>();
             listA = new List<Aeronaves>();
             listP = new List<Pasajeros>();
             listV = new List<Vuelos>();
 
+            if(!File.Exists("usuarios.log"))
+            {
+                Serializadores.SerializarJson("usuarios.log", historialUsuarios);
+            }
             if(!File.Exists("Usuarios.json"))
             {
                 usuarios = HardCodeo.HardCodeoUsuarios();

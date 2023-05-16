@@ -313,7 +313,7 @@ namespace PrimerParcialLabo
         {
             dataGVPasajeros.Rows.Clear();
             string filtro = txtBDni.Text;
-            pasajeros = Deserializadores.DeserializarPasajerosJson();
+            pasajeros = Deserializadores.DeserializarPasajerosXml();
 
             for (int i = pasajerosPorDni.Count - 1; i >= 0; i--)
             {

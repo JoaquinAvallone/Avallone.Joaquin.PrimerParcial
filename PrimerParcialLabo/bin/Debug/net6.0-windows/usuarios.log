@@ -1,0 +1,32 @@
+[
+  {
+    "Legajo": 1,
+    "Correo": "cgorgen@vendedor.com",
+    "Clave": "123abc45",
+    "Perfil": "vendedor",
+    "FechaAcceso": "2023-05-16T00:00:00-03:00",
+    "FechaSalida": "2023-05-16T19:13:21.1675144-03:00",
+    "Apellido": "Gorgen",
+    "Nombre": "Corey"
+  },
+  {
+    "Legajo": 1,
+    "Correo": "cgorgen@vendedor.com",
+    "Clave": "123abc45",
+    "Perfil": "vendedor",
+    "FechaAcceso": "2023-05-16T00:00:00-03:00",
+    "FechaSalida": "2023-05-16T19:15:36.1034133-03:00",
+    "Apellido": "Gorgen",
+    "Nombre": "Corey"
+  },
+  {
+    "Legajo": 4,
+    "Correo": "trobinson@super.com",
+    "Clave": "12345678",
+    "Perfil": "supervisor",
+    "FechaAcceso": "0001-01-01T00:00:00",
+    "FechaSalida": "2023-05-16T19:19:04.8658148-03:00",
+    "Apellido": "Robinson",
+    "Nombre": "Tilda"
+  }
+]

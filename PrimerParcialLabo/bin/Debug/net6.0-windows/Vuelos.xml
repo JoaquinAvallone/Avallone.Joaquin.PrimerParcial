@@ -156,10 +156,10 @@
       <CantidadBaños>3</CantidadBaños>
       <Internet>false</Internet>
       <Comida>false</Comida>
-      <CapacidadBodega>4570</CapacidadBodega>
+      <CapacidadBodega>4600</CapacidadBodega>
       <HorasDeVuelo>0</HorasDeVuelo>
     </Avion>
-    <CantidadAsientosPrem>23</CantidadAsientosPrem>
+    <CantidadAsientosPrem>24</CantidadAsientosPrem>
     <CantidadAsientosTuris>96</CantidadAsientosTuris>
     <PrecioTurista>1210</PrecioTurista>
     <PrecioPrem>1633.5</PrecioPrem>
@@ -198,20 +198,9 @@
         <Clase>Premium</Clase>
         <CantidadVuelos>1</CantidadVuelos>
       </Pasajeros>
-      <Pasajeros>
-        <Apellido>Avallone</Apellido>
-        <Nombre>Joaquin</Nombre>
-        <Dni>40796568</Dni>
-        <Edad>25</Edad>
-        <EquipajeMano>true</EquipajeMano>
-        <EquipajeBodega>false</EquipajeBodega>
-        <PesoEquipaje>30</PesoEquipaje>
-        <Clase>Premium</Clase>
-        <CantidadVuelos>2</CantidadVuelos>
-      </Pasajeros>
     </Pasajeros>
     <GananciasTuris>1210</GananciasTuris>
-    <GananciasPrem>4900.5</GananciasPrem>
+    <GananciasPrem>3267</GananciasPrem>
   </Vuelos>
   <Vuelos>
     <CiudadPartida>Tucumán</CiudadPartida>
@@ -223,10 +212,10 @@
       <CantidadBaños>5</CantidadBaños>
       <Internet>true</Internet>
       <Comida>true</Comida>
-      <CapacidadBodega>6970</CapacidadBodega>
+      <CapacidadBodega>7000</CapacidadBodega>
       <HorasDeVuelo>0</HorasDeVuelo>
     </Avion>
-    <CantidadAsientosPrem>39</CantidadAsientosPrem>
+    <CantidadAsientosPrem>40</CantidadAsientosPrem>
     <CantidadAsientosTuris>160</CantidadAsientosTuris>
     <PrecioTurista>181.5</PrecioTurista>
     <PrecioPrem>248.65</PrecioPrem>
@@ -265,20 +254,9 @@
         <Clase>Turista</Clase>
         <CantidadVuelos>1</CantidadVuelos>
       </Pasajeros>
-      <Pasajeros>
-        <Apellido>Avallone</Apellido>
-        <Nombre>Joaquin</Nombre>
-        <Dni>40796568</Dni>
-        <Edad>25</Edad>
-        <EquipajeMano>true</EquipajeMano>
-        <EquipajeBodega>false</EquipajeBodega>
-        <PesoEquipaje>30</PesoEquipaje>
-        <Clase>Premium</Clase>
-        <CantidadVuelos>2</CantidadVuelos>
-      </Pasajeros>
     </Pasajeros>
     <GananciasTuris>363</GananciasTuris>
-    <GananciasPrem>497.3</GananciasPrem>
+    <GananciasPrem>248.65</GananciasPrem>
   </Vuelos>
   <Vuelos>
     <CiudadPartida>BuenosAires</CiudadPartida>

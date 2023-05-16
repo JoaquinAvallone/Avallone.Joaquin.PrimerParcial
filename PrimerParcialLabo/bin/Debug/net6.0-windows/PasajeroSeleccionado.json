@@ -1,11 +1,11 @@
 {
-  "Dni": 46149922,
-  "Edad": 18,
+  "Dni": 43196568,
+  "Edad": 25,
   "EquipajeMano": true,
-  "EquipajeBodega": true,
-  "PesoEquipaje": 32,
-  "Clase": "Premium",
+  "EquipajeBodega": false,
+  "PesoEquipaje": 15,
+  "Clase": "Turista",
   "CantidadVuelos": 1,
-  "Apellido": "Avallone",
-  "Nombre": "Paloma"
+  "Apellido": "Lopez",
+  "Nombre": "Zendaya"
 }

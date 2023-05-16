@@ -1,56 +1,67 @@
 {
-  "CiudadPartida": "Tucum\u00E1n",
-  "CiudadDestino": "Bariloche",
-  "FechaVuelo": "2023-06-15T10:00:00",
+  "CiudadPartida": "BuenosAires",
+  "CiudadDestino": "Roma",
+  "FechaVuelo": "2023-05-24T16:20:00",
   "Avion": {
-    "Matricula": "8S7HY5A3",
-    "CantidadAsientos": 200,
+    "Matricula": "LA31YTE6",
+    "CantidadAsientos": 170,
     "CantidadBa\u00F1os": 5,
     "Internet": true,
     "Comida": true,
-    "CapacidadBodega": 7000,
+    "CapacidadBodega": 4970,
     "HorasDeVuelo": 0
   },
-  "CantidadAsientosPrem": 40,
-  "CantidadAsientosTuris": 160,
-  "PrecioTurista": 181.5,
-  "PrecioPrem": 248.65,
-  "DuracionVuelo": 3,
+  "CantidadAsientosPrem": 33,
+  "CantidadAsientosTuris": 136,
+  "PrecioTurista": 1452,
+  "PrecioPrem": 1960.2,
+  "DuracionVuelo": 12,
   "Pasajeros": [
     {
-      "Dni": 37719568,
-      "Edad": 40,
+      "Dni": 41796568,
+      "Edad": 27,
       "EquipajeMano": true,
       "EquipajeBodega": false,
-      "PesoEquipaje": 16,
+      "PesoEquipaje": 21,
       "Clase": "Turista",
       "CantidadVuelos": 1,
-      "Apellido": "Potato",
-      "Nombre": "Hernan"
+      "Apellido": "Jenner",
+      "Nombre": "Kendall"
     },
     {
-      "Dni": 45157002,
-      "Edad": 17,
+      "Dni": 44327922,
+      "Edad": 24,
       "EquipajeMano": true,
       "EquipajeBodega": true,
-      "PesoEquipaje": 20,
+      "PesoEquipaje": 38,
       "Clase": "Premium",
       "CantidadVuelos": 1,
-      "Apellido": "Forti",
-      "Nombre": "Agustin"
+      "Apellido": "Holland",
+      "Nombre": "Tom"
     },
     {
-      "Dni": 38754768,
+      "Dni": 43196568,
       "Edad": 25,
       "EquipajeMano": true,
       "EquipajeBodega": false,
-      "PesoEquipaje": 17,
+      "PesoEquipaje": 15,
       "Clase": "Turista",
       "CantidadVuelos": 1,
-      "Apellido": "Smith",
-      "Nombre": "Ignacio"
+      "Apellido": "Lopez",
+      "Nombre": "Zendaya"
+    },
+    {
+      "Dni": 40796568,
+      "Edad": 25,
+      "EquipajeMano": true,
+      "EquipajeBodega": false,
+      "PesoEquipaje": 30,
+      "Clase": "Premium",
+      "CantidadVuelos": 2,
+      "Apellido": "Avallone",
+      "Nombre": "Joaquin"
     }
   ],
-  "GananciasTuris": 363,
-  "GananciasPrem": 248.65
+  "GananciasTuris": 2904,
+  "GananciasPrem": 3920.4
 }

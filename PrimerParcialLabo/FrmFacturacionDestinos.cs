@@ -39,8 +39,13 @@ namespace PrimerParcialLabo
                 int rowIndex = dataGVFacturacionDestinos.Rows.Add();
                 DataGridViewRow row = dataGVFacturacionDestinos.Rows[rowIndex];
                 row.Cells[0].Value = item.Destino;
-                row.Cells[1].Value = "$" + item.Recaudacion;
+                row.Cells[1].Value = "$" + item.Recaudacion.ToString("0.00");
             }
+        }
+
+        private void dataGVFacturacionDestinos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

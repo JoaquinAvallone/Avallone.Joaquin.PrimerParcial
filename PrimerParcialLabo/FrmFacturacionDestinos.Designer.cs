@@ -87,6 +87,7 @@
             dataGVFacturacionDestinos.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dataGVFacturacionDestinos.Size = new Size(708, 338);
             dataGVFacturacionDestinos.TabIndex = 5;
+            dataGVFacturacionDestinos.CellContentClick += dataGVFacturacionDestinos_CellContentClick;
             // 
             // ColumDestino
             // 

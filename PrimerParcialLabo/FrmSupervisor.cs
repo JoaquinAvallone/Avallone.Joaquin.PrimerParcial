@@ -15,6 +15,8 @@ namespace PrimerParcialLabo
     public partial class FrmSupervisor : Form
     {
         Usuarios? usuarioActual;
+        List<Usuarios>? historialUsuarios;
+        DateTime fechaSalida;
         string? pathFotoUsuario;
         Form? formularioAbierto = null;
         public FrmSupervisor()
@@ -24,6 +26,8 @@ namespace PrimerParcialLabo
 
         private void FrmSupervisor_Load(object sender, EventArgs e)
         {
+            historialUsuarios = new List<Usuarios>();
+            historialUsuarios = Deserializadores.DeserializarHistorialUsuarioJson();
             SubMenuVisibility();
             usuarioActual = Deserializadores.DeserializarUsuarioActualJson();
             lblNombreUsuario.Text = usuarioActual.Nombre + " " + usuarioActual.Apellido;
@@ -121,13 +125,17 @@ namespace PrimerParcialLabo
 
         private void FrmSupervisor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Serializadores.SerializarFotoperfilJson(usuarioActual, pathFotoUsuario);
             DialogResult result = MessageBox.Show("¿Está seguro de abandonar la aplicación?", "Confirmar cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
+            fechaSalida = DateTime.Now;
+            usuarioActual.FechaSalida = fechaSalida;
+            historialUsuarios.Add(usuarioActual);
+            Serializadores.SerializarJson("usuarios.log", historialUsuarios);
+            Serializadores.SerializarFotoperfilJson(usuarioActual, pathFotoUsuario);
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
