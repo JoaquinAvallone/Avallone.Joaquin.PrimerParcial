@@ -92,7 +92,7 @@
             dataGVAviones.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGVAviones.RowTemplate.Height = 25;
             dataGVAviones.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dataGVAviones.Size = new Size(703, 331);
+            dataGVAviones.Size = new Size(706, 327);
             dataGVAviones.TabIndex = 4;
             dataGVAviones.CellClick += dataGVAviones_CellClick;
             // 

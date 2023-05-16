@@ -20,6 +20,7 @@ namespace Biblioteca
             this.equipajeBodega = equipajeBodega;
             this.pesoEquipaje = pesoEquipaje;
             this.clase = clase;
+            cantidadVuelos = 0;
         }
 
         public int Dni { get => dni; set => dni = value; }

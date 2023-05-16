@@ -1,8 +1,9 @@
 {
-  "Matricula": "LA31YTE6",
-  "CantidadAsientos": 170,
-  "CantidadBa\u00F1os": 5,
-  "Internet": true,
+  "Matricula": "Y45TS67M",
+  "CantidadAsientos": 250,
+  "CantidadBa\u00F1os": 6,
+  "Internet": false,
   "Comida": true,
-  "CapacidadBodega": 5000
+  "CapacidadBodega": 3100,
+  "HorasDeVuelo": 0
 }

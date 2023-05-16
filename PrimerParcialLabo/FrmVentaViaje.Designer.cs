@@ -89,13 +89,13 @@
             dataGridViewCellStyle1.SelectionForeColor = Color.WhiteSmoke;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGVVuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGVVuelos.ColumnHeadersHeight = 46;
-            dataGVVuelos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGVVuelos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGVVuelos.Columns.AddRange(new DataGridViewColumn[] { ColumFecha, ColumOrigen, ColumDestino, ColumPrecio, ColumPrecioP, ColumPrecioTSinIva, ColumPrecioPSinIva, ColumAsientosTuris, ColumAsientosPrem, ColumWifi, ColumComida, ColumAvion });
             dataGVVuelos.Cursor = Cursors.Hand;
             dataGVVuelos.EnableHeadersVisualStyles = false;
             dataGVVuelos.GridColor = Color.FromArgb(35, 32, 39);
             dataGVVuelos.Location = new Point(3, 1);
+            dataGVVuelos.MultiSelect = false;
             dataGVVuelos.Name = "dataGVVuelos";
             dataGVVuelos.ReadOnly = true;
             dataGVVuelos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -107,7 +107,6 @@
             dataGridViewCellStyle2.SelectionForeColor = Color.DarkGray;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dataGVVuelos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGVVuelos.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(35, 32, 39);
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = Color.LightGray;
@@ -115,6 +114,7 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dataGVVuelos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGVVuelos.RowTemplate.Height = 25;
+            dataGVVuelos.ScrollBars = ScrollBars.Horizontal;
             dataGVVuelos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGVVuelos.Size = new Size(709, 342);
             dataGVVuelos.TabIndex = 1;
@@ -252,7 +252,7 @@
             dataGVPasajeros.RowsDefaultCellStyle = dataGridViewCellStyle6;
             dataGVPasajeros.RowTemplate.Height = 25;
             dataGVPasajeros.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dataGVPasajeros.Size = new Size(709, 342);
+            dataGVPasajeros.Size = new Size(657, 315);
             dataGVPasajeros.TabIndex = 7;
             dataGVPasajeros.CellClick += dataGVPasajeros_CellClick;
             // 
@@ -261,42 +261,49 @@
             ColumApellido.HeaderText = "APELLIDO";
             ColumApellido.Name = "ColumApellido";
             ColumApellido.ReadOnly = true;
+            ColumApellido.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumNombre
             // 
             ColumNombre.HeaderText = "NOMBRE";
             ColumNombre.Name = "ColumNombre";
             ColumNombre.ReadOnly = true;
+            ColumNombre.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumDni
             // 
             ColumDni.HeaderText = "DNI";
             ColumDni.Name = "ColumDni";
             ColumDni.ReadOnly = true;
+            ColumDni.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumEdad
             // 
             ColumEdad.HeaderText = "EDAD";
             ColumEdad.Name = "ColumEdad";
             ColumEdad.ReadOnly = true;
+            ColumEdad.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumEquipajeMano
             // 
             ColumEquipajeMano.HeaderText = "EQUIPAJE MANO";
             ColumEquipajeMano.Name = "ColumEquipajeMano";
             ColumEquipajeMano.ReadOnly = true;
+            ColumEquipajeMano.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumEquipajeBodega
             // 
             ColumEquipajeBodega.HeaderText = "EQUIPAJE BODEGA";
             ColumEquipajeBodega.Name = "ColumEquipajeBodega";
             ColumEquipajeBodega.ReadOnly = true;
+            ColumEquipajeBodega.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumPesoEquip
             // 
             ColumPesoEquip.HeaderText = "PESO EQUIPAJE";
             ColumPesoEquip.Name = "ColumPesoEquip";
             ColumPesoEquip.ReadOnly = true;
+            ColumPesoEquip.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumClase
             // 
@@ -375,99 +382,100 @@
             // 
             // ColumFecha
             // 
-            ColumFecha.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumFecha.HeaderText = "FECHA/HS.";
             ColumFecha.Name = "ColumFecha";
             ColumFecha.ReadOnly = true;
-            ColumFecha.Width = 90;
+            ColumFecha.Resizable = DataGridViewTriState.True;
+            ColumFecha.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumOrigen
             // 
-            ColumOrigen.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumOrigen.HeaderText = "ORIGEN";
             ColumOrigen.Name = "ColumOrigen";
             ColumOrigen.ReadOnly = true;
-            ColumOrigen.Width = 75;
+            ColumOrigen.Resizable = DataGridViewTriState.True;
+            ColumOrigen.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumDestino
             // 
-            ColumDestino.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumDestino.HeaderText = "DESTINO";
             ColumDestino.Name = "ColumDestino";
             ColumDestino.ReadOnly = true;
-            ColumDestino.Width = 81;
+            ColumDestino.Resizable = DataGridViewTriState.True;
+            ColumDestino.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumPrecio
             // 
-            ColumPrecio.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumPrecio.HeaderText = "PRECIO TURIS. C/IVA";
             ColumPrecio.Name = "ColumPrecio";
             ColumPrecio.ReadOnly = true;
-            ColumPrecio.Width = 105;
+            ColumPrecio.Resizable = DataGridViewTriState.True;
+            ColumPrecio.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumPrecioP
             // 
-            ColumPrecioP.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumPrecioP.HeaderText = "PRECIO PREM. C/IVA";
             ColumPrecioP.Name = "ColumPrecioP";
             ColumPrecioP.ReadOnly = true;
-            ColumPrecioP.Width = 103;
+            ColumPrecioP.Resizable = DataGridViewTriState.True;
+            ColumPrecioP.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumPrecioTSinIva
             // 
-            ColumPrecioTSinIva.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumPrecioTSinIva.HeaderText = "PRECION TURIS. S/IVA";
             ColumPrecioTSinIva.Name = "ColumPrecioTSinIva";
             ColumPrecioTSinIva.ReadOnly = true;
-            ColumPrecioTSinIva.Width = 113;
+            ColumPrecioTSinIva.Resizable = DataGridViewTriState.True;
+            ColumPrecioTSinIva.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumPrecioPSinIva
             // 
-            ColumPrecioPSinIva.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumPrecioPSinIva.HeaderText = "PRECIO PREM. S/IVA";
             ColumPrecioPSinIva.Name = "ColumPrecioPSinIva";
             ColumPrecioPSinIva.ReadOnly = true;
-            ColumPrecioPSinIva.Width = 103;
+            ColumPrecioPSinIva.Resizable = DataGridViewTriState.True;
+            ColumPrecioPSinIva.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumAsientosTuris
             // 
-            ColumAsientosTuris.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumAsientosTuris.HeaderText = "ASIENTOS TURIS.";
             ColumAsientosTuris.Name = "ColumAsientosTuris";
             ColumAsientosTuris.ReadOnly = true;
-            ColumAsientosTuris.Width = 117;
+            ColumAsientosTuris.Resizable = DataGridViewTriState.True;
+            ColumAsientosTuris.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumAsientosPrem
             // 
-            ColumAsientosPrem.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ColumAsientosPrem.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             ColumAsientosPrem.HeaderText = "ASIENTOS PREM.";
             ColumAsientosPrem.Name = "ColumAsientosPrem";
             ColumAsientosPrem.ReadOnly = true;
-            ColumAsientosPrem.Width = 114;
+            ColumAsientosPrem.Resizable = DataGridViewTriState.True;
+            ColumAsientosPrem.SortMode = DataGridViewColumnSortMode.NotSortable;
+            ColumAsientosPrem.Width = 95;
             // 
             // ColumWifi
             // 
-            ColumWifi.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumWifi.HeaderText = "WIFI";
             ColumWifi.Name = "ColumWifi";
             ColumWifi.ReadOnly = true;
-            ColumWifi.Width = 56;
+            ColumWifi.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumComida
             // 
-            ColumComida.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumComida.HeaderText = "COMIDA";
             ColumComida.Name = "ColumComida";
             ColumComida.ReadOnly = true;
-            ColumComida.Width = 78;
+            ColumComida.Resizable = DataGridViewTriState.True;
+            ColumComida.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumAvion
             // 
-            ColumAvion.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumAvion.HeaderText = "AVION";
             ColumAvion.Name = "ColumAvion";
             ColumAvion.ReadOnly = true;
-            ColumAvion.Width = 67;
+            ColumAvion.Resizable = DataGridViewTriState.True;
+            ColumAvion.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // FrmVentaViaje
             // 
@@ -505,6 +513,10 @@
         private Button btnCrear;
         private Button btnAsignar;
         private DataGridView dataGVPasajeros;
+        protected TextBox txtBDni;
+        private Button btnAceptar;
+        private Button btnCancelar;
+        private Button btnVolverPasajeros;
         private DataGridViewTextBoxColumn ColumApellido;
         private DataGridViewTextBoxColumn ColumNombre;
         private DataGridViewTextBoxColumn ColumDni;
@@ -513,10 +525,6 @@
         private DataGridViewTextBoxColumn ColumEquipajeBodega;
         private DataGridViewTextBoxColumn ColumPesoEquip;
         private DataGridViewTextBoxColumn ColumClase;
-        protected TextBox txtBDni;
-        private Button btnAceptar;
-        private Button btnCancelar;
-        private Button btnVolverPasajeros;
         private DataGridViewTextBoxColumn ColumFecha;
         private DataGridViewTextBoxColumn ColumOrigen;
         private DataGridViewTextBoxColumn ColumDestino;

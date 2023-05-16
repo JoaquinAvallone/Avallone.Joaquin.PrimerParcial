@@ -125,6 +125,8 @@ namespace Biblioteca
             vuelos.Add(vuelo5);
             vuelos.Add(vuelo6);
 
+            Serializadores.SerializarJson("Pasajeros.json", pasajeros);
+
             return vuelos;
         }
     }

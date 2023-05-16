@@ -31,13 +31,12 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            dataGVVuelos = new DataGridView();
             txtBMatricula = new TextBox();
             btnVolver = new Button();
             btnModificar = new Button();
             btnAgregar = new Button();
             btnEliminar = new Button();
-            panelFormularios = new Panel();
+            dataGVVuelos = new DataGridView();
             ColumFecha = new DataGridViewTextBoxColumn();
             ColumOrigen = new DataGridViewTextBoxColumn();
             ColumDestino = new DataGridViewTextBoxColumn();
@@ -51,58 +50,6 @@
             ColumAvion = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGVVuelos).BeginInit();
             SuspendLayout();
-            // 
-            // dataGVVuelos
-            // 
-            dataGVVuelos.AllowUserToAddRows = false;
-            dataGVVuelos.AllowUserToDeleteRows = false;
-            dataGVVuelos.AllowUserToResizeColumns = false;
-            dataGVVuelos.AllowUserToResizeRows = false;
-            dataGVVuelos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGVVuelos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGVVuelos.BackgroundColor = Color.FromArgb(35, 32, 39);
-            dataGVVuelos.BorderStyle = BorderStyle.None;
-            dataGVVuelos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGVVuelos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle1.Font = new Font("Arial", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle1.SelectionForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGVVuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGVVuelos.ColumnHeadersHeight = 46;
-            dataGVVuelos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGVVuelos.Columns.AddRange(new DataGridViewColumn[] { ColumFecha, ColumOrigen, ColumDestino, ColumPrecio, ColumPrecioP, ColumPrecioTSinIva, ColumPrecioPremSinIva, ColumTurista, ColumPremium, ColumDuracion, ColumAvion });
-            dataGVVuelos.Cursor = Cursors.Hand;
-            dataGVVuelos.EnableHeadersVisualStyles = false;
-            dataGVVuelos.GridColor = Color.FromArgb(35, 32, 39);
-            dataGVVuelos.Location = new Point(6, 3);
-            dataGVVuelos.MultiSelect = false;
-            dataGVVuelos.Name = "dataGVVuelos";
-            dataGVVuelos.ReadOnly = true;
-            dataGVVuelos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.DarkGray;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle2.SelectionForeColor = Color.DarkGray;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGVVuelos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGVVuelos.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.LightGray;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dataGVVuelos.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dataGVVuelos.RowTemplate.Height = 25;
-            dataGVVuelos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGVVuelos.Size = new Size(703, 331);
-            dataGVVuelos.TabIndex = 1;
-            dataGVVuelos.CellClick += dataGVVuelos_CellClick;
             // 
             // txtBMatricula
             // 
@@ -191,101 +138,121 @@
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
             // 
-            // panelFormularios
+            // dataGVVuelos
             // 
-            panelFormularios.Dock = DockStyle.Fill;
-            panelFormularios.Location = new Point(0, 0);
-            panelFormularios.Name = "panelFormularios";
-            panelFormularios.Size = new Size(711, 379);
-            panelFormularios.TabIndex = 50;
+            dataGVVuelos.AllowUserToAddRows = false;
+            dataGVVuelos.AllowUserToDeleteRows = false;
+            dataGVVuelos.AllowUserToResizeColumns = false;
+            dataGVVuelos.AllowUserToResizeRows = false;
+            dataGVVuelos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGVVuelos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGVVuelos.BackgroundColor = Color.FromArgb(35, 32, 39);
+            dataGVVuelos.BorderStyle = BorderStyle.None;
+            dataGVVuelos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGVVuelos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle1.Font = new Font("Arial", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle1.SelectionForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGVVuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGVVuelos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGVVuelos.Columns.AddRange(new DataGridViewColumn[] { ColumFecha, ColumOrigen, ColumDestino, ColumPrecio, ColumPrecioP, ColumPrecioTSinIva, ColumPrecioPremSinIva, ColumTurista, ColumPremium, ColumDuracion, ColumAvion });
+            dataGVVuelos.Cursor = Cursors.Hand;
+            dataGVVuelos.EnableHeadersVisualStyles = false;
+            dataGVVuelos.GridColor = Color.FromArgb(35, 32, 39);
+            dataGVVuelos.Location = new Point(1, 0);
+            dataGVVuelos.MultiSelect = false;
+            dataGVVuelos.Name = "dataGVVuelos";
+            dataGVVuelos.ReadOnly = true;
+            dataGVVuelos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.DarkGray;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle2.SelectionForeColor = Color.DarkGray;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGVVuelos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGVVuelos.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.LightGray;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGVVuelos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGVVuelos.RowTemplate.Height = 25;
+            dataGVVuelos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGVVuelos.Size = new Size(707, 331);
+            dataGVVuelos.TabIndex = 50;
             // 
             // ColumFecha
             // 
-            ColumFecha.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumFecha.HeaderText = "FECHA Y HORA";
             ColumFecha.Name = "ColumFecha";
             ColumFecha.ReadOnly = true;
-            ColumFecha.Width = 65;
             // 
             // ColumOrigen
             // 
-            ColumOrigen.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumOrigen.HeaderText = "ORIGEN";
             ColumOrigen.Name = "ColumOrigen";
             ColumOrigen.ReadOnly = true;
-            ColumOrigen.Width = 69;
             // 
             // ColumDestino
             // 
-            ColumDestino.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumDestino.HeaderText = "DESTINO";
             ColumDestino.Name = "ColumDestino";
             ColumDestino.ReadOnly = true;
-            ColumDestino.Width = 75;
             // 
             // ColumPrecio
             // 
-            ColumPrecio.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumPrecio.HeaderText = "PRECIO TURIS. C/IVA";
             ColumPrecio.Name = "ColumPrecio";
             ColumPrecio.ReadOnly = true;
-            ColumPrecio.Width = 88;
             // 
             // ColumPrecioP
             // 
-            ColumPrecioP.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumPrecioP.HeaderText = "PRECIO PREM. C/IVA";
             ColumPrecioP.Name = "ColumPrecioP";
             ColumPrecioP.ReadOnly = true;
-            ColumPrecioP.Width = 87;
             // 
             // ColumPrecioTSinIva
             // 
-            ColumPrecioTSinIva.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumPrecioTSinIva.HeaderText = "PRECIO TURIS. S/IVA";
             ColumPrecioTSinIva.Name = "ColumPrecioTSinIva";
             ColumPrecioTSinIva.ReadOnly = true;
-            ColumPrecioTSinIva.Width = 87;
             // 
             // ColumPrecioPremSinIva
             // 
-            ColumPrecioPremSinIva.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumPrecioPremSinIva.HeaderText = "PRECIO PREM. S/IVA";
             ColumPrecioPremSinIva.Name = "ColumPrecioPremSinIva";
             ColumPrecioPremSinIva.ReadOnly = true;
-            ColumPrecioPremSinIva.Width = 86;
             // 
             // ColumTurista
             // 
-            ColumTurista.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumTurista.HeaderText = "ASIENTOS TURIS.";
             ColumTurista.Name = "ColumTurista";
             ColumTurista.ReadOnly = true;
-            ColumTurista.Width = 110;
             // 
             // ColumPremium
             // 
-            ColumPremium.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumPremium.HeaderText = "ASIENTOS PREM.";
             ColumPremium.Name = "ColumPremium";
             ColumPremium.ReadOnly = true;
-            ColumPremium.Width = 109;
             // 
             // ColumDuracion
             // 
-            ColumDuracion.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumDuracion.HeaderText = "DURACION";
             ColumDuracion.Name = "ColumDuracion";
             ColumDuracion.ReadOnly = true;
-            ColumDuracion.Width = 85;
             // 
             // ColumAvion
             // 
-            ColumAvion.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             ColumAvion.HeaderText = "AVION";
             ColumAvion.Name = "ColumAvion";
             ColumAvion.ReadOnly = true;
-            ColumAvion.Width = 63;
             // 
             // FrmCrudVuelos
             // 
@@ -293,13 +260,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(35, 32, 39);
             ClientSize = new Size(711, 379);
+            Controls.Add(dataGVVuelos);
             Controls.Add(txtBMatricula);
             Controls.Add(btnVolver);
             Controls.Add(btnModificar);
             Controls.Add(btnAgregar);
             Controls.Add(btnEliminar);
-            Controls.Add(dataGVVuelos);
-            Controls.Add(panelFormularios);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmCrudVuelos";
             Text = "FrmCrudVuelos";
@@ -310,14 +276,12 @@
         }
 
         #endregion
-
-        private DataGridView dataGVVuelos;
         protected TextBox txtBMatricula;
         private Button btnVolver;
         private Button btnModificar;
         private Button btnAgregar;
         private Button btnEliminar;
-        private Panel panelFormularios;
+        private DataGridView dataGVVuelos;
         private DataGridViewTextBoxColumn ColumFecha;
         private DataGridViewTextBoxColumn ColumOrigen;
         private DataGridViewTextBoxColumn ColumDestino;

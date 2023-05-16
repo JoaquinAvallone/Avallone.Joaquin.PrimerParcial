@@ -9,10 +9,11 @@
       "CantidadBa\u00F1os": 4,
       "Internet": true,
       "Comida": true,
-      "CapacidadBodega": 1600
+      "CapacidadBodega": 1583,
+      "HorasDeVuelo": 0
     },
     "CantidadAsientosPrem": 30,
-    "CantidadAsientosTuris": 120,
+    "CantidadAsientosTuris": 119,
     "PrecioTurista": 181.5,
     "PrecioPrem": 248.65,
     "DuracionVuelo": 3,
@@ -38,9 +39,20 @@
         "CantidadVuelos": 1,
         "Apellido": "Fernando",
         "Nombre": "Gago"
+      },
+      {
+        "Dni": 38754768,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 17,
+        "Clase": "Turista",
+        "CantidadVuelos": 2,
+        "Apellido": "Smith",
+        "Nombre": "Ignacio"
       }
     ],
-    "GananciasTuris": 0,
+    "GananciasTuris": 181.5,
     "GananciasPrem": 497.3
   },
   {
@@ -53,7 +65,8 @@
       "CantidadBa\u00F1os": 6,
       "Internet": false,
       "Comida": true,
-      "CapacidadBodega": 3100
+      "CapacidadBodega": 3100,
+      "HorasDeVuelo": 0
     },
     "CantidadAsientosPrem": 50,
     "CantidadAsientosTuris": 200,
@@ -97,9 +110,10 @@
       "CantidadBa\u00F1os": 5,
       "Internet": true,
       "Comida": true,
-      "CapacidadBodega": 4957
+      "CapacidadBodega": 5000,
+      "HorasDeVuelo": 0
     },
-    "CantidadAsientosPrem": 32,
+    "CantidadAsientosPrem": 34,
     "CantidadAsientosTuris": 136,
     "PrecioTurista": 1452,
     "PrecioPrem": 1960.2,
@@ -137,32 +151,10 @@
         "CantidadVuelos": 1,
         "Apellido": "Lopez",
         "Nombre": "Zendaya"
-      },
-      {
-        "Dni": 40787922,
-        "Edad": 28,
-        "EquipajeMano": true,
-        "EquipajeBodega": true,
-        "PesoEquipaje": 23,
-        "Clase": "Premium",
-        "CantidadVuelos": 1,
-        "Apellido": "Hadid",
-        "Nombre": "Bella"
-      },
-      {
-        "Dni": 45157002,
-        "Edad": 17,
-        "EquipajeMano": true,
-        "EquipajeBodega": true,
-        "PesoEquipaje": 20,
-        "Clase": "Premium",
-        "CantidadVuelos": 1,
-        "Apellido": "Forti",
-        "Nombre": "Agustin"
       }
     ],
     "GananciasTuris": 2904,
-    "GananciasPrem": 5880.5996
+    "GananciasPrem": 1960.2
   },
   {
     "CiudadPartida": "BuenosAires",
@@ -174,9 +166,10 @@
       "CantidadBa\u00F1os": 3,
       "Internet": false,
       "Comida": false,
-      "CapacidadBodega": 4600
+      "CapacidadBodega": 4570,
+      "HorasDeVuelo": 0
     },
-    "CantidadAsientosPrem": 24,
+    "CantidadAsientosPrem": 23,
     "CantidadAsientosTuris": 96,
     "PrecioTurista": 1210,
     "PrecioPrem": 1633.5,
@@ -214,10 +207,21 @@
         "CantidadVuelos": 1,
         "Apellido": "Jackie",
         "Nombre": "Chan"
+      },
+      {
+        "Dni": 40796568,
+        "Edad": 25,
+        "EquipajeMano": true,
+        "EquipajeBodega": false,
+        "PesoEquipaje": 30,
+        "Clase": "Premium",
+        "CantidadVuelos": 2,
+        "Apellido": "Avallone",
+        "Nombre": "Joaquin"
       }
     ],
     "GananciasTuris": 1210,
-    "GananciasPrem": 3267
+    "GananciasPrem": 4900.5
   },
   {
     "CiudadPartida": "Tucum\u00E1n",
@@ -229,7 +233,8 @@
       "CantidadBa\u00F1os": 5,
       "Internet": true,
       "Comida": true,
-      "CapacidadBodega": 7000
+      "CapacidadBodega": 7000,
+      "HorasDeVuelo": 0
     },
     "CantidadAsientosPrem": 40,
     "CantidadAsientosTuris": 160,
@@ -284,7 +289,8 @@
       "CantidadBa\u00F1os": 4,
       "Internet": false,
       "Comida": false,
-      "CapacidadBodega": 8000
+      "CapacidadBodega": 8000,
+      "HorasDeVuelo": 0
     },
     "CantidadAsientosPrem": 30,
     "CantidadAsientosTuris": 120,

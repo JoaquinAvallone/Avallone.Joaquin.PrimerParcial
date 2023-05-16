@@ -269,7 +269,7 @@
             btnVender.Padding = new Padding(30, 0, 0, 0);
             btnVender.Size = new Size(200, 24);
             btnVender.TabIndex = 3;
-            btnVender.Text = "Vender";
+            btnVender.Text = "Venta Viaje";
             btnVender.TextAlign = ContentAlignment.MiddleLeft;
             btnVender.UseVisualStyleBackColor = true;
             btnVender.Click += btnVender_Click;
@@ -306,7 +306,7 @@
             btnVenta.Padding = new Padding(10, 0, 0, 0);
             btnVenta.Size = new Size(200, 27);
             btnVenta.TabIndex = 1;
-            btnVenta.Text = "Venta";
+            btnVenta.Text = "Vuelos";
             btnVenta.TextAlign = ContentAlignment.MiddleLeft;
             btnVenta.UseVisualStyleBackColor = true;
             btnVenta.Click += btnVenta_Click;
