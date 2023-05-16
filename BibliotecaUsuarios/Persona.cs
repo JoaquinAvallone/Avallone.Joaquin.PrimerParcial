@@ -15,6 +15,7 @@ namespace Biblioteca
         public string Apellido { get => apellido; set => apellido = value; }
         public string Nombre { get => nombre; set => nombre = value; }
 
+        public Persona() { }
         public Persona(string apellido, string nombre)
         {
             this.apellido = apellido;

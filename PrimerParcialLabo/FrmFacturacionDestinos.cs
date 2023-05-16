@@ -42,7 +42,5 @@ namespace PrimerParcialLabo
                 row.Cells[1].Value = "$" + item.Recaudacion;
             }
         }
-
-
     }
 }

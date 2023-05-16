@@ -6,6 +6,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Biblioteca
 {
@@ -19,6 +20,16 @@ namespace Biblioteca
             string json = JsonSerializer.Serialize(obj, jsonSerializerOptions);
 
             File.WriteAllText(path, json);
+        }
+
+        public static void SerializarXML<T>(string rutaArchivo, T objeto)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(T));
+
+            using (StreamWriter writer = new StreamWriter(rutaArchivo))
+            {
+                serializer.Serialize(writer, objeto);
+            }
         }
 
         public static void SerializarFotoperfilJson(Usuarios? usuario, string? item)

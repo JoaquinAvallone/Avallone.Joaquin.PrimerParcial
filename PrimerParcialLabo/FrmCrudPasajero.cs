@@ -35,7 +35,7 @@ namespace PrimerParcialLabo
         private void RellenarGrid()
         {
             dataGVPasajeros.Rows.Clear();
-            pasajeros = Deserializadores.DeserializarPasajerosJson();
+            pasajeros = Deserializadores.DeserializarPasajerosXml();
             foreach (Pasajeros item in pasajeros)
             {
                 int rowIndex = dataGVPasajeros.Rows.Add();
@@ -114,7 +114,7 @@ namespace PrimerParcialLabo
         {
             dataGVPasajeros.Rows.Clear();
             string filtro = txtBDni.Text;
-            pasajeros = Deserializadores.DeserializarPasajerosJson();
+            pasajeros = Deserializadores.DeserializarPasajerosXml();
 
             for (int i = pasajerosPorDni.Count - 1; i >= 0; i--)
             {
@@ -182,7 +182,7 @@ namespace PrimerParcialLabo
                         if (item.Dni == dni)
                         {
                             pasajeros.Remove(item);
-                            Serializadores.SerializarJson("Pasajeros.json", pasajeros);
+                            Serializadores.SerializarXML("Pasajeros.xml", pasajeros);
                             btnVolver.Visible = false;
                             RellenarGrid();
                             break;

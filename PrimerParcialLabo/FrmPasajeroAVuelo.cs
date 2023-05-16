@@ -25,10 +25,10 @@ namespace PrimerParcialLabo
         private void FrmPasajeroAVuelo_Load(object sender, EventArgs e)
         {
             vuelos = new List<Vuelos>();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             pasajeros = new List<Pasajeros>();
             vueloSeleccionado = Deserializadores.DeserializarUnVueloJson();
-            pasajeros = Deserializadores.DeserializarPasajerosJson();
+            pasajeros = Deserializadores.DeserializarPasajerosXml();
         }
 
         private void btnAceptar2_Click(object sender, EventArgs e)
@@ -108,9 +108,9 @@ namespace PrimerParcialLabo
                             item.Pasajeros.Add(newPasajero);
                             newPasajero.CantidadVuelos++;
                             item.GananciasPrem += item.PrecioPrem;
-                            Serializadores.SerializarJson("Vuelos.json", vuelos);
+                            Serializadores.SerializarXML("Vuelos.xml", vuelos);
                             pasajeros.Add(newPasajero);
-                            Serializadores.SerializarJson("Pasajeros.json", pasajeros);
+                            Serializadores.SerializarXML("Pasajeros.xml", pasajeros);
                             MessageBox.Show("Pasajero agregado con exito", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             break;
                         }
@@ -125,9 +125,9 @@ namespace PrimerParcialLabo
                             item.Pasajeros.Add(newPasajero);
                             newPasajero.CantidadVuelos++;
                             item.GananciasTuris += item.PrecioTurista;
-                            Serializadores.SerializarJson("Vuelos.json", vuelos);
+                            Serializadores.SerializarXML("Vuelos.xml", vuelos);
                             pasajeros.Add(newPasajero);
-                            Serializadores.SerializarJson("Pasajeros.json", pasajeros);
+                            Serializadores.SerializarXML("Pasajeros.xml", pasajeros);
                             MessageBox.Show("Pasajero agregado con exito", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             break;
                         }

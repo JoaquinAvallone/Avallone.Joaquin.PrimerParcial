@@ -30,7 +30,7 @@ namespace PrimerParcialLabo
         {
             vuelos = new List<Vuelos>();
             pasajerosPorDni = new List<Pasajeros>();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             btnVolver.Visible = false;
             btnCrear.Visible = false;
             btnAsignar.Visible = false;
@@ -44,7 +44,7 @@ namespace PrimerParcialLabo
         private void RellenarGrid()
         {
             dataGVVuelos.Rows.Clear();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             foreach (Vuelos item in vuelos)
             {
                 float precioTSinIva = (item.PrecioTurista * 100) / 121;
@@ -70,7 +70,7 @@ namespace PrimerParcialLabo
         private void RellenarGridPasajeros()
         {
             dataGVPasajeros.Rows.Clear();
-            pasajeros = Deserializadores.DeserializarPasajerosJson();
+            pasajeros = Deserializadores.DeserializarPasajerosXml();
             foreach (Pasajeros item in pasajeros)
             {
                 int rowIndex = dataGVPasajeros.Rows.Add();
@@ -385,7 +385,7 @@ namespace PrimerParcialLabo
                                 item.Pasajeros.Add(pasajeroSeleccionado);
                                 pasajeroSeleccionado.CantidadVuelos++;
                                 item.GananciasPrem += item.PrecioPrem;
-                                Serializadores.SerializarJson("Vuelos.json", vuelos);
+                                Serializadores.SerializarXML("Vuelos.xml", vuelos);
                                 MessageBox.Show("Pasajero agregado con exito", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 dataGVVuelos.Visible = true;
                                 dataGVPasajeros.Visible = false;
@@ -409,7 +409,7 @@ namespace PrimerParcialLabo
                                 item.Pasajeros.Add(pasajeroSeleccionado);
                                 pasajeroSeleccionado.CantidadVuelos++;
                                 item.GananciasTuris += item.PrecioTurista;
-                                Serializadores.SerializarJson("Vuelos.json", vuelos);
+                                Serializadores.SerializarXML("Vuelos.xml", vuelos);
                                 MessageBox.Show("Pasajero agregado con exito", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 dataGVVuelos.Visible = true;
                                 dataGVPasajeros.Visible = false;

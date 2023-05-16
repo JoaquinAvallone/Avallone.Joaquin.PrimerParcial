@@ -14,6 +14,7 @@ namespace PrimerParcialLabo
     public partial class FrmCrudAeronaves : Form
     {
         List<Aeronaves>? aviones;
+        List<Aeronaves>? avionesPorMatricula;
         Aeronaves? avionSeleccionado;
         List<Vuelos>? vuelos;
         bool seleccionado = false;
@@ -26,8 +27,9 @@ namespace PrimerParcialLabo
         private void FrmCrudAeronaves_Load(object sender, EventArgs e)
         {
             aviones = new List<Aeronaves>();
+            avionesPorMatricula = new List<Aeronaves>();
             vuelos = new List<Vuelos>();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             btnVolver.Visible = false;
             RellenarGrid();
         }
@@ -55,6 +57,12 @@ namespace PrimerParcialLabo
             string filtro = txtBMatricula.Text.ToUpper();
             aviones = Deserializadores.DeserializarAeronavesJson();
 
+            for (int i = avionesPorMatricula.Count - 1; i >= 0; i--)
+            {
+                Aeronaves item = avionesPorMatricula[i];
+                avionesPorMatricula.Remove(item);
+            }
+
             foreach (Aeronaves item in aviones)
             {
                 string matricula = item.Matricula.ToString();
@@ -79,7 +87,15 @@ namespace PrimerParcialLabo
                     row.Cells[3].Value = item.BoolAString(item.Internet);
                     row.Cells[4].Value = item.BoolAString(item.Comida);
                     row.Cells[5].Value = item.CapacidadBodega + "Kg.";
+                    avionSeleccionado = item;
+                    avionesPorMatricula.Add(item);
                 }
+            }
+
+            if (dataGVAviones.Rows.Count == 1)
+            {
+                seleccionado = true;
+                Serializadores.SerializarJson("AvionSeleccionado.json", avionSeleccionado);
             }
         }
         private void dataGVAviones_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -94,21 +110,43 @@ namespace PrimerParcialLabo
                 return;
             }
 
-            if (indice >= 0 && indice < aviones.Count)
+            if (dataGVAviones.Rows.Count == aviones.Count)
             {
-                avionSeleccionado = aviones[indice];
-                dataGVAviones.Rows.Clear();
+                if (indice >= 0 && indice < aviones.Count)
+                {
+                    avionSeleccionado = aviones[indice];
+                    dataGVAviones.Rows.Clear();
 
-                int rowIndex = dataGVAviones.Rows.Add();
-                DataGridViewRow row = dataGVAviones.Rows[rowIndex];
-                row.Cells[0].Value = avionSeleccionado.Matricula;
-                row.Cells[1].Value = avionSeleccionado.CantidadAsientos;
-                row.Cells[2].Value = avionSeleccionado.CantidadBaños;
-                row.Cells[3].Value = avionSeleccionado.BoolAString(avionSeleccionado.Internet);
-                row.Cells[4].Value = avionSeleccionado.BoolAString(avionSeleccionado.Comida);
-                row.Cells[5].Value = avionSeleccionado.CapacidadBodega + "Kg.";
-                seleccionado = true;
-                Serializadores.SerializarJson("AvionSeleccionado.json", avionSeleccionado);
+                    int rowIndex = dataGVAviones.Rows.Add();
+                    DataGridViewRow row = dataGVAviones.Rows[rowIndex];
+                    row.Cells[0].Value = avionSeleccionado.Matricula;
+                    row.Cells[1].Value = avionSeleccionado.CantidadAsientos;
+                    row.Cells[2].Value = avionSeleccionado.CantidadBaños;
+                    row.Cells[3].Value = avionSeleccionado.BoolAString(avionSeleccionado.Internet);
+                    row.Cells[4].Value = avionSeleccionado.BoolAString(avionSeleccionado.Comida);
+                    row.Cells[5].Value = avionSeleccionado.CapacidadBodega + "Kg.";
+                    seleccionado = true;
+                    Serializadores.SerializarJson("AvionSeleccionado.json", avionSeleccionado);
+                }
+            }
+            else
+            {
+                if (indice >= 0 && indice < avionesPorMatricula.Count)
+                {
+                    avionSeleccionado = avionesPorMatricula[indice];
+                    dataGVAviones.Rows.Clear();
+
+                    int rowIndex = dataGVAviones.Rows.Add();
+                    DataGridViewRow row = dataGVAviones.Rows[rowIndex];
+                    row.Cells[0].Value = avionSeleccionado.Matricula;
+                    row.Cells[1].Value = avionSeleccionado.CantidadAsientos;
+                    row.Cells[2].Value = avionSeleccionado.CantidadBaños;
+                    row.Cells[3].Value = avionSeleccionado.BoolAString(avionSeleccionado.Internet);
+                    row.Cells[4].Value = avionSeleccionado.BoolAString(avionSeleccionado.Comida);
+                    row.Cells[5].Value = avionSeleccionado.CapacidadBodega + "Kg.";
+                    seleccionado = true;
+                    Serializadores.SerializarJson("AvionSeleccionado.json", avionSeleccionado);
+                }
             }
         }
 

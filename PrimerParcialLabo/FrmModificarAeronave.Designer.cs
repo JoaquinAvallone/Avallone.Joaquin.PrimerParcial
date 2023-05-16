@@ -115,7 +115,6 @@
             numericUDAsientos.ForeColor = Color.WhiteSmoke;
             numericUDAsientos.Location = new Point(165, 101);
             numericUDAsientos.Maximum = new decimal(new int[] { 500, 0, 0, 0 });
-            numericUDAsientos.Minimum = new decimal(new int[] { 150, 0, 0, 0 });
             numericUDAsientos.Name = "numericUDAsientos";
             numericUDAsientos.Size = new Size(107, 19);
             numericUDAsientos.TabIndex = 102;

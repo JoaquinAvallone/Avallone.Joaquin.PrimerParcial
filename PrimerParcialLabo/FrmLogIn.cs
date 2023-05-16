@@ -19,26 +19,32 @@ namespace PrimerParcialLabo
         public void FrmLogIn_Load(object sender, EventArgs e)
         {
             usuarios = new List<Usuarios>();
-            usuarios = Deserializadores.DeserializarUsuariosJson();
-
             listA = new List<Aeronaves>();
             listP = new List<Pasajeros>();
             listV = new List<Vuelos>();
+
+            if(!File.Exists("Usuarios.json"))
+            {
+                usuarios = HardCodeo.HardCodeoUsuarios();
+                Serializadores.SerializarJson("Usuarios.json", usuarios);
+                
+            }
             if (!File.Exists("Aeronaves.json"))
             {
                 listA = HardCodeo.HardCodeoAeronaves();
                 Serializadores.SerializarJson("Aeronaves.json", listA);
             }
-            if (!File.Exists("Vuelos.json"))
+            if (!File.Exists("Vuelos.xml"))
             {
                 listV = HardCodeo.HardCodeoVuelos();
-                Serializadores.SerializarJson("Vuelos.json", listV);
+                Serializadores.SerializarXML("Vuelos.xml", listV);
             }
-            if (!File.Exists("Pasajeros.json"))
+            if (!File.Exists("Pasajeros.xml"))
             {
                 listP = HardCodeo.HardCodeoPasajeros();
-                Serializadores.SerializarJson("Pasajeros.json", listP);
+                Serializadores.SerializarXML("Pasajeros.xml", listP);
             }
+            usuarios = Deserializadores.DeserializarUsuariosJson();
             comboBUsuarios.Visible = false;
         }
 

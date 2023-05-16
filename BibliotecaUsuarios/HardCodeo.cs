@@ -8,6 +8,23 @@ namespace Biblioteca
 {
     public class HardCodeo
     {
+        public static List<Usuarios> HardCodeoUsuarios()
+        {
+            List<Usuarios> lista = new List<Usuarios>();
+            Usuarios usuario1 = new Usuarios("Gorgen", "Corey", 1, "cgorgen@vendedor.com", "123abc45", "vendedor");
+            Usuarios usuario2 = new Usuarios("Harroll", "Ingrid", 2, "iharroll@vendedor.com", "qweasdzx", "vendedor");
+            Usuarios usuario3 = new Usuarios("Harris", "Steve", 3, "sharris@maiden.com.uk", "eddie666", "vendedor");
+            Usuarios usuario4 = new Usuarios("Robinson", "Tilda", 4, "trobinson@super.com", "12345678", "supervisor");
+            Usuarios usuario5 = new Usuarios("Jordan", "Michael", 5, "admin@admin.com", "12345678", "administrador");
+
+            lista.Add(usuario1);
+            lista.Add(usuario2);
+            lista.Add(usuario3);
+            lista.Add(usuario4);
+            lista.Add(usuario5);
+
+            return lista;
+        }
         public static List<Pasajeros> HardCodeoPasajeros()
         {
             List<Pasajeros> lista = new List<Pasajeros>();
@@ -125,7 +142,7 @@ namespace Biblioteca
             vuelos.Add(vuelo5);
             vuelos.Add(vuelo6);
 
-            Serializadores.SerializarJson("Pasajeros.json", pasajeros);
+            Serializadores.SerializarXML("Pasajeros.xml", pasajeros);
 
             return vuelos;
         }

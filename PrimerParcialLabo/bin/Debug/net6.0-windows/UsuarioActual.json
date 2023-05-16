@@ -1,8 +1,8 @@
 {
-  "Legajo": 4,
-  "Correo": "trobinson@super.com",
-  "Clave": "12345678",
-  "Perfil": "supervisor",
-  "Apellido": "Robinson",
-  "Nombre": "Tilda"
+  "Legajo": 1,
+  "Correo": "cgorgen@vendedor.com",
+  "Clave": "123abc45",
+  "Perfil": "vendedor",
+  "Apellido": "Gorgen",
+  "Nombre": "Corey"
 }

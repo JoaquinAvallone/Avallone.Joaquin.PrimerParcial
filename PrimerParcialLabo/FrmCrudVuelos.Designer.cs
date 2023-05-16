@@ -187,72 +187,84 @@
             dataGVVuelos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGVVuelos.Size = new Size(707, 331);
             dataGVVuelos.TabIndex = 50;
+            dataGVVuelos.CellClick += dataGVVuelos_CellClick_1;
             // 
             // ColumFecha
             // 
             ColumFecha.HeaderText = "FECHA Y HORA";
             ColumFecha.Name = "ColumFecha";
             ColumFecha.ReadOnly = true;
+            ColumFecha.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumOrigen
             // 
             ColumOrigen.HeaderText = "ORIGEN";
             ColumOrigen.Name = "ColumOrigen";
             ColumOrigen.ReadOnly = true;
+            ColumOrigen.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumDestino
             // 
             ColumDestino.HeaderText = "DESTINO";
             ColumDestino.Name = "ColumDestino";
             ColumDestino.ReadOnly = true;
+            ColumDestino.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumPrecio
             // 
             ColumPrecio.HeaderText = "PRECIO TURIS. C/IVA";
             ColumPrecio.Name = "ColumPrecio";
             ColumPrecio.ReadOnly = true;
+            ColumPrecio.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumPrecioP
             // 
             ColumPrecioP.HeaderText = "PRECIO PREM. C/IVA";
             ColumPrecioP.Name = "ColumPrecioP";
             ColumPrecioP.ReadOnly = true;
+            ColumPrecioP.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumPrecioTSinIva
             // 
             ColumPrecioTSinIva.HeaderText = "PRECIO TURIS. S/IVA";
             ColumPrecioTSinIva.Name = "ColumPrecioTSinIva";
             ColumPrecioTSinIva.ReadOnly = true;
+            ColumPrecioTSinIva.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumPrecioPremSinIva
             // 
             ColumPrecioPremSinIva.HeaderText = "PRECIO PREM. S/IVA";
             ColumPrecioPremSinIva.Name = "ColumPrecioPremSinIva";
             ColumPrecioPremSinIva.ReadOnly = true;
+            ColumPrecioPremSinIva.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumTurista
             // 
             ColumTurista.HeaderText = "ASIENTOS TURIS.";
             ColumTurista.Name = "ColumTurista";
             ColumTurista.ReadOnly = true;
+            ColumTurista.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumPremium
             // 
             ColumPremium.HeaderText = "ASIENTOS PREM.";
             ColumPremium.Name = "ColumPremium";
             ColumPremium.ReadOnly = true;
+            ColumPremium.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumDuracion
             // 
             ColumDuracion.HeaderText = "DURACION";
             ColumDuracion.Name = "ColumDuracion";
             ColumDuracion.ReadOnly = true;
+            ColumDuracion.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumAvion
             // 
             ColumAvion.HeaderText = "AVION";
             ColumAvion.Name = "ColumAvion";
             ColumAvion.ReadOnly = true;
+            ColumAvion.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // FrmCrudVuelos
             // 

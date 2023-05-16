@@ -12,6 +12,10 @@ namespace Biblioteca
         private string clase;
         private int cantidadVuelos;
 
+        public Pasajeros():base()
+        {
+
+        }
         public Pasajeros(string apellido, string nombre, int dni, int edad, bool equipajeMano, bool equipajeBodega, float pesoEquipaje, string clase) : base(apellido, nombre)
         {            
             this.dni = dni;
@@ -55,17 +59,26 @@ namespace Biblioteca
         public static List<Pasajeros> PasajerosFrecuentes()
         {
             List<Pasajeros> pasajerosOrdenados = new List<Pasajeros>();
-            List<Vuelos>? vuelos = new List<Vuelos>();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            List<Vuelos> vuelos = Deserializadores.DeserializarVuelosXml();
 
-            foreach(Vuelos item in vuelos)
+            Dictionary<string, Pasajeros> diccionarioPasajeros = new Dictionary<string, Pasajeros>();
+
+            foreach (Vuelos vuelo in vuelos)
             {
-                foreach(Pasajeros pasajero in item.Pasajeros)
+                foreach (Pasajeros pasajero in vuelo.Pasajeros)
                 {
-                    pasajerosOrdenados.Add(pasajero);
+                    if (diccionarioPasajeros.ContainsKey(pasajero.Nombre))
+                    {
+                        diccionarioPasajeros[pasajero.Nombre].cantidadVuelos++;
+                    }
+                    else
+                    {
+                        diccionarioPasajeros.Add(pasajero.Nombre, pasajero);
+                    }
                 }
             }
 
+            pasajerosOrdenados = diccionarioPasajeros.Values.ToList();
             pasajerosOrdenados.Sort(PasajerosFrecuentesDescendente);
 
             return pasajerosOrdenados;

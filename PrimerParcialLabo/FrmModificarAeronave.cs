@@ -26,7 +26,7 @@ namespace PrimerParcialLabo
             aeronaves = new List<Aeronaves>();
             aeronaves = Deserializadores.DeserializarAeronavesJson();
             vuelos = new List<Vuelos>();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             avionSeleccionado = Deserializadores.DeserializarUnaAeronavesJson();
 
             txtBMatricula.Text = avionSeleccionado.Matricula;
@@ -118,7 +118,7 @@ namespace PrimerParcialLabo
                     }
                 }
                 Serializadores.SerializarJson("Aeronaves.json", aeronaves);
-                Serializadores.SerializarJson("Vuelos.json", vuelos);
+                Serializadores.SerializarXML("Vuelos.xml", vuelos);
                 this.Close();
             }
             this.Close();

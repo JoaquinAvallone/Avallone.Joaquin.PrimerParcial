@@ -32,17 +32,17 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dataGVAviones = new DataGridView();
+            btnVolver = new Button();
+            btnModificar = new Button();
+            btnAgregar = new Button();
+            btnEliminar = new Button();
+            txtBMatricula = new TextBox();
             ColumMatricula = new DataGridViewTextBoxColumn();
             ColumAsientos = new DataGridViewTextBoxColumn();
             ColumBaños = new DataGridViewTextBoxColumn();
             ColumInternet = new DataGridViewTextBoxColumn();
             ColumComida = new DataGridViewTextBoxColumn();
             ColumBodega = new DataGridViewTextBoxColumn();
-            btnVolver = new Button();
-            btnModificar = new Button();
-            btnAgregar = new Button();
-            btnEliminar = new Button();
-            txtBMatricula = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGVAviones).BeginInit();
             SuspendLayout();
             // 
@@ -95,42 +95,6 @@
             dataGVAviones.Size = new Size(706, 327);
             dataGVAviones.TabIndex = 4;
             dataGVAviones.CellClick += dataGVAviones_CellClick;
-            // 
-            // ColumMatricula
-            // 
-            ColumMatricula.HeaderText = "MATRICULA";
-            ColumMatricula.Name = "ColumMatricula";
-            ColumMatricula.ReadOnly = true;
-            // 
-            // ColumAsientos
-            // 
-            ColumAsientos.HeaderText = "CANT. ASIENTOS";
-            ColumAsientos.Name = "ColumAsientos";
-            ColumAsientos.ReadOnly = true;
-            // 
-            // ColumBaños
-            // 
-            ColumBaños.HeaderText = "CANT. BAÑOS";
-            ColumBaños.Name = "ColumBaños";
-            ColumBaños.ReadOnly = true;
-            // 
-            // ColumInternet
-            // 
-            ColumInternet.HeaderText = "INTERNET";
-            ColumInternet.Name = "ColumInternet";
-            ColumInternet.ReadOnly = true;
-            // 
-            // ColumComida
-            // 
-            ColumComida.HeaderText = "COMIDA";
-            ColumComida.Name = "ColumComida";
-            ColumComida.ReadOnly = true;
-            // 
-            // ColumBodega
-            // 
-            ColumBodega.HeaderText = "CAPACIDAD BODEGA";
-            ColumBodega.Name = "ColumBodega";
-            ColumBodega.ReadOnly = true;
             // 
             // btnVolver
             // 
@@ -219,6 +183,48 @@
             txtBMatricula.TabIndex = 44;
             txtBMatricula.TextChanged += txtBMatricula_TextChanged;
             // 
+            // ColumMatricula
+            // 
+            ColumMatricula.HeaderText = "MATRICULA";
+            ColumMatricula.Name = "ColumMatricula";
+            ColumMatricula.ReadOnly = true;
+            ColumMatricula.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumAsientos
+            // 
+            ColumAsientos.HeaderText = "CANT. ASIENTOS";
+            ColumAsientos.Name = "ColumAsientos";
+            ColumAsientos.ReadOnly = true;
+            ColumAsientos.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumBaños
+            // 
+            ColumBaños.HeaderText = "CANT. BAÑOS";
+            ColumBaños.Name = "ColumBaños";
+            ColumBaños.ReadOnly = true;
+            ColumBaños.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumInternet
+            // 
+            ColumInternet.HeaderText = "INTERNET";
+            ColumInternet.Name = "ColumInternet";
+            ColumInternet.ReadOnly = true;
+            ColumInternet.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumComida
+            // 
+            ColumComida.HeaderText = "COMIDA";
+            ColumComida.Name = "ColumComida";
+            ColumComida.ReadOnly = true;
+            ColumComida.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumBodega
+            // 
+            ColumBodega.HeaderText = "CAPACIDAD BODEGA";
+            ColumBodega.Name = "ColumBodega";
+            ColumBodega.ReadOnly = true;
+            ColumBodega.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
             // FrmCrudAeronaves
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -248,12 +254,12 @@
         private Button btnModificar;
         private Button btnAgregar;
         private Button btnEliminar;
+        protected TextBox txtBMatricula;
         private DataGridViewTextBoxColumn ColumMatricula;
         private DataGridViewTextBoxColumn ColumAsientos;
         private DataGridViewTextBoxColumn ColumBaños;
         private DataGridViewTextBoxColumn ColumInternet;
         private DataGridViewTextBoxColumn ColumComida;
         private DataGridViewTextBoxColumn ColumBodega;
-        protected TextBox txtBMatricula;
     }
 }

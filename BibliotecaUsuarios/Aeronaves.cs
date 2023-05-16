@@ -16,7 +16,10 @@ namespace Biblioteca
         private int capacidadBodega;
         private int horasDeVuelo;
 
+        public Aeronaves()
+        {
 
+        }
         public Aeronaves( string matricula, int cantidadAsientos, int cantidadBaños, bool internet, bool comida, int capacidadBodega)
         {
             this.matricula = matricula;
@@ -95,7 +98,7 @@ namespace Biblioteca
             List<Vuelos>? vuelos = new List<Vuelos>();
             List<Aeronaves>? aviones = new List<Aeronaves>();
             aviones = Deserializadores.DeserializarAeronavesJson();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
 
             foreach (Vuelos item in vuelos)
             {

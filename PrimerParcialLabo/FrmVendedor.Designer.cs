@@ -49,12 +49,7 @@
             lblPerfil = new Label();
             lblNombreUsuario = new Label();
             picBoxUser = new PictureBox();
-            picBEscape = new PictureBox();
             picBoxLogo = new PictureBox();
-            panelTop = new Panel();
-            picBRestore = new PictureBox();
-            picBMaximize = new PictureBox();
-            picbMini = new PictureBox();
             panelFormularios = new Panel();
             panelSideMenu.SuspendLayout();
             panelEstadisticas.SuspendLayout();
@@ -62,12 +57,7 @@
             panelSubmenuVenta.SuspendLayout();
             panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picBoxUser).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picBEscape).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picBoxLogo).BeginInit();
-            panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picBRestore).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picBMaximize).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picbMini).BeginInit();
             panelFormularios.SuspendLayout();
             SuspendLayout();
             // 
@@ -85,7 +75,7 @@
             panelSideMenu.Dock = DockStyle.Left;
             panelSideMenu.Location = new Point(0, 0);
             panelSideMenu.Name = "panelSideMenu";
-            panelSideMenu.Size = new Size(200, 413);
+            panelSideMenu.Size = new Size(200, 409);
             panelSideMenu.TabIndex = 0;
             // 
             // panelEstadisticas
@@ -176,7 +166,7 @@
             lblFecha.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblFecha.AutoSize = true;
             lblFecha.ForeColor = Color.Gainsboro;
-            lblFecha.Location = new Point(4, 393);
+            lblFecha.Location = new Point(4, 389);
             lblFecha.Name = "lblFecha";
             lblFecha.Size = new Size(0, 15);
             lblFecha.TabIndex = 13;
@@ -356,19 +346,6 @@
             picBoxUser.TabStop = false;
             picBoxUser.Click += picBoxUser_Click;
             // 
-            // picBEscape
-            // 
-            picBEscape.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picBEscape.Cursor = Cursors.Hand;
-            picBEscape.Image = Properties.Resources.close_512px2;
-            picBEscape.Location = new Point(681, 7);
-            picBEscape.Name = "picBEscape";
-            picBEscape.Size = new Size(21, 20);
-            picBEscape.SizeMode = PictureBoxSizeMode.Zoom;
-            picBEscape.TabIndex = 2;
-            picBEscape.TabStop = false;
-            picBEscape.Click += picBEscape_Click;
-            // 
             // picBoxLogo
             // 
             picBoxLogo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -376,70 +353,18 @@
             picBoxLogo.BackgroundImageLayout = ImageLayout.Center;
             picBoxLogo.Location = new Point(191, 63);
             picBoxLogo.Name = "picBoxLogo";
-            picBoxLogo.Size = new Size(301, 246);
+            picBoxLogo.Size = new Size(344, 276);
             picBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
             picBoxLogo.TabIndex = 1;
             picBoxLogo.TabStop = false;
             // 
-            // panelTop
-            // 
-            panelTop.Controls.Add(picBRestore);
-            panelTop.Controls.Add(picBMaximize);
-            panelTop.Controls.Add(picbMini);
-            panelTop.Controls.Add(picBEscape);
-            panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(200, 0);
-            panelTop.Name = "panelTop";
-            panelTop.Size = new Size(711, 34);
-            panelTop.TabIndex = 4;
-            // 
-            // picBRestore
-            // 
-            picBRestore.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picBRestore.Cursor = Cursors.Hand;
-            picBRestore.Image = (Image)resources.GetObject("picBRestore.Image");
-            picBRestore.Location = new Point(654, 7);
-            picBRestore.Name = "picBRestore";
-            picBRestore.Size = new Size(21, 20);
-            picBRestore.SizeMode = PictureBoxSizeMode.Zoom;
-            picBRestore.TabIndex = 13;
-            picBRestore.TabStop = false;
-            picBRestore.Visible = false;
-            picBRestore.Click += picBRestore_Click;
-            // 
-            // picBMaximize
-            // 
-            picBMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picBMaximize.Cursor = Cursors.Hand;
-            picBMaximize.Image = (Image)resources.GetObject("picBMaximize.Image");
-            picBMaximize.Location = new Point(654, 7);
-            picBMaximize.Name = "picBMaximize";
-            picBMaximize.Size = new Size(21, 20);
-            picBMaximize.SizeMode = PictureBoxSizeMode.Zoom;
-            picBMaximize.TabIndex = 12;
-            picBMaximize.TabStop = false;
-            picBMaximize.Click += picBMaximize_Click;
-            // 
-            // picbMini
-            // 
-            picbMini.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picbMini.Cursor = Cursors.Hand;
-            picbMini.Image = Properties.Resources.minus_96px1;
-            picbMini.Location = new Point(627, 8);
-            picbMini.Name = "picbMini";
-            picbMini.Size = new Size(21, 20);
-            picbMini.SizeMode = PictureBoxSizeMode.Zoom;
-            picbMini.TabIndex = 3;
-            picbMini.TabStop = false;
-            picbMini.Click += picbMini_Click;
-            // 
             // panelFormularios
             // 
-            panelFormularios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelFormularios.Controls.Add(picBoxLogo);
-            panelFormularios.Location = new Point(200, 34);
+            panelFormularios.Dock = DockStyle.Fill;
+            panelFormularios.Location = new Point(200, 0);
             panelFormularios.Name = "panelFormularios";
-            panelFormularios.Size = new Size(711, 379);
+            panelFormularios.Size = new Size(754, 409);
             panelFormularios.TabIndex = 5;
             // 
             // FrmVendedor
@@ -448,16 +373,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(35, 32, 39);
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(911, 413);
+            ClientSize = new Size(954, 409);
             Controls.Add(panelFormularios);
-            Controls.Add(panelTop);
             Controls.Add(panelSideMenu);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MinimumSize = new Size(911, 413);
             Name = "FrmVendedor";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Bienvenido";
+            Text = "AvalloneAirLines";
             FormClosing += FrmVendedor_FormClosing;
             Load += FrmPrincipal_Load;
             panelSideMenu.ResumeLayout(false);
@@ -468,12 +392,7 @@
             panelUsuario.ResumeLayout(false);
             panelUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picBoxUser).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picBEscape).EndInit();
             ((System.ComponentModel.ISupportInitialize)picBoxLogo).EndInit();
-            panelTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)picBRestore).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picBMaximize).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picbMini).EndInit();
             panelFormularios.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -486,18 +405,13 @@
         private Button btnModPasa;
         private Button btnModificaciones;
         private Panel panelUsuario;
-        private PictureBox picBEscape;
         private PictureBox picBoxUser;
         private PictureBox picBoxLogo;
-        private Panel panelTop;
-        private PictureBox picbMini;
         private Panel panelSubmenuVenta;
         private Button btnVender;
         private Button btnViajesDispon;
         private Button btnVenta;
         private Panel panelFormularios;
-        private PictureBox picBMaximize;
-        private PictureBox picBRestore;
         private Label lblPerfil;
         private Label lblNombreUsuario;
         private Label lblFecha;

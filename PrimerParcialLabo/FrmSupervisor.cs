@@ -106,20 +106,6 @@ namespace PrimerParcialLabo
             AbrirFormulario<FrmHorasDeVuelo>();
         }
 
-        private void pictureBEscape_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Desea abandonar la aplicacion?", "AirlinesApp", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void picBMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void picBoxUser_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -133,23 +119,15 @@ namespace PrimerParcialLabo
             }
         }
 
-        private void picBRestore_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            picBRestore.Visible = false;
-            picBMaximize.Visible = true;
-        }
-
-        private void picBMaximize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            picBRestore.Visible = true;
-            picBMaximize.Visible = false;
-        }
-
         private void FrmSupervisor_FormClosing(object sender, FormClosingEventArgs e)
         {
             Serializadores.SerializarFotoperfilJson(usuarioActual, pathFotoUsuario);
+            DialogResult result = MessageBox.Show("¿Está seguro de abandonar la aplicación?", "Confirmar cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()

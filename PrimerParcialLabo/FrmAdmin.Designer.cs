@@ -39,34 +39,12 @@
             lblPerfil = new Label();
             lblNombreUsuario = new Label();
             picBoxUser = new PictureBox();
-            panelTop = new Panel();
-            picBRestore = new PictureBox();
-            picBMaximize = new PictureBox();
-            picBoxMinimize = new PictureBox();
-            picBoxEscape = new PictureBox();
-            picBMinimize = new PictureBox();
-            pictureBSettings = new PictureBox();
-            pictureBEscape = new PictureBox();
-            picbMini = new PictureBox();
-            picBSettings = new PictureBox();
-            picBEscape = new PictureBox();
             panelFormularios = new Panel();
             picBoxLogo = new PictureBox();
             panelSideMenu.SuspendLayout();
             panelSubMenuModif.SuspendLayout();
             panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picBoxUser).BeginInit();
-            panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picBRestore).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picBMaximize).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picBoxMinimize).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picBoxEscape).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picBMinimize).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBSettings).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBEscape).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picbMini).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picBSettings).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picBEscape).BeginInit();
             panelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picBoxLogo).BeginInit();
             SuspendLayout();
@@ -81,7 +59,7 @@
             panelSideMenu.Dock = DockStyle.Left;
             panelSideMenu.Location = new Point(0, 0);
             panelSideMenu.Name = "panelSideMenu";
-            panelSideMenu.Size = new Size(200, 413);
+            panelSideMenu.Size = new Size(200, 409);
             panelSideMenu.TabIndex = 1;
             // 
             // lblFecha
@@ -89,7 +67,7 @@
             lblFecha.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblFecha.AutoSize = true;
             lblFecha.ForeColor = Color.Gainsboro;
-            lblFecha.Location = new Point(5, 393);
+            lblFecha.Location = new Point(5, 389);
             lblFecha.Name = "lblFecha";
             lblFecha.Size = new Size(0, 15);
             lblFecha.TabIndex = 13;
@@ -203,150 +181,13 @@
             picBoxUser.TabStop = false;
             picBoxUser.Click += picBoxUser_Click;
             // 
-            // panelTop
-            // 
-            panelTop.Controls.Add(picBRestore);
-            panelTop.Controls.Add(picBMaximize);
-            panelTop.Controls.Add(picBoxMinimize);
-            panelTop.Controls.Add(picBoxEscape);
-            panelTop.Controls.Add(picBMinimize);
-            panelTop.Controls.Add(pictureBSettings);
-            panelTop.Controls.Add(pictureBEscape);
-            panelTop.Controls.Add(picbMini);
-            panelTop.Controls.Add(picBSettings);
-            panelTop.Controls.Add(picBEscape);
-            panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(200, 0);
-            panelTop.Name = "panelTop";
-            panelTop.Size = new Size(711, 34);
-            panelTop.TabIndex = 6;
-            // 
-            // picBRestore
-            // 
-            picBRestore.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picBRestore.Cursor = Cursors.Hand;
-            picBRestore.Image = (Image)resources.GetObject("picBRestore.Image");
-            picBRestore.Location = new Point(654, 7);
-            picBRestore.Name = "picBRestore";
-            picBRestore.Size = new Size(21, 20);
-            picBRestore.SizeMode = PictureBoxSizeMode.Zoom;
-            picBRestore.TabIndex = 11;
-            picBRestore.TabStop = false;
-            picBRestore.Visible = false;
-            picBRestore.Click += picBRestore_Click;
-            // 
-            // picBMaximize
-            // 
-            picBMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picBMaximize.Cursor = Cursors.Hand;
-            picBMaximize.Image = (Image)resources.GetObject("picBMaximize.Image");
-            picBMaximize.Location = new Point(654, 7);
-            picBMaximize.Name = "picBMaximize";
-            picBMaximize.Size = new Size(21, 20);
-            picBMaximize.SizeMode = PictureBoxSizeMode.Zoom;
-            picBMaximize.TabIndex = 10;
-            picBMaximize.TabStop = false;
-            picBMaximize.Click += picBMaximize_Click;
-            // 
-            // picBoxMinimize
-            // 
-            picBoxMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picBoxMinimize.Cursor = Cursors.Hand;
-            picBoxMinimize.Image = Properties.Resources.minus_96px1;
-            picBoxMinimize.Location = new Point(627, 7);
-            picBoxMinimize.Name = "picBoxMinimize";
-            picBoxMinimize.Size = new Size(21, 20);
-            picBoxMinimize.SizeMode = PictureBoxSizeMode.Zoom;
-            picBoxMinimize.TabIndex = 9;
-            picBoxMinimize.TabStop = false;
-            picBoxMinimize.Click += picBoxMinimize_Click;
-            // 
-            // picBoxEscape
-            // 
-            picBoxEscape.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picBoxEscape.Cursor = Cursors.Hand;
-            picBoxEscape.Image = Properties.Resources.close_512px2;
-            picBoxEscape.Location = new Point(681, 7);
-            picBoxEscape.Name = "picBoxEscape";
-            picBoxEscape.Size = new Size(21, 20);
-            picBoxEscape.SizeMode = PictureBoxSizeMode.Zoom;
-            picBoxEscape.TabIndex = 7;
-            picBoxEscape.TabStop = false;
-            picBoxEscape.Click += picBoxEscape_Click;
-            // 
-            // picBMinimize
-            // 
-            picBMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picBMinimize.Image = Properties.Resources.minus_96px1;
-            picBMinimize.Location = new Point(1163, 7);
-            picBMinimize.Name = "picBMinimize";
-            picBMinimize.Size = new Size(21, 20);
-            picBMinimize.SizeMode = PictureBoxSizeMode.Zoom;
-            picBMinimize.TabIndex = 6;
-            picBMinimize.TabStop = false;
-            // 
-            // pictureBSettings
-            // 
-            pictureBSettings.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBSettings.Image = Properties.Resources.settings_144px;
-            pictureBSettings.Location = new Point(1135, 7);
-            pictureBSettings.Name = "pictureBSettings";
-            pictureBSettings.Size = new Size(21, 20);
-            pictureBSettings.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBSettings.TabIndex = 5;
-            pictureBSettings.TabStop = false;
-            // 
-            // pictureBEscape
-            // 
-            pictureBEscape.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBEscape.Image = Properties.Resources.close_512px2;
-            pictureBEscape.Location = new Point(1192, 7);
-            pictureBEscape.Name = "pictureBEscape";
-            pictureBEscape.Size = new Size(21, 20);
-            pictureBEscape.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBEscape.TabIndex = 4;
-            pictureBEscape.TabStop = false;
-            // 
-            // picbMini
-            // 
-            picbMini.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picbMini.Image = Properties.Resources.minus_96px1;
-            picbMini.Location = new Point(1674, 7);
-            picbMini.Name = "picbMini";
-            picbMini.Size = new Size(21, 20);
-            picbMini.SizeMode = PictureBoxSizeMode.Zoom;
-            picbMini.TabIndex = 3;
-            picbMini.TabStop = false;
-            // 
-            // picBSettings
-            // 
-            picBSettings.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picBSettings.Image = Properties.Resources.settings_144px;
-            picBSettings.Location = new Point(1646, 7);
-            picBSettings.Name = "picBSettings";
-            picBSettings.Size = new Size(21, 20);
-            picBSettings.SizeMode = PictureBoxSizeMode.Zoom;
-            picBSettings.TabIndex = 3;
-            picBSettings.TabStop = false;
-            // 
-            // picBEscape
-            // 
-            picBEscape.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picBEscape.Image = Properties.Resources.close_512px2;
-            picBEscape.Location = new Point(1703, 7);
-            picBEscape.Name = "picBEscape";
-            picBEscape.Size = new Size(21, 20);
-            picBEscape.SizeMode = PictureBoxSizeMode.Zoom;
-            picBEscape.TabIndex = 2;
-            picBEscape.TabStop = false;
-            // 
             // panelFormularios
             // 
             panelFormularios.Controls.Add(picBoxLogo);
             panelFormularios.Dock = DockStyle.Fill;
-            panelFormularios.Location = new Point(200, 34);
+            panelFormularios.Location = new Point(200, 0);
             panelFormularios.Name = "panelFormularios";
-            panelFormularios.Size = new Size(711, 379);
+            panelFormularios.Size = new Size(754, 409);
             panelFormularios.TabIndex = 7;
             // 
             // picBoxLogo
@@ -356,7 +197,7 @@
             picBoxLogo.BackgroundImageLayout = ImageLayout.Center;
             picBoxLogo.Location = new Point(205, 66);
             picBoxLogo.Name = "picBoxLogo";
-            picBoxLogo.Size = new Size(301, 246);
+            picBoxLogo.Size = new Size(344, 242);
             picBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
             picBoxLogo.TabIndex = 3;
             picBoxLogo.TabStop = false;
@@ -366,16 +207,15 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(35, 32, 39);
-            ClientSize = new Size(911, 413);
+            ClientSize = new Size(954, 409);
             Controls.Add(panelFormularios);
-            Controls.Add(panelTop);
             Controls.Add(panelSideMenu);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MinimumSize = new Size(911, 413);
             Name = "FrmAdmin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FrmAdmin";
+            Text = "AvalloneAirLines";
             FormClosing += FrmAdmin_FormClosing;
             Load += FrmAdmin_Load;
             panelSideMenu.ResumeLayout(false);
@@ -384,17 +224,6 @@
             panelUsuario.ResumeLayout(false);
             panelUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picBoxUser).EndInit();
-            panelTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)picBRestore).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picBMaximize).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picBoxMinimize).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picBoxEscape).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picBMinimize).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBSettings).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBEscape).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picbMini).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picBSettings).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picBEscape).EndInit();
             panelFormularios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)picBoxLogo).EndInit();
             ResumeLayout(false);
@@ -408,18 +237,7 @@
         private Button btnModificaciones;
         private Panel panelUsuario;
         private PictureBox picBoxUser;
-        private Panel panelTop;
-        private PictureBox picBMinimize;
-        private PictureBox pictureBSettings;
-        private PictureBox pictureBEscape;
-        private PictureBox picbMini;
-        private PictureBox picBSettings;
-        private PictureBox picBEscape;
-        private PictureBox picBoxMinimize;
-        private PictureBox picBoxEscape;
         private Button btnModifAeronaves;
-        private PictureBox picBRestore;
-        private PictureBox picBMaximize;
         private Label lblPerfil;
         private Label lblNombreUsuario;
         private Panel panelFormularios;

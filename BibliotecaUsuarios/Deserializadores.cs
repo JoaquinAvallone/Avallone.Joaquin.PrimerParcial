@@ -4,18 +4,53 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Biblioteca
 {
     public class Deserializadores
     {
-        public static List<Usuarios>? DeserializarUsuariosJson()
+        public static List<Pasajeros>? DeserializarPasajerosXml()
         {
-            if (!File.Exists("MOCK_DATA.json"))
+            string rutaArchivo = "Pasajeros.xml";
+
+            if (!File.Exists(rutaArchivo))
             {
                 return null;
             }
-            using (StreamReader sr = new StreamReader("MOCK_DATA.json"))
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Pasajeros>));
+
+            using (StreamReader reader = new StreamReader(rutaArchivo))
+            {
+                return (List<Pasajeros>)serializer.Deserialize(reader);
+            }
+        }
+
+        public static List<Vuelos>? DeserializarVuelosXml()
+        {
+            string rutaArchivo = "Vuelos.xml";
+
+            if (!File.Exists(rutaArchivo))
+            {
+                return null;
+            }
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Vuelos>));
+
+            using (StreamReader reader = new StreamReader(rutaArchivo))
+            {
+                return (List<Vuelos>)serializer.Deserialize(reader);
+            }
+        }
+
+        public static List<Usuarios>? DeserializarUsuariosJson()
+        {
+            if (!File.Exists("Usuarios.json"))
+            {
+                return null;
+            }
+            using (StreamReader sr = new StreamReader("Usuarios.json"))
             {
                 string stringJson = sr.ReadToEnd();
 

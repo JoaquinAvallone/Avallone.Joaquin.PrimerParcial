@@ -23,7 +23,7 @@ namespace PrimerParcialLabo
         private void FrmModificarPasajero_Load(object sender, EventArgs e)
         {
             pasajeros = new List<Pasajeros>();
-            pasajeros = Deserializadores.DeserializarPasajerosJson();
+            pasajeros = Deserializadores.DeserializarPasajerosXml();
             pasajeroSelecc = Deserializadores.DeserializarUnPasajeroJson();
             txtBApellido.Text = pasajeroSelecc.Apellido;
             txtBNombre.Text = pasajeroSelecc.Nombre;
@@ -120,7 +120,7 @@ namespace PrimerParcialLabo
                         break;
                     }
                 }
-                Serializadores.SerializarJson("Pasajeros.json", pasajeros);
+                Serializadores.SerializarXML("Pasajeros.xml", pasajeros);
                 this.Close();
             }
         }

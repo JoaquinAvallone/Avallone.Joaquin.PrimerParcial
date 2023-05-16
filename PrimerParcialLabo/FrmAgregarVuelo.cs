@@ -28,7 +28,7 @@ namespace PrimerParcialLabo
         {
             aviones = new List<Aeronaves>();
             vuelos = new List<Vuelos>();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             RellenarComboBox();
             comboBPartida.Enabled = false;
             RellenarGrid();
@@ -259,7 +259,7 @@ namespace PrimerParcialLabo
                 destino = comboBDestino.Text;
                 Vuelos newVuelo = new Vuelos(partida, destino, dateTime, avionSelect, cantidadAsientosPrem, cantidadAsientosTuris, precioTurista, precioPrem, duracion);
                 vuelos.Add(newVuelo);
-                Serializadores.SerializarJson("Vuelos.json", vuelos);
+                Serializadores.SerializarXML("Vuelos.xml", vuelos);
                 this.Close();
             }
         }

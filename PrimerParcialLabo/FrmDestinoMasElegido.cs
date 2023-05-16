@@ -13,7 +13,7 @@ namespace PrimerParcialLabo
 {
     public partial class FrmDestinoMasElegido : Form
     {
-        Destinos destinoMasElegido;
+        Destinos? destinoMasElegido;
         public FrmDestinoMasElegido()
         {
             InitializeComponent();

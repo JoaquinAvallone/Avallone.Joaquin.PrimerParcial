@@ -33,7 +33,7 @@ namespace PrimerParcialLabo
         private void RellenarGrid()
         {
             dataGVVuelos.Rows.Clear();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             foreach (Vuelos item in vuelos)
             {
                 int rowIndex = dataGVVuelos.Rows.Add();

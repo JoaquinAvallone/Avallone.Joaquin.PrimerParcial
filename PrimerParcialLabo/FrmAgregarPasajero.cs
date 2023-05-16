@@ -24,7 +24,7 @@ namespace PrimerParcialLabo
         private void FrmAgregarPasajero_Load(object sender, EventArgs e)
         {
             pasajeros = new List<Pasajeros>();
-            pasajeros = Deserializadores.DeserializarPasajerosJson();
+            pasajeros = Deserializadores.DeserializarPasajerosXml();
 
         }
 
@@ -96,7 +96,7 @@ namespace PrimerParcialLabo
                     }
                 }
                 pasajeros.Add(newPasajero);
-                Serializadores.SerializarJson("Pasajeros.json", pasajeros);
+                Serializadores.SerializarXML("Pasajeros.xml", pasajeros);
                 this.Close();
             }
         }

@@ -14,6 +14,7 @@ namespace PrimerParcialLabo
     public partial class FrmCrudVuelos : Form
     {
         List<Vuelos>? vuelos;
+        List<Vuelos>? vuelosPorMatricula;
         Vuelos? vueloSeleccionado;
         bool seleccionado = false;
         public FrmCrudVuelos()
@@ -24,6 +25,7 @@ namespace PrimerParcialLabo
         private void FrmCrudVuelos_Load(object sender, EventArgs e)
         {
             vuelos = new List<Vuelos>();
+            vuelosPorMatricula = new List<Vuelos>();
             btnVolver.Visible = false;
             RellenarGrid();
         }
@@ -31,7 +33,7 @@ namespace PrimerParcialLabo
         private void RellenarGrid()
         {
             dataGVVuelos.Rows.Clear();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             foreach (Vuelos item in vuelos)
             {
                 float precioTSinIva = (item.PrecioTurista * 100) / 121;
@@ -52,8 +54,7 @@ namespace PrimerParcialLabo
                 row.Cells[10].Value = item.Avion.Matricula;
             }
         }
-
-        private void dataGVVuelos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGVVuelos_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int indice;
             indice = e.RowIndex;
@@ -65,28 +66,57 @@ namespace PrimerParcialLabo
                 return;
             }
 
-            if (indice >= 0 && indice < vuelos.Count)
+            if (dataGVVuelos.Rows.Count == vuelos.Count)
             {
-                vueloSeleccionado = vuelos[indice];
-                dataGVVuelos.Rows.Clear();
-                float precioTSinIva = (vueloSeleccionado.PrecioTurista * 100) / 121;
-                float precioPSinIva = (vueloSeleccionado.PrecioPrem * 100) / 121;
+                if (indice >= 0 && indice < vuelos.Count)
+                {
+                    vueloSeleccionado = vuelos[indice];
+                    dataGVVuelos.Rows.Clear();
+                    float precioTSinIva = (vueloSeleccionado.PrecioTurista * 100) / 121;
+                    float precioPSinIva = (vueloSeleccionado.PrecioPrem * 100) / 121;
 
-                int rowIndex = dataGVVuelos.Rows.Add();
-                DataGridViewRow row = dataGVVuelos.Rows[rowIndex];
-                row.Cells[0].Value = vueloSeleccionado.FechaVuelo;
-                row.Cells[1].Value = vueloSeleccionado.CiudadPartida;
-                row.Cells[2].Value = vueloSeleccionado.CiudadDestino;
-                row.Cells[3].Value = "$" + vueloSeleccionado.PrecioTurista;
-                row.Cells[4].Value = "$" + vueloSeleccionado.PrecioPrem;
-                row.Cells[5].Value = "$" + precioTSinIva.ToString("0.00");
-                row.Cells[6].Value = "$" + precioPSinIva.ToString("0.00");
-                row.Cells[7].Value = vueloSeleccionado.CantidadAsientosTuris;
-                row.Cells[8].Value = vueloSeleccionado.CantidadAsientosPrem;
-                row.Cells[9].Value = vueloSeleccionado.DuracionVuelo;
-                row.Cells[10].Value = vueloSeleccionado.Avion.Matricula;
-                seleccionado = true;
-                Serializadores.SerializarJson("VueloSeleccionado.json", vueloSeleccionado);
+                    int rowIndex = dataGVVuelos.Rows.Add();
+                    DataGridViewRow row = dataGVVuelos.Rows[rowIndex];
+                    row.Cells[0].Value = vueloSeleccionado.FechaVuelo;
+                    row.Cells[1].Value = vueloSeleccionado.CiudadPartida;
+                    row.Cells[2].Value = vueloSeleccionado.CiudadDestino;
+                    row.Cells[3].Value = "$" + vueloSeleccionado.PrecioTurista;
+                    row.Cells[4].Value = "$" + vueloSeleccionado.PrecioPrem;
+                    row.Cells[5].Value = "$" + precioTSinIva.ToString("0.00");
+                    row.Cells[6].Value = "$" + precioPSinIva.ToString("0.00");
+                    row.Cells[7].Value = vueloSeleccionado.CantidadAsientosTuris;
+                    row.Cells[8].Value = vueloSeleccionado.CantidadAsientosPrem;
+                    row.Cells[9].Value = vueloSeleccionado.DuracionVuelo;
+                    row.Cells[10].Value = vueloSeleccionado.Avion.Matricula;
+                    seleccionado = true;
+                    Serializadores.SerializarJson("VueloSeleccionado.json", vueloSeleccionado);
+                }
+            }
+            else
+            {
+                if (indice >= 0 && indice < vuelosPorMatricula.Count)
+                {
+                    vueloSeleccionado = vuelosPorMatricula[indice];
+                    dataGVVuelos.Rows.Clear();
+                    float precioTSinIva = (vueloSeleccionado.PrecioTurista * 100) / 121;
+                    float precioPSinIva = (vueloSeleccionado.PrecioPrem * 100) / 121;
+
+                    int rowIndex = dataGVVuelos.Rows.Add();
+                    DataGridViewRow row = dataGVVuelos.Rows[rowIndex];
+                    row.Cells[0].Value = vueloSeleccionado.FechaVuelo;
+                    row.Cells[1].Value = vueloSeleccionado.CiudadPartida;
+                    row.Cells[2].Value = vueloSeleccionado.CiudadDestino;
+                    row.Cells[3].Value = "$" + vueloSeleccionado.PrecioTurista;
+                    row.Cells[4].Value = "$" + vueloSeleccionado.PrecioPrem;
+                    row.Cells[5].Value = "$" + precioTSinIva.ToString("0.00");
+                    row.Cells[6].Value = "$" + precioPSinIva.ToString("0.00");
+                    row.Cells[7].Value = vueloSeleccionado.CantidadAsientosTuris;
+                    row.Cells[8].Value = vueloSeleccionado.CantidadAsientosPrem;
+                    row.Cells[9].Value = vueloSeleccionado.DuracionVuelo;
+                    row.Cells[10].Value = vueloSeleccionado.Avion.Matricula;
+                    seleccionado = true;
+                    Serializadores.SerializarJson("VueloSeleccionado.json", vueloSeleccionado);
+                }
             }
         }
 
@@ -102,7 +132,13 @@ namespace PrimerParcialLabo
         {
             dataGVVuelos.Rows.Clear();
             string filtro = txtBMatricula.Text.ToUpper();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
+
+            for (int i = vuelosPorMatricula.Count - 1; i >= 0; i--)
+            {
+                Vuelos item = vuelosPorMatricula[i];
+                vuelosPorMatricula.Remove(item);
+            }
 
             foreach (Vuelos item in vuelos)
             {
@@ -136,7 +172,15 @@ namespace PrimerParcialLabo
                     row.Cells[8].Value = item.CantidadAsientosPrem;
                     row.Cells[9].Value = item.DuracionVuelo;
                     row.Cells[10].Value = item.Avion.Matricula;
+                    vueloSeleccionado = item;
+                    vuelosPorMatricula.Add(item);
                 }
+            }
+
+            if (dataGVVuelos.Rows.Count == 1)
+            {
+                seleccionado = true;
+                Serializadores.SerializarJson("VueloSeleccionado.json", vueloSeleccionado);
             }
         }
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -184,7 +228,7 @@ namespace PrimerParcialLabo
                             if (result == DialogResult.Yes)
                             {
                                 vuelos.Remove(vuelo);
-                                Serializadores.SerializarJson("Vuelos.json", vuelos);
+                                Serializadores.SerializarXML("Vuelos.xml", vuelos);
                                 btnVolver.Visible = false;
                                 seleccionado = false;
                                 RellenarGrid();
@@ -230,6 +274,6 @@ namespace PrimerParcialLabo
             seleccionado = false;
         }
 
-
+       
     }
 }

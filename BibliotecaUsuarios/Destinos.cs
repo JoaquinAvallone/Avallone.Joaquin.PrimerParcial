@@ -32,7 +32,7 @@ namespace Biblioteca
         {
             Dictionary<string, int> contadorDestinos = new Dictionary<string, int>();
             List<Vuelos>? vuelos = new List<Vuelos>();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
 
             foreach (Vuelos item in vuelos)
             {

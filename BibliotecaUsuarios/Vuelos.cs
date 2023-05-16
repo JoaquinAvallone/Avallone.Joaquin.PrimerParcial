@@ -216,7 +216,7 @@ namespace Biblioteca
         public static List<Destinos> DestinosOrdenadosPorRecaudacion()
         {
             Dictionary<string, float> acumuladorGanancias = new Dictionary<string, float>();
-            List<Vuelos> vuelos = Deserializadores.DeserializarVuelosJson();
+            List<Vuelos> vuelos = Deserializadores.DeserializarVuelosXml();
 
             foreach (Vuelos item in vuelos)
             {
@@ -251,7 +251,7 @@ namespace Biblioteca
         public static float RecaudacionInternacional()
         {
             List<Vuelos>? vuelos = new List<Vuelos>();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             float acumuladorGanancias = 0;
 
             foreach (Destinos.DestinoInternacional destino in Enum.GetValues(typeof(Destinos.DestinoInternacional)))
@@ -272,7 +272,7 @@ namespace Biblioteca
         public static float RecaudacionNacional()
         {
             List<Vuelos>? vuelos = new List<Vuelos>();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             float acumuladorGanancias = 0;
 
             foreach (Destinos.Nacional destino in Enum.GetValues(typeof(Destinos.Nacional)))

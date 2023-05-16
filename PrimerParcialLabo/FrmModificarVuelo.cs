@@ -29,7 +29,7 @@ namespace PrimerParcialLabo
         {
             aviones = new List<Aeronaves>();
             vuelos = new List<Vuelos>();
-            vuelos = Deserializadores.DeserializarVuelosJson();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             vueloSeleccionado = Deserializadores.DeserializarUnVueloJson();
             partidaInicial = vueloSeleccionado.CiudadPartida;
             destinoInicial = vueloSeleccionado.CiudadDestino;
@@ -311,7 +311,7 @@ namespace PrimerParcialLabo
                         break;
                     }
                 }
-                Serializadores.SerializarJson("Vuelos.json", vuelos);
+                Serializadores.SerializarXML("Vuelos.xml", vuelos);
                 this.Close();
             }
         }

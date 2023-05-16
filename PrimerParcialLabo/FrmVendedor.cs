@@ -92,20 +92,6 @@ namespace PrimerParcialLabo
             panelSubmenuVenta.Visible = false;
         }
 
-        private void picBEscape_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Desea abandonar la aplicacion?", "AirlinesApp", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
-        private void picbMini_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void picBoxUser_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -119,24 +105,15 @@ namespace PrimerParcialLabo
             }
         }
 
-        private void picBMaximize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            picBRestore.Visible = true;
-            picBMaximize.Visible = false;
-        }
-
-        private void picBRestore_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            picBRestore.Visible = false;
-            picBMaximize.Visible = true;
-        }
-
         private void FrmVendedor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CerrarFormularioAbierto();
             Serializadores.SerializarFotoperfilJson(usuarioActual, pathFotoUsuario);
+            DialogResult result = MessageBox.Show("¿Está seguro de abandonar la aplicación?", "Confirmar cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void btnViajesDispon_Click(object sender, EventArgs e)
