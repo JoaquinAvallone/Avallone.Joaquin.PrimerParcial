@@ -218,6 +218,14 @@ namespace Biblioteca
         {
             if (!File.Exists(path))
             {
+                string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                string photoPath = Path.Combine(exeDirectory, "FotoPerfil.png");
+
+                if (File.Exists(photoPath))
+                {
+                    return photoPath;
+                }
+
                 return null;
             }
             using (StreamReader sr = new StreamReader(path))

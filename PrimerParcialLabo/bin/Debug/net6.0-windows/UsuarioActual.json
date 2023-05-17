@@ -1,10 +1,10 @@
 {
-  "Legajo": 5,
-  "Correo": "admin@admin.com",
-  "Clave": "12345678",
-  "Perfil": "administrador",
+  "Legajo": 1,
+  "Correo": "cgorgen@vendedor.com",
+  "Clave": "123abc45",
+  "Perfil": "vendedor",
   "FechaAcceso": "0001-01-01T00:00:00",
   "FechaSalida": "0001-01-01T00:00:00",
-  "Apellido": "Jordan",
-  "Nombre": "Michael"
+  "Apellido": "Gorgen",
+  "Nombre": "Corey"
 }
