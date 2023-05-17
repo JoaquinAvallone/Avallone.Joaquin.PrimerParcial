@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dataGVAviones = new DataGridView();
+            lblAdvertencia = new Label();
             ColumMatricula = new DataGridViewTextBoxColumn();
             ColumAsientos = new DataGridViewTextBoxColumn();
             ColumBaños = new DataGridViewTextBoxColumn();
@@ -39,7 +40,6 @@
             ColumComida = new DataGridViewTextBoxColumn();
             ColumBodega = new DataGridViewTextBoxColumn();
             ColumHorasVuelo = new DataGridViewTextBoxColumn();
-            lblAdvertencia = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGVAviones).BeginInit();
             SuspendLayout();
             // 
@@ -55,14 +55,14 @@
             dataGVAviones.BorderStyle = BorderStyle.None;
             dataGVAviones.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGVAviones.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle4.SelectionForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dataGVAviones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle1.SelectionForeColor = Color.WhiteSmoke;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGVAviones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGVAviones.ColumnHeadersHeight = 36;
             dataGVAviones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGVAviones.Columns.AddRange(new DataGridViewColumn[] { ColumMatricula, ColumAsientos, ColumBaños, ColumInternet, ColumComida, ColumBodega, ColumHorasVuelo });
@@ -73,67 +73,25 @@
             dataGVAviones.Name = "dataGVAviones";
             dataGVAviones.ReadOnly = true;
             dataGVAviones.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.DarkGray;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle5.SelectionForeColor = Color.DarkGray;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGVAviones.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.DarkGray;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle2.SelectionForeColor = Color.DarkGray;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGVAviones.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGVAviones.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(35, 32, 39);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.LightGray;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(64, 64, 64);
-            dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            dataGVAviones.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(35, 32, 39);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.LightGray;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGVAviones.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGVAviones.RowTemplate.Height = 25;
             dataGVAviones.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dataGVAviones.Size = new Size(713, 352);
             dataGVAviones.TabIndex = 5;
-            // 
-            // ColumMatricula
-            // 
-            ColumMatricula.HeaderText = "MATRICULA";
-            ColumMatricula.Name = "ColumMatricula";
-            ColumMatricula.ReadOnly = true;
-            // 
-            // ColumAsientos
-            // 
-            ColumAsientos.HeaderText = "CANT. ASIENTOS";
-            ColumAsientos.Name = "ColumAsientos";
-            ColumAsientos.ReadOnly = true;
-            // 
-            // ColumBaños
-            // 
-            ColumBaños.HeaderText = "CANT. BAÑOS";
-            ColumBaños.Name = "ColumBaños";
-            ColumBaños.ReadOnly = true;
-            // 
-            // ColumInternet
-            // 
-            ColumInternet.HeaderText = "INTERNET";
-            ColumInternet.Name = "ColumInternet";
-            ColumInternet.ReadOnly = true;
-            // 
-            // ColumComida
-            // 
-            ColumComida.HeaderText = "COMIDA";
-            ColumComida.Name = "ColumComida";
-            ColumComida.ReadOnly = true;
-            // 
-            // ColumBodega
-            // 
-            ColumBodega.HeaderText = "CAPACIDAD BODEGA";
-            ColumBodega.Name = "ColumBodega";
-            ColumBodega.ReadOnly = true;
-            // 
-            // ColumHorasVuelo
-            // 
-            ColumHorasVuelo.HeaderText = "HORAS DE VUELO";
-            ColumHorasVuelo.Name = "ColumHorasVuelo";
-            ColumHorasVuelo.ReadOnly = true;
             // 
             // lblAdvertencia
             // 
@@ -145,6 +103,55 @@
             lblAdvertencia.Size = new Size(356, 15);
             lblAdvertencia.TabIndex = 6;
             lblAdvertencia.Text = "No se mostraran los aviones que no hayan sumado horas de vuelo";
+            // 
+            // ColumMatricula
+            // 
+            ColumMatricula.HeaderText = "MATRICULA";
+            ColumMatricula.Name = "ColumMatricula";
+            ColumMatricula.ReadOnly = true;
+            ColumMatricula.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumAsientos
+            // 
+            ColumAsientos.HeaderText = "CANT. ASIENTOS";
+            ColumAsientos.Name = "ColumAsientos";
+            ColumAsientos.ReadOnly = true;
+            ColumAsientos.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumBaños
+            // 
+            ColumBaños.HeaderText = "CANT. BAÑOS";
+            ColumBaños.Name = "ColumBaños";
+            ColumBaños.ReadOnly = true;
+            ColumBaños.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumInternet
+            // 
+            ColumInternet.HeaderText = "INTERNET";
+            ColumInternet.Name = "ColumInternet";
+            ColumInternet.ReadOnly = true;
+            ColumInternet.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumComida
+            // 
+            ColumComida.HeaderText = "COMIDA";
+            ColumComida.Name = "ColumComida";
+            ColumComida.ReadOnly = true;
+            ColumComida.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumBodega
+            // 
+            ColumBodega.HeaderText = "CAPACIDAD BODEGA";
+            ColumBodega.Name = "ColumBodega";
+            ColumBodega.ReadOnly = true;
+            ColumBodega.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumHorasVuelo
+            // 
+            ColumHorasVuelo.HeaderText = "HORAS DE VUELO";
+            ColumHorasVuelo.Name = "ColumHorasVuelo";
+            ColumHorasVuelo.ReadOnly = true;
+            ColumHorasVuelo.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // FrmHorasDeVuelo
             // 
@@ -166,6 +173,7 @@
         #endregion
 
         private DataGridView dataGVAviones;
+        private Label lblAdvertencia;
         private DataGridViewTextBoxColumn ColumMatricula;
         private DataGridViewTextBoxColumn ColumAsientos;
         private DataGridViewTextBoxColumn ColumBaños;
@@ -173,6 +181,5 @@
         private DataGridViewTextBoxColumn ColumComida;
         private DataGridViewTextBoxColumn ColumBodega;
         private DataGridViewTextBoxColumn ColumHorasVuelo;
-        private Label lblAdvertencia;
     }
 }

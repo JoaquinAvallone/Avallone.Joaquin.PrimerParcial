@@ -212,7 +212,7 @@
             Controls.Add(panelSideMenu);
             DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            MinimumSize = new Size(911, 413);
+            MinimumSize = new Size(970, 448);
             Name = "FrmAdmin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AvalloneAirLines";

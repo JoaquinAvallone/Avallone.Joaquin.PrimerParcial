@@ -176,4 +176,26 @@
     <Clase>Premium</Clase>
     <CantidadVuelos>1</CantidadVuelos>
   </Pasajeros>
+  <Pasajeros>
+    <Apellido>Culo</Apellido>
+    <Nombre>Nashe</Nombre>
+    <Dni>40404040</Dni>
+    <Edad>22</Edad>
+    <EquipajeMano>true</EquipajeMano>
+    <EquipajeBodega>true</EquipajeBodega>
+    <PesoEquipaje>22</PesoEquipaje>
+    <Clase>Turista</Clase>
+    <CantidadVuelos>1</CantidadVuelos>
+  </Pasajeros>
+  <Pasajeros>
+    <Apellido>AA</Apellido>
+    <Nombre>B</Nombre>
+    <Dni>11223211</Dni>
+    <Edad>12</Edad>
+    <EquipajeMano>false</EquipajeMano>
+    <EquipajeBodega>true</EquipajeBodega>
+    <PesoEquipaje>23</PesoEquipaje>
+    <Clase>Premium</Clase>
+    <CantidadVuelos>0</CantidadVuelos>
+  </Pasajeros>
 </ArrayOfPasajeros>

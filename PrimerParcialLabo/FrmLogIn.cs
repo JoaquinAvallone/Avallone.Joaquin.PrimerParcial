@@ -14,7 +14,6 @@ namespace PrimerParcialLabo
         public FrmLogIn()
         {
             InitializeComponent();
-
         }
 
         public void FrmLogIn_Load(object sender, EventArgs e)

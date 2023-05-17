@@ -42,7 +42,7 @@ namespace PrimerParcialLabo
             ToolTip toolTip = new ToolTip();
             toolTip.ShowAlways = true;
             toolTip.SetToolTip(picBoxUser, "Cambiar Foto");
-            
+
             usuarioActual.FechaAcceso = fechaActual;
         }
 

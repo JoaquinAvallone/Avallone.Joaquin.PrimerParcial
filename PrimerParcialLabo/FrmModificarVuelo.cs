@@ -275,7 +275,7 @@ namespace PrimerParcialLabo
 
             if (dateTime <= DateTime.Now)
             {
-                MessageBox.Show("El horario seleccionado es invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La fecha/hora seleccionada es invalida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 todoOk = false;
             }
 

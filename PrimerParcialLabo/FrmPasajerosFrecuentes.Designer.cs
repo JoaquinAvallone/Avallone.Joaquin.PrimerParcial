@@ -94,30 +94,35 @@
             ColumApellido.HeaderText = "APELLIDO";
             ColumApellido.Name = "ColumApellido";
             ColumApellido.ReadOnly = true;
+            ColumApellido.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumNombre
             // 
             ColumNombre.HeaderText = "NOMBRE";
             ColumNombre.Name = "ColumNombre";
             ColumNombre.ReadOnly = true;
+            ColumNombre.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumDni
             // 
             ColumDni.HeaderText = "DNI";
             ColumDni.Name = "ColumDni";
             ColumDni.ReadOnly = true;
+            ColumDni.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumEdad
             // 
             ColumEdad.HeaderText = "EDAD";
             ColumEdad.Name = "ColumEdad";
             ColumEdad.ReadOnly = true;
+            ColumEdad.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumCantVuelos
             // 
             ColumCantVuelos.HeaderText = "VUELOS";
             ColumCantVuelos.Name = "ColumCantVuelos";
             ColumCantVuelos.ReadOnly = true;
+            ColumCantVuelos.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // FrmPasajerosFrecuentes
             // 

@@ -221,6 +221,8 @@ namespace PrimerParcialLabo
             else
             {
                 RellenarGrid();
+                checkBComida.Checked = false;
+                checkBInternet.Checked = false;
                 btnVolver.Visible = false;
                 btnCrear.Visible = false;
                 btnAsignar.Visible = false;
@@ -267,46 +269,25 @@ namespace PrimerParcialLabo
                 return;
             }
 
-            if (dataGVPasajeros.Rows.Count == pasajeros.Count)
-            {
-                if (indice >= 0 && indice < pasajeros.Count)
-                {
-                    pasajeroSeleccionado = pasajeros[indice];
-                    dataGVPasajeros.Rows.Clear();
 
-                    int rowIndex = dataGVPasajeros.Rows.Add();
-                    DataGridViewRow row = dataGVPasajeros.Rows[rowIndex];
-                    row.Cells[0].Value = pasajeroSeleccionado.Apellido;
-                    row.Cells[1].Value = pasajeroSeleccionado.Nombre;
-                    row.Cells[2].Value = pasajeroSeleccionado.Dni;
-                    row.Cells[3].Value = pasajeroSeleccionado.Edad;
-                    row.Cells[4].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeMano);
-                    row.Cells[5].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeBodega);
-                    row.Cells[6].Value = pasajeroSeleccionado.PesoEquipaje + "kg.";
-                    row.Cells[7].Value = pasajeroSeleccionado.Clase;
-                    seleccionadoP = true;
-                }
-            }
-            else
+            if (indice >= 0 && indice < pasajeros.Count)
             {
-                if (indice >= 0 && indice < pasajerosPorDni.Count)
-                {
-                    pasajeroSeleccionado = pasajerosPorDni[indice];
-                    dataGVPasajeros.Rows.Clear();
+                pasajeroSeleccionado = pasajeros[indice];
+                dataGVPasajeros.Rows.Clear();
 
-                    int rowIndex = dataGVPasajeros.Rows.Add();
-                    DataGridViewRow row = dataGVPasajeros.Rows[rowIndex];
-                    row.Cells[0].Value = pasajeroSeleccionado.Apellido;
-                    row.Cells[1].Value = pasajeroSeleccionado.Nombre;
-                    row.Cells[2].Value = pasajeroSeleccionado.Dni;
-                    row.Cells[3].Value = pasajeroSeleccionado.Edad;
-                    row.Cells[4].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeMano);
-                    row.Cells[5].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeBodega);
-                    row.Cells[6].Value = pasajeroSeleccionado.PesoEquipaje + "kg.";
-                    row.Cells[7].Value = pasajeroSeleccionado.Clase;
-                    seleccionadoP = true;
-                }
+                int rowIndex = dataGVPasajeros.Rows.Add();
+                DataGridViewRow row = dataGVPasajeros.Rows[rowIndex];
+                row.Cells[0].Value = pasajeroSeleccionado.Apellido;
+                row.Cells[1].Value = pasajeroSeleccionado.Nombre;
+                row.Cells[2].Value = pasajeroSeleccionado.Dni;
+                row.Cells[3].Value = pasajeroSeleccionado.Edad;
+                row.Cells[4].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeMano);
+                row.Cells[5].Value = pasajeroSeleccionado.TipoEquipaje(pasajeroSeleccionado.EquipajeBodega);
+                row.Cells[6].Value = pasajeroSeleccionado.PesoEquipaje + "kg.";
+                row.Cells[7].Value = pasajeroSeleccionado.Clase;
+                seleccionadoP = true;
             }
+
         }
 
         private void FiltrarPorDni()

@@ -1,11 +1,11 @@
 {
-  "Dni": 43196568,
-  "Edad": 25,
+  "Dni": 45157002,
+  "Edad": 17,
   "EquipajeMano": true,
-  "EquipajeBodega": false,
-  "PesoEquipaje": 15,
-  "Clase": "Turista",
+  "EquipajeBodega": true,
+  "PesoEquipaje": 20,
+  "Clase": "Premium",
   "CantidadVuelos": 1,
-  "Apellido": "Lopez",
-  "Nombre": "Zendaya"
+  "Apellido": "Forti",
+  "Nombre": "Agustin"
 }

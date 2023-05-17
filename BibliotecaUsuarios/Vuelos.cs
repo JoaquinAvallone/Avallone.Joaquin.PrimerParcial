@@ -199,6 +199,18 @@ namespace Biblioteca
             return false;
         }
 
+        public override bool Equals(object? obj)
+        {
+            Pasajeros? pasajero = obj as Pasajeros;
+
+            return pasajero is not null && pasajero == this;
+        }
+
+        public override int GetHashCode()
+        {
+            return pasajeros.GetHashCode();
+        }
+
         public static bool operator -(Vuelos vuelo, Pasajeros pasajero)
         {
             if (vuelo is null || pasajero is null)
@@ -216,7 +228,7 @@ namespace Biblioteca
         public static List<Destinos> DestinosOrdenadosPorRecaudacion()
         {
             Dictionary<string, float> acumuladorGanancias = new Dictionary<string, float>();
-            List<Vuelos> vuelos = Deserializadores.DeserializarVuelosXml();
+            List<Vuelos>? vuelos = Deserializadores.DeserializarVuelosXml();
 
             foreach (Vuelos item in vuelos)
             {

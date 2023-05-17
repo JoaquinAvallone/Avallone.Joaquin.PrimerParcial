@@ -1,9 +1,9 @@
 {
-  "Matricula": "UTR43Y21",
-  "CantidadAsientos": 120,
-  "CantidadBa\u00F1os": 3,
+  "Matricula": "Y45TS67M",
+  "CantidadAsientos": 250,
+  "CantidadBa\u00F1os": 6,
   "Internet": false,
-  "Comida": false,
-  "CapacidadBodega": 4600,
+  "Comida": true,
+  "CapacidadBodega": 3100,
   "HorasDeVuelo": 0
 }

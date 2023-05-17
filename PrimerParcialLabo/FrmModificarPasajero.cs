@@ -94,12 +94,12 @@ namespace PrimerParcialLabo
             }
             else if (clase == "Turista" && pesoEquipaje > 25)
             {
-                MessageBox.Show("El peso del equipaje es mayor al permitido para su clase", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El peso del equipaje es mayor al permitido para su clase. Peso maximo clase turista 25kg.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 todoOk = false;
             }
             else if (clase == "Premium" && pesoEquipaje > 42)
             {
-                MessageBox.Show("El peso del equipaje es mayor al permitido para su clase", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El peso del equipaje es mayor al permitido para su clase. Peso maximo clase oremium 42kg.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 todoOk = false;
             }
 

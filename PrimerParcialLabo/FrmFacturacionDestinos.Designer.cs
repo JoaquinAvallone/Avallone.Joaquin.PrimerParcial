@@ -32,10 +32,10 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dataGVFacturacionDestinos = new DataGridView();
-            ColumDestino = new DataGridViewTextBoxColumn();
-            ColumRecaudacion = new DataGridViewTextBoxColumn();
             lblGananciaNacional = new Label();
             lblGananciaInter = new Label();
+            ColumDestino = new DataGridViewTextBoxColumn();
+            ColumRecaudacion = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGVFacturacionDestinos).BeginInit();
             SuspendLayout();
             // 
@@ -89,18 +89,6 @@
             dataGVFacturacionDestinos.TabIndex = 5;
             dataGVFacturacionDestinos.CellContentClick += dataGVFacturacionDestinos_CellContentClick;
             // 
-            // ColumDestino
-            // 
-            ColumDestino.HeaderText = "DESTINO";
-            ColumDestino.Name = "ColumDestino";
-            ColumDestino.ReadOnly = true;
-            // 
-            // ColumRecaudacion
-            // 
-            ColumRecaudacion.HeaderText = "RECAUDACIÓN";
-            ColumRecaudacion.Name = "ColumRecaudacion";
-            ColumRecaudacion.ReadOnly = true;
-            // 
             // lblGananciaNacional
             // 
             lblGananciaNacional.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
@@ -122,6 +110,20 @@
             lblGananciaInter.Name = "lblGananciaInter";
             lblGananciaInter.Size = new Size(0, 13);
             lblGananciaInter.TabIndex = 8;
+            // 
+            // ColumDestino
+            // 
+            ColumDestino.HeaderText = "DESTINO";
+            ColumDestino.Name = "ColumDestino";
+            ColumDestino.ReadOnly = true;
+            ColumDestino.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumRecaudacion
+            // 
+            ColumRecaudacion.HeaderText = "RECAUDACIÓN";
+            ColumRecaudacion.Name = "ColumRecaudacion";
+            ColumRecaudacion.ReadOnly = true;
+            ColumRecaudacion.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // FrmFacturacionDestinos
             // 

@@ -100,10 +100,10 @@
       <CantidadBaños>5</CantidadBaños>
       <Internet>true</Internet>
       <Comida>true</Comida>
-      <CapacidadBodega>5000</CapacidadBodega>
+      <CapacidadBodega>4960</CapacidadBodega>
       <HorasDeVuelo>0</HorasDeVuelo>
     </Avion>
-    <CantidadAsientosPrem>34</CantidadAsientosPrem>
+    <CantidadAsientosPrem>33</CantidadAsientosPrem>
     <CantidadAsientosTuris>136</CantidadAsientosTuris>
     <PrecioTurista>1452</PrecioTurista>
     <PrecioPrem>1960.2</PrecioPrem>
@@ -142,9 +142,20 @@
         <Clase>Turista</Clase>
         <CantidadVuelos>1</CantidadVuelos>
       </Pasajeros>
+      <Pasajeros>
+        <Apellido>Fernando</Apellido>
+        <Nombre>Gago</Nombre>
+        <Dni>44157922</Dni>
+        <Edad>30</Edad>
+        <EquipajeMano>true</EquipajeMano>
+        <EquipajeBodega>true</EquipajeBodega>
+        <PesoEquipaje>40</PesoEquipaje>
+        <Clase>Premium</Clase>
+        <CantidadVuelos>2</CantidadVuelos>
+      </Pasajeros>
     </Pasajeros>
     <GananciasTuris>2904</GananciasTuris>
-    <GananciasPrem>1960.2</GananciasPrem>
+    <GananciasPrem>3920.4</GananciasPrem>
   </Vuelos>
   <Vuelos>
     <CiudadPartida>BuenosAires</CiudadPartida>
@@ -156,10 +167,10 @@
       <CantidadBaños>3</CantidadBaños>
       <Internet>false</Internet>
       <Comida>false</Comida>
-      <CapacidadBodega>4600</CapacidadBodega>
+      <CapacidadBodega>4570</CapacidadBodega>
       <HorasDeVuelo>0</HorasDeVuelo>
     </Avion>
-    <CantidadAsientosPrem>24</CantidadAsientosPrem>
+    <CantidadAsientosPrem>23</CantidadAsientosPrem>
     <CantidadAsientosTuris>96</CantidadAsientosTuris>
     <PrecioTurista>1210</PrecioTurista>
     <PrecioPrem>1633.5</PrecioPrem>
@@ -198,9 +209,20 @@
         <Clase>Premium</Clase>
         <CantidadVuelos>1</CantidadVuelos>
       </Pasajeros>
+      <Pasajeros>
+        <Apellido>Avallone</Apellido>
+        <Nombre>Joaquin</Nombre>
+        <Dni>40796568</Dni>
+        <Edad>25</Edad>
+        <EquipajeMano>true</EquipajeMano>
+        <EquipajeBodega>false</EquipajeBodega>
+        <PesoEquipaje>30</PesoEquipaje>
+        <Clase>Premium</Clase>
+        <CantidadVuelos>2</CantidadVuelos>
+      </Pasajeros>
     </Pasajeros>
     <GananciasTuris>1210</GananciasTuris>
-    <GananciasPrem>3267</GananciasPrem>
+    <GananciasPrem>4900.5</GananciasPrem>
   </Vuelos>
   <Vuelos>
     <CiudadPartida>Tucumán</CiudadPartida>
@@ -268,11 +290,11 @@
       <CantidadBaños>4</CantidadBaños>
       <Internet>false</Internet>
       <Comida>false</Comida>
-      <CapacidadBodega>8000</CapacidadBodega>
+      <CapacidadBodega>7962</CapacidadBodega>
       <HorasDeVuelo>0</HorasDeVuelo>
     </Avion>
     <CantidadAsientosPrem>30</CantidadAsientosPrem>
-    <CantidadAsientosTuris>120</CantidadAsientosTuris>
+    <CantidadAsientosTuris>118</CantidadAsientosTuris>
     <PrecioTurista>242</PrecioTurista>
     <PrecioPrem>326.7</PrecioPrem>
     <DuracionVuelo>4</DuracionVuelo>
@@ -310,8 +332,30 @@
         <Clase>Premium</Clase>
         <CantidadVuelos>1</CantidadVuelos>
       </Pasajeros>
+      <Pasajeros>
+        <Apellido>Potato</Apellido>
+        <Nombre>Hernan</Nombre>
+        <Dni>37719568</Dni>
+        <Edad>40</Edad>
+        <EquipajeMano>true</EquipajeMano>
+        <EquipajeBodega>false</EquipajeBodega>
+        <PesoEquipaje>16</PesoEquipaje>
+        <Clase>Turista</Clase>
+        <CantidadVuelos>2</CantidadVuelos>
+      </Pasajeros>
+      <Pasajeros>
+        <Apellido>Culo</Apellido>
+        <Nombre>Nashe</Nombre>
+        <Dni>40404040</Dni>
+        <Edad>22</Edad>
+        <EquipajeMano>true</EquipajeMano>
+        <EquipajeBodega>true</EquipajeBodega>
+        <PesoEquipaje>22</PesoEquipaje>
+        <Clase>Turista</Clase>
+        <CantidadVuelos>1</CantidadVuelos>
+      </Pasajeros>
     </Pasajeros>
-    <GananciasTuris>242</GananciasTuris>
+    <GananciasTuris>726</GananciasTuris>
     <GananciasPrem>653.4</GananciasPrem>
   </Vuelos>
 </ArrayOfVuelos>

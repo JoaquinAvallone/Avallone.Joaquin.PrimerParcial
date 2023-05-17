@@ -1,10 +1,10 @@
 {
-  "Legajo": 4,
-  "Correo": "trobinson@super.com",
+  "Legajo": 5,
+  "Correo": "admin@admin.com",
   "Clave": "12345678",
-  "Perfil": "supervisor",
+  "Perfil": "administrador",
   "FechaAcceso": "0001-01-01T00:00:00",
   "FechaSalida": "0001-01-01T00:00:00",
-  "Apellido": "Robinson",
-  "Nombre": "Tilda"
+  "Apellido": "Jordan",
+  "Nombre": "Michael"
 }

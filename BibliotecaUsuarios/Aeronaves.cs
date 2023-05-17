@@ -76,6 +76,18 @@ namespace Biblioteca
             return !(avion == vuelo);
         }
 
+        public override bool Equals(object? obj)
+        {
+            Vuelos? vuelo = obj as Vuelos;
+
+            return vuelo is not null && this == vuelo;
+        }
+
+        public override int GetHashCode()
+        {
+            return matricula.GetHashCode();
+        }
+
         public string BoolAString(bool booleano)
         {
             StringBuilder sb = new StringBuilder();

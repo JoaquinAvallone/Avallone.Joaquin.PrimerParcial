@@ -35,7 +35,21 @@
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             dataGVVuelos = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            ColumPartida = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            ColumPrecioTuris = new DataGridViewTextBoxColumn();
+            ColumPrecioPrem = new DataGridViewTextBoxColumn();
+            ColumMatricula = new DataGridViewTextBoxColumn();
+            ColumDuracion = new DataGridViewTextBoxColumn();
             dataGVInfoPasajeros = new DataGridView();
+            btnVolver = new Button();
+            ColumFecha = new DataGridViewTextBoxColumn();
+            ColumOrigen = new DataGridViewTextBoxColumn();
+            ColumDestino = new DataGridViewTextBoxColumn();
+            ColumPrecio = new DataGridViewTextBoxColumn();
+            ColumPrecioP = new DataGridViewTextBoxColumn();
+            ColumAvion = new DataGridViewTextBoxColumn();
             ColumApellido = new DataGridViewTextBoxColumn();
             ColumNombre = new DataGridViewTextBoxColumn();
             ColumDni = new DataGridViewTextBoxColumn();
@@ -44,20 +58,6 @@
             ColumEquipajeBodega = new DataGridViewTextBoxColumn();
             ColumPesoEquip = new DataGridViewTextBoxColumn();
             ColumClase = new DataGridViewTextBoxColumn();
-            btnVolver = new Button();
-            ColumFecha = new DataGridViewTextBoxColumn();
-            ColumOrigen = new DataGridViewTextBoxColumn();
-            ColumDestino = new DataGridViewTextBoxColumn();
-            ColumPrecio = new DataGridViewTextBoxColumn();
-            ColumPrecioP = new DataGridViewTextBoxColumn();
-            ColumAvion = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            ColumPartida = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            ColumPrecioTuris = new DataGridViewTextBoxColumn();
-            ColumPrecioPrem = new DataGridViewTextBoxColumn();
-            ColumMatricula = new DataGridViewTextBoxColumn();
-            ColumDuracion = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGVVuelos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGVInfoPasajeros).BeginInit();
             SuspendLayout();
@@ -113,6 +113,55 @@
             dataGVVuelos.TabIndex = 0;
             dataGVVuelos.CellClick += dataGVVuelos_CellClick;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "FECHA Y HORA";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            dataGridViewTextBoxColumn1.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumPartida
+            // 
+            ColumPartida.HeaderText = "CIUDAD PARTIDA";
+            ColumPartida.Name = "ColumPartida";
+            ColumPartida.ReadOnly = true;
+            ColumPartida.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText = "DESTINO";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            dataGridViewTextBoxColumn2.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumPrecioTuris
+            // 
+            ColumPrecioTuris.HeaderText = "PRECIO TURISTA +IVA";
+            ColumPrecioTuris.Name = "ColumPrecioTuris";
+            ColumPrecioTuris.ReadOnly = true;
+            ColumPrecioTuris.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumPrecioPrem
+            // 
+            ColumPrecioPrem.HeaderText = "PRECIO PREMIUM +IVA";
+            ColumPrecioPrem.Name = "ColumPrecioPrem";
+            ColumPrecioPrem.ReadOnly = true;
+            ColumPrecioPrem.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumMatricula
+            // 
+            ColumMatricula.HeaderText = "MATRICULA";
+            ColumMatricula.Name = "ColumMatricula";
+            ColumMatricula.ReadOnly = true;
+            ColumMatricula.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumDuracion
+            // 
+            ColumDuracion.HeaderText = "DURACION";
+            ColumDuracion.Name = "ColumDuracion";
+            ColumDuracion.ReadOnly = true;
+            ColumDuracion.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
             // dataGVInfoPasajeros
             // 
             dataGVInfoPasajeros.AllowUserToAddRows = false;
@@ -161,54 +210,6 @@
             dataGVInfoPasajeros.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dataGVInfoPasajeros.Size = new Size(711, 379);
             dataGVInfoPasajeros.TabIndex = 2;
-            // 
-            // ColumApellido
-            // 
-            ColumApellido.HeaderText = "APELLIDO";
-            ColumApellido.Name = "ColumApellido";
-            ColumApellido.ReadOnly = true;
-            // 
-            // ColumNombre
-            // 
-            ColumNombre.HeaderText = "NOMBRE";
-            ColumNombre.Name = "ColumNombre";
-            ColumNombre.ReadOnly = true;
-            // 
-            // ColumDni
-            // 
-            ColumDni.HeaderText = "DNI";
-            ColumDni.Name = "ColumDni";
-            ColumDni.ReadOnly = true;
-            // 
-            // ColumEdad
-            // 
-            ColumEdad.HeaderText = "EDAD";
-            ColumEdad.Name = "ColumEdad";
-            ColumEdad.ReadOnly = true;
-            // 
-            // ColumEquipajeMano
-            // 
-            ColumEquipajeMano.HeaderText = "EQUIPAJE MANO";
-            ColumEquipajeMano.Name = "ColumEquipajeMano";
-            ColumEquipajeMano.ReadOnly = true;
-            // 
-            // ColumEquipajeBodega
-            // 
-            ColumEquipajeBodega.HeaderText = "EQUIPAJE BODEGA";
-            ColumEquipajeBodega.Name = "ColumEquipajeBodega";
-            ColumEquipajeBodega.ReadOnly = true;
-            // 
-            // ColumPesoEquip
-            // 
-            ColumPesoEquip.HeaderText = "PESO EQUIPAJE";
-            ColumPesoEquip.Name = "ColumPesoEquip";
-            ColumPesoEquip.ReadOnly = true;
-            // 
-            // ColumClase
-            // 
-            ColumClase.HeaderText = "CLASE";
-            ColumClase.Name = "ColumClase";
-            ColumClase.ReadOnly = true;
             // 
             // btnVolver
             // 
@@ -264,47 +265,61 @@
             ColumAvion.Name = "ColumAvion";
             ColumAvion.Width = 116;
             // 
-            // dataGridViewTextBoxColumn1
+            // ColumApellido
             // 
-            dataGridViewTextBoxColumn1.HeaderText = "FECHA Y HORA";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
+            ColumApellido.HeaderText = "APELLIDO";
+            ColumApellido.Name = "ColumApellido";
+            ColumApellido.ReadOnly = true;
+            ColumApellido.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // ColumPartida
+            // ColumNombre
             // 
-            ColumPartida.HeaderText = "CIUDAD PARTIDA";
-            ColumPartida.Name = "ColumPartida";
-            ColumPartida.ReadOnly = true;
+            ColumNombre.HeaderText = "NOMBRE";
+            ColumNombre.Name = "ColumNombre";
+            ColumNombre.ReadOnly = true;
+            ColumNombre.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridViewTextBoxColumn2
+            // ColumDni
             // 
-            dataGridViewTextBoxColumn2.HeaderText = "DESTINO";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
+            ColumDni.HeaderText = "DNI";
+            ColumDni.Name = "ColumDni";
+            ColumDni.ReadOnly = true;
+            ColumDni.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // ColumPrecioTuris
+            // ColumEdad
             // 
-            ColumPrecioTuris.HeaderText = "PRECIO TURISTA +IVA";
-            ColumPrecioTuris.Name = "ColumPrecioTuris";
-            ColumPrecioTuris.ReadOnly = true;
+            ColumEdad.HeaderText = "EDAD";
+            ColumEdad.Name = "ColumEdad";
+            ColumEdad.ReadOnly = true;
+            ColumEdad.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // ColumPrecioPrem
+            // ColumEquipajeMano
             // 
-            ColumPrecioPrem.HeaderText = "PRECIO PREMIUM +IVA";
-            ColumPrecioPrem.Name = "ColumPrecioPrem";
-            ColumPrecioPrem.ReadOnly = true;
+            ColumEquipajeMano.HeaderText = "EQUIPAJE MANO";
+            ColumEquipajeMano.Name = "ColumEquipajeMano";
+            ColumEquipajeMano.ReadOnly = true;
+            ColumEquipajeMano.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // ColumMatricula
+            // ColumEquipajeBodega
             // 
-            ColumMatricula.HeaderText = "MATRICULA";
-            ColumMatricula.Name = "ColumMatricula";
-            ColumMatricula.ReadOnly = true;
+            ColumEquipajeBodega.HeaderText = "EQUIPAJE BODEGA";
+            ColumEquipajeBodega.Name = "ColumEquipajeBodega";
+            ColumEquipajeBodega.ReadOnly = true;
+            ColumEquipajeBodega.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
-            // ColumDuracion
+            // ColumPesoEquip
             // 
-            ColumDuracion.HeaderText = "DURACION";
-            ColumDuracion.Name = "ColumDuracion";
-            ColumDuracion.ReadOnly = true;
+            ColumPesoEquip.HeaderText = "PESO EQUIPAJE";
+            ColumPesoEquip.Name = "ColumPesoEquip";
+            ColumPesoEquip.ReadOnly = true;
+            ColumPesoEquip.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumClase
+            // 
+            ColumClase.HeaderText = "CLASE";
+            ColumClase.Name = "ColumClase";
+            ColumClase.ReadOnly = true;
+            ColumClase.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // FrmViajesDisponibles
             // 
@@ -330,14 +345,6 @@
         private DataGridView dataGVVuelos;
         private DataGridView dataGVInfoPasajeros;
         private Button btnVolver;
-        private DataGridViewTextBoxColumn ColumApellido;
-        private DataGridViewTextBoxColumn ColumNombre;
-        private DataGridViewTextBoxColumn ColumDni;
-        private DataGridViewTextBoxColumn ColumEdad;
-        private DataGridViewTextBoxColumn ColumEquipajeMano;
-        private DataGridViewTextBoxColumn ColumEquipajeBodega;
-        private DataGridViewTextBoxColumn ColumPesoEquip;
-        private DataGridViewTextBoxColumn ColumClase;
         private DataGridViewTextBoxColumn ColumDuracionVuelo;
         private DataGridViewTextBoxColumn ColumFecha;
         private DataGridViewTextBoxColumn ColumOrigen;
@@ -352,5 +359,13 @@
         private DataGridViewTextBoxColumn ColumPrecioPrem;
         private DataGridViewTextBoxColumn ColumMatricula;
         private DataGridViewTextBoxColumn ColumDuracion;
+        private DataGridViewTextBoxColumn ColumApellido;
+        private DataGridViewTextBoxColumn ColumNombre;
+        private DataGridViewTextBoxColumn ColumDni;
+        private DataGridViewTextBoxColumn ColumEdad;
+        private DataGridViewTextBoxColumn ColumEquipajeMano;
+        private DataGridViewTextBoxColumn ColumEquipajeBodega;
+        private DataGridViewTextBoxColumn ColumPesoEquip;
+        private DataGridViewTextBoxColumn ColumClase;
     }
 }

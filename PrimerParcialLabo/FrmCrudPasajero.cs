@@ -15,6 +15,7 @@ namespace PrimerParcialLabo
     public partial class FrmCrudPasajero : Form
     {
         List<Pasajeros>? pasajeros;
+        List<Vuelos>? vuelos;
         Pasajeros? pasajeroSeleccionado;
         List<Pasajeros>? pasajerosPorDni;
         bool seleccionado = false;
@@ -25,6 +26,7 @@ namespace PrimerParcialLabo
 
         private void FrmCrudPasajero_Load(object sender, EventArgs e)
         {
+            vuelos = new List<Vuelos>();
             pasajeros = new List<Pasajeros>();
             pasajerosPorDni = new List<Pasajeros>();
             btnVolver.Visible = false;
@@ -174,6 +176,16 @@ namespace PrimerParcialLabo
             }
             else
             {
+                foreach(Vuelos item in vuelos)
+                {
+                    foreach(Pasajeros pasajero in item.Pasajeros)
+                    {
+                        if(pasajero.Dni == dni)
+                        {
+                            MessageBox.Show("No se puede eliminar un pasajero que esta aderido a un vuelo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
                 DialogResult result = MessageBox.Show("Esta seguro de eliminar el pasajero?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {

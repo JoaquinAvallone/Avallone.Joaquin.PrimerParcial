@@ -92,18 +92,21 @@
             ColumDestino.HeaderText = "DESTINO";
             ColumDestino.Name = "ColumDestino";
             ColumDestino.ReadOnly = true;
+            ColumDestino.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumRecaudacion
             // 
             ColumRecaudacion.HeaderText = "RECAUDACIÓN";
             ColumRecaudacion.Name = "ColumRecaudacion";
             ColumRecaudacion.ReadOnly = true;
+            ColumRecaudacion.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumVecesElegido
             // 
             ColumVecesElegido.HeaderText = "VECES ELEGIDO";
             ColumVecesElegido.Name = "ColumVecesElegido";
             ColumVecesElegido.ReadOnly = true;
+            ColumVecesElegido.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // FrmDestinoMasElegido
             // 
