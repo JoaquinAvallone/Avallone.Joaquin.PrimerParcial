@@ -1,0 +1,72 @@
+[
+  {
+    "Legajo": 1,
+    "Correo": "cgorgen@vendedor.com",
+    "Clave": "123abc45",
+    "Perfil": "vendedor",
+    "FechaAcceso": "2023-05-17T00:00:00-03:00",
+    "FechaSalida": "2023-05-17T17:13:54.3712044-03:00",
+    "Apellido": "Gorgen",
+    "Nombre": "Corey"
+  },
+  {
+    "Legajo": 1,
+    "Correo": "cgorgen@vendedor.com",
+    "Clave": "123abc45",
+    "Perfil": "vendedor",
+    "FechaAcceso": "2023-05-18T00:00:00-03:00",
+    "FechaSalida": "2023-05-18T23:00:29.8101798-03:00",
+    "Apellido": "Gorgen",
+    "Nombre": "Corey"
+  },
+  {
+    "Legajo": 1,
+    "Correo": "cgorgen@vendedor.com",
+    "Clave": "123abc45",
+    "Perfil": "vendedor",
+    "FechaAcceso": "2023-05-18T00:00:00-03:00",
+    "FechaSalida": "2023-05-18T23:00:58.6839792-03:00",
+    "Apellido": "Gorgen",
+    "Nombre": "Corey"
+  },
+  {
+    "Legajo": 1,
+    "Correo": "cgorgen@vendedor.com",
+    "Clave": "123abc45",
+    "Perfil": "vendedor",
+    "FechaAcceso": "2023-05-18T00:00:00-03:00",
+    "FechaSalida": "2023-05-18T23:01:29.1401584-03:00",
+    "Apellido": "Gorgen",
+    "Nombre": "Corey"
+  },
+  {
+    "Legajo": 1,
+    "Correo": "cgorgen@vendedor.com",
+    "Clave": "123abc45",
+    "Perfil": "vendedor",
+    "FechaAcceso": "2023-05-18T00:00:00-03:00",
+    "FechaSalida": "2023-05-18T23:01:29.1401584-03:00",
+    "Apellido": "Gorgen",
+    "Nombre": "Corey"
+  },
+  {
+    "Legajo": 1,
+    "Correo": "cgorgen@vendedor.com",
+    "Clave": "123abc45",
+    "Perfil": "vendedor",
+    "FechaAcceso": "2023-05-19T00:00:00-03:00",
+    "FechaSalida": "2023-05-19T18:26:19.8207104-03:00",
+    "Apellido": "Gorgen",
+    "Nombre": "Corey"
+  },
+  {
+    "Legajo": 1,
+    "Correo": "cgorgen@vendedor.com",
+    "Clave": "123abc45",
+    "Perfil": "vendedor",
+    "FechaAcceso": "2023-05-19T00:00:00-03:00",
+    "FechaSalida": "2023-05-19T18:26:19.8207104-03:00",
+    "Apellido": "Gorgen",
+    "Nombre": "Corey"
+  }
+]

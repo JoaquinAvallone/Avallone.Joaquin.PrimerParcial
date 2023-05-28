@@ -204,8 +204,8 @@ namespace PrimerParcialLabo
                             DialogResult result = MessageBox.Show("Esta seguro de eliminar el avion?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                             if (result == DialogResult.Yes)
                             {
-                                aviones.Remove(item);
-                                Serializadores.SerializarJson("Aeronaves.json", aviones);
+                                aviones.Remove(item);                                
+                                Serializadores.SerializarJson("Aeronaves.json", aviones);                                
                                 btnVolver.Visible = false;
                                 seleccionado = false;
                                 RellenarGrid();

@@ -78,10 +78,15 @@ namespace Biblioteca
 
         public override bool Equals(object? obj)
         {
-            Vuelos? vuelo = obj as Vuelos;
-
-            return vuelo is not null && this == vuelo;
+            return base.Equals(obj);
         }
+
+        //public override bool Equals(object? obj)
+        //{
+        //    Vuelos? vuelo = obj as Vuelos;
+
+        //    return vuelo is not null && this == vuelo;
+        //}
 
         public override int GetHashCode()
         {

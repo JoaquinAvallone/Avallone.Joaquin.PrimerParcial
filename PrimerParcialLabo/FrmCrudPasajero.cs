@@ -27,6 +27,7 @@ namespace PrimerParcialLabo
         private void FrmCrudPasajero_Load(object sender, EventArgs e)
         {
             vuelos = new List<Vuelos>();
+            vuelos = Deserializadores.DeserializarVuelosXml();
             pasajeros = new List<Pasajeros>();
             pasajerosPorDni = new List<Pasajeros>();
             btnVolver.Visible = false;
@@ -183,6 +184,7 @@ namespace PrimerParcialLabo
                         if(pasajero.Dni == dni)
                         {
                             MessageBox.Show("No se puede eliminar un pasajero que esta aderido a un vuelo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
                         }
                     }
                 }
